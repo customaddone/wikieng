@@ -64,8 +64,9 @@ jobs:
           command: ./vendor/bin/phpunit
 
       - run:
-          name: run browser test
-          command: |
-            php artisan serve
-            php artisan dusk
+          name: run browser
+          command: php artisan serve
           background: true
+      - run:
+          name: run dusk
+          command: APP_URL=http://127.0.0.1:8000 php artisan dusk
