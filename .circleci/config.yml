@@ -4,6 +4,9 @@ jobs:
     docker:
       # Specify the version you desire here
       - image: circleci/php:7.3-node-browsers
+      # duskテスト用
+      - image: circleci/node:7.10-browsers
+      - image: selenium/standalone-chrome
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -21,9 +24,13 @@ jobs:
 
     steps:
       - checkout
+      - setup_remote_docker
 
       - run: sudo apt update # PHP CircleCI 2.0 Configuration File# PHP CircleCI 2.0 Configuration File sudo apt install zlib1g-dev libsqlite3-dev
       - run: sudo docker-php-ext-install zip
+      - run:
+          name: run selenium　
+          command: docker run -d -p 4444:4444 selenium/standalone-chrome
 
       # Download and cache dependencies
       - restore_cache:
@@ -34,6 +41,10 @@ jobs:
             - v1-dependencies-
 
       - run: composer install -n --prefer-dist
+      - run:
+          name: install-npm
+          command: npm install
+
       - save_cache:
           key: v1-dependencies-{{ checksum "composer.json" }}
           paths:
