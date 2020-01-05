@@ -1,0 +1,48 @@
+[
+  {
+    "name": "example",
+    "image": "183344260146.dkr.ecr.ap-northeast-1.amazonaws.com/example:latest",
+    "cpu": 128,
+    "memoryReservation": 256,
+    "essential": true,
+    "links": [
+      "app"
+    ],
+    "portMappings": [
+      {
+        "hostPort": 80,
+        "protocol": "tcp",
+        "containerPort": 80
+      }
+    ],
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-group": "example",
+        "awslogs-region": "ap-northeast-1",
+        "awslogs-stream-prefix": "service"
+      }
+    }
+  },
+  {
+     "name": "app",
+     "image": "183344260146.dkr.ecr.ap-northeast-1.amazonaws.com/app:latest",
+     "cpu": 128,
+     "memoryReservation": 256,
+     "essential": true,
+     "logConfiguration": {
+       "logDriver": "awslogs",
+       "options": {
+         "awslogs-group": "app",
+         "awslogs-region": "ap-northeast-1",
+         "awslogs-stream-prefix": "app"
+       }
+     },
+     "environment": [
+       {
+         "name": "APP_KEY",
+         "value": "base64:Rha6fhgYifnvVBnwm81FCal18ULvEgiMnqpLLwlvyKI="
+       }
+     ]
+   }
+]
