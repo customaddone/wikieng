@@ -47,6 +47,14 @@ jobs:
           key: node-v1-{{ checksum "package.json" }}
           paths:
             - node_modules
+
       - run:
           name: run unit test
           command: ./vendor/bin/phpunit
+
+      - run:
+          name: run browser test
+          command: |
+            php artisan serve
+            php artisan dusk
+          background: true
