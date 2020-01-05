@@ -10,3 +10,19 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+
+# Local .terraform directories
+/terraform/**/.terraform/*
+
+# .tfstate files
+/terraform/**/*.tfstate
+/terraform/**/*.tfstate.*
+
+# Crash log files
+/terraform/crash.log
+
+# Ignore any .tfvars files that are generated automatically for each Terraform run. Most
+# .tfvars files are managed as part of configuration and so should be included in
+# version control.
+#
+/terraform/terraform.tfvars
