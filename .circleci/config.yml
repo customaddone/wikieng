@@ -13,6 +13,11 @@ jobs:
       # - image: circleci/mysql:5.7-ram
       #
       # - image: redis:2.8.19
+      environment:
+      - APP_DEBUG: true
+      - APP_ENV: testing
+      - APP_KEY: base64:Rha6fhgYifnvVBnwm81FCal18ULvEgiMnqpLLwlvyKI=
+      - APP_URL: http://localhost:8888
 
     steps:
       - checkout
@@ -42,3 +47,6 @@ jobs:
           key: node-v1-{{ checksum "package.json" }}
           paths:
             - node_modules
+      - run:
+          name: run unit test
+          command: ./vendor/bin/phpunit
