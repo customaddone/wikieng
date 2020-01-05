@@ -1,5 +1,6 @@
 version: 2
 jobs:
+  #テストを行うworkflow
   build:
     docker:
       # Specify the version you desire here
@@ -7,15 +8,6 @@ jobs:
       # duskテスト用
       - image: circleci/node:7.10-browsers
       - image: selenium/standalone-chrome
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # Using the RAM variation mitigates I/O contention
-      # for database intensive operations.
-      # - image: circleci/mysql:5.7-ram
-      #
-      # - image: redis:2.8.19
     environment:
       - APP_DEBUG: true
       - APP_ENV: testing
@@ -28,10 +20,10 @@ jobs:
 
       - run: sudo apt update # PHP CircleCI 2.0 Configuration File# PHP CircleCI 2.0 Configuration File sudo apt install zlib1g-dev libsqlite3-dev
       - run: sudo docker-php-ext-install zip
+      - run: composer install -n --prefer-dist
       - run:
-          name: run selenium　
-          command: docker run -d -p 4444:4444 selenium/standalone-chrome
-
+          name: install-npm
+          command: npm install
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -39,12 +31,6 @@ jobs:
             - v1-dependencies-{{ checksum "composer.json" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
-
-      - run: composer install -n --prefer-dist
-      - run:
-          name: install-npm
-          command: npm install
-
       - save_cache:
           key: v1-dependencies-{{ checksum "composer.json" }}
           paths:
@@ -59,10 +45,13 @@ jobs:
           paths:
             - node_modules
 
+      #unit and browser test
       - run:
           name: run unit test
           command: ./vendor/bin/phpunit
-
+      - run:
+          name: run selenium　
+          command: docker run -d -p 4444:4444 selenium/standalone-chrome
       - run:
           name: run browser
           command: php artisan serve
@@ -70,3 +59,9 @@ jobs:
       - run:
           name: run dusk
           command: APP_URL=http://127.0.0.1:8000 php artisan dusk
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - build
