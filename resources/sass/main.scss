@@ -1,0 +1,15 @@
+$background-color: #ffdab9;
+$color: #0000DD;
+$margin: 10px 20px 30px 40px;
+
+body {
+  background-color: $background-color;
+}
+
+p {
+  color: $color;
+}
+
+.test-margin {
+  margin: $margin;
+}
