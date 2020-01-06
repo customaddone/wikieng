@@ -13,10 +13,10 @@
     <script src="https://unpkg.com/vue-router@3.0.1"></script>
 
     <!-- CSS -->
-    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link href="http://wikiforlearningenglish.com/css/main.css" rel="stylesheet">
 
     <!-- icon -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body>
     @yield('content')
