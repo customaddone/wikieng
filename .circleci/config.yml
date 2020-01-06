@@ -1,7 +1,7 @@
 version: 2
 jobs:
   #テストを行うworkflow
-  build:
+  test:
     docker:
       # Specify the version you desire here
       - image: circleci/php:7.3-node-browsers
@@ -59,18 +59,11 @@ jobs:
       - run:
           name: run dusk
           command: APP_URL=http://127.0.0.1:8000 php artisan dusk
-  build_and_deploy:
+  deploy:
     docker:
       # Specify the version you desire here
       - image: circleci/php:7.3-node-browsers
       - image: docker:19.03
-
-    environment:
-      - APP_DEBUG: true
-      - APP_ENV: testing
-      - APP_KEY: base64:Rha6fhgYifnvVBnwm81FCal18ULvEgiMnqpLLwlvyKI=
-      - APP_URL: http://localhost:8888
-
     steps:
       - checkout
       - setup_remote_docker
@@ -110,5 +103,10 @@ workflows:
   version: 2
   test:
     jobs:
-      #- build
-      - build_and_deploy
+      - test
+      - deploy:
+          requires:
+            - test
+          #filters:
+            #branches:
+              #only: master
