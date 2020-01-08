@@ -1,12 +1,115 @@
-body {
-  background-color: #ffdab9;
+a {
+  text-decoration: none;
 }
 
-p {
-  color: #0000DD;
+header {
+  width: 100%;
+  padding-top: 17px;
+  overflow: hidden;
+  padding-bottom: 6px;
+  border-bottom: 1px solid gainsboro;
 }
 
-.test-margin {
-  margin: 10px 20px 30px 40px;
+header .row {
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 2%;
+}
+
+header .row .logo {
+  width: 50px;
+  font-size: 25px;
+  color: #8f8f8f;
+  float: left;
+  display: block;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 750px) {
+  header .row .logo {
+    float: none;
+  }
+}
+
+header .row nav {
+  float: right;
+  width: 60%;
+}
+
+header .row nav ul {
+  list-style: none;
+  overflow: hidden;
+  text-align: right;
+  float: right;
+}
+
+header .row nav ul li {
+  display: inline-block;
+  margin-left: 35px;
+  line-height: 1.5;
+}
+
+@media (max-width: 750px) {
+  header .row nav ul li {
+    width: 100%;
+    padding: 7px 0;
+    margin: 0;
+  }
+}
+
+header .row nav ul a {
+  color: #888888;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+@media (max-width: 750px) {
+  header .row nav ul {
+    padding-top: 10px;
+    margin-bottom: 22px;
+    float: left;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 750px) {
+  header .row nav {
+    width: 100%;
+  }
+}
+
+header .row .mobile-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  right: 22px;
+  top: 0;
+  width: 30px;
+}
+
+header .row .mobile-toggle span {
+  width: 30px;
+  height: 4px;
+  margin-bottom: 6px;
+  border-radius: 1000px;
+  background: #8f8f8f;
+  display: block;
+}
+
+@media (max-width: 750px) {
+  header .row .mobile-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 750px) {
+  header {
+    padding-top: 25px;
+  }
 }
 

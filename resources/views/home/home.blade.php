@@ -1,5 +1,7 @@
 @extends('layouts.layouts')
 
 @section('content')
-  Laravel
+    @component('components.navbar')
+    @endcomponent
+
 @endsection

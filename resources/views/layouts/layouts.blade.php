@@ -13,6 +13,7 @@
     <script src="https://unpkg.com/vue-router@3.0.1"></script>
 
     <!-- CSS -->
+    <!-- hrefの書き方間違えると公開側でlinkがhttpになって弾かれるので注意しよう -->
     <link href="/css/main.css" rel="stylesheet" type="text/css">
 
     <!-- icon -->
