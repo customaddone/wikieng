@@ -4,4 +4,6 @@
     @component('components.navbar')
     @endcomponent
 
+    @component('components.footer')
+    @endcomponent
 @endsection

@@ -1,0 +1,46 @@
+footer {
+    position: fixed;
+    left:0;
+    bottom:0;
+    width: 100%;
+    margin-bottom: 25px;
+    overflow: hidden;
+    padding-top: 6px;
+    border-top: 1px solid gainsboro;
+
+    a {
+      text-decoration: none;
+    }
+
+    .row {
+        width: 100%;
+        max-width: 940px;
+        margin: 0 auto;
+        position: relative;
+        padding: 0;
+
+        li {
+            float:left;
+            width:25%;
+            padding-bottom: 15px;
+            list-style-type: none;
+            text-align: center;
+            box-sizing: border-box;
+            border-left: 1px solid gainsboro;
+
+            &:last-child {
+                border-right: 1px solid gainsboro;
+            }
+
+            a {
+                color: #888888;
+                text-transform: uppercase;
+                font-size: 12px;
+            }
+        }
+    }
+
+    @media (max-width: 750px) {
+        margin-bottom: 25px;
+    }
+}
