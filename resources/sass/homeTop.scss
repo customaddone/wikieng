@@ -1,0 +1,22 @@
+main {
+    width: 100%;
+    padding-top: 17px;
+    padding-bottom: 6px;
+
+    .row {
+        width: 100%;
+        max-width: 940px;
+        margin: 0 auto;
+        padding: 0 2%;
+
+        .content {
+            display: block;
+            float: left;
+            width: 33%;
+
+            @media (max-width: 750px) {
+                width: 100%;
+            }
+        }
+    }
+}

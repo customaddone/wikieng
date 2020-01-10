@@ -113,6 +113,31 @@ header .row .mobile-toggle span {
   }
 }
 
+main {
+  width: 100%;
+  padding-top: 17px;
+  padding-bottom: 6px;
+}
+
+main .row {
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+
+main .row .content {
+  display: block;
+  float: left;
+  width: 33%;
+}
+
+@media (max-width: 750px) {
+  main .row .content {
+    width: 100%;
+  }
+}
+
 footer {
   position: fixed;
   left: 0;
