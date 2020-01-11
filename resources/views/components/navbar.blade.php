@@ -5,7 +5,15 @@
 <header>
 
     <div class="row"　id="header">
-        <a class="logo" href="#">P/F</a>
+        <div class="logo">
+            <div class="find">
+                <a href="#">P/F</a>
+                <form method="get" action="#" class="search_container">
+                    <input type="text" size="25" placeholder="　キーワード検索">
+                    <i class="fa fa-search "></i>
+                </form>
+            </div>
+        </div>
 
         <div @click="toggle=!toggle" class="mobile-toggle">
             <span></span>
@@ -13,7 +21,7 @@
             <span></span>
         </div>
 
-        <nav v-if="toggle">
+        <nav v-if="toggle" class="toggle">
             <ul>
                 <li><a href=".sec01">Section 01</a></li>
                 <li><a href=".sec02">Section 02</a></li>

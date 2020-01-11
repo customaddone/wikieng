@@ -4,6 +4,7 @@ header {
   overflow: hidden;
   padding-bottom: 6px;
   border-bottom: 1px solid gainsboro;
+  background-color: #fff;
 }
 
 header a {
@@ -19,13 +20,52 @@ header .row {
 }
 
 header .row .logo {
-  width: 50px;
   font-size: 25px;
   color: #8f8f8f;
-  float: left;
-  display: block;
   line-height: 1;
   margin-bottom: 10px;
+}
+
+header .row .logo a {
+  float: left;
+  display: block;
+  font-size: 35px;
+  color: #8f8f8f;
+}
+
+header .row .logo .find .search_container {
+  margin-top: 1px;
+  margin-left: 10px;
+  float: left;
+  display: block;
+  background-color: white;
+  width: 255px;
+  height: 30px;
+  border: 1px gainsboro solid;
+  border-radius: 15px;
+}
+
+header .row .logo .find .search_container input {
+  vertical-align: top;
+  margin: 0 0 0 10px;
+  width: 160px;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+  outline: 0;
+}
+
+header .row .logo .find .search_container i {
+  float: right;
+  margin: 5px 8px 0 0;
+  font-size: 2rem;
+}
+
+@media (max-width: 320px) {
+  header .row .logo .find .search_container {
+    width: 200px;
+  }
 }
 
 @media (max-width: 750px) {
@@ -63,7 +103,7 @@ header .row nav ul li {
 header .row nav ul a {
   color: #888888;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 750px) {
@@ -103,13 +143,14 @@ header .row .mobile-toggle span {
 
 @media (max-width: 750px) {
   header .row .mobile-toggle {
+    margin-top: 5px;
     display: block;
   }
 }
 
 @media (max-width: 750px) {
   header {
-    padding-top: 25px;
+    padding: 10px 0 10px 0;
   }
 }
 
@@ -117,25 +158,206 @@ main {
   width: 100%;
   padding-top: 17px;
   padding-bottom: 6px;
+  margin: 0;
+}
+
+main h1,
+main p {
+  color: #333;
 }
 
 main .row {
   width: 100%;
   max-width: 940px;
   margin: 0 auto;
-  padding: 0 2%;
+  padding: 10px 0 0 0;
+  background-color: #fff;
 }
 
-main .row .content {
+main .row .top-image {
+  padding-bottom: 15px;
+}
+
+main .row .top-image .image-heading {
+  margin: 0 2%;
+}
+
+main .row .top-image .image-heading .image-heading-block-icon {
   display: block;
   float: left;
-  width: 33%;
+  background-color: rgba(200, 200, 200, 0.4);
+}
+
+main .row .top-image .image-heading .image-heading-block-icon i {
+  width: 80%;
+  color: #fff;
+  font-size: 4.8rem;
 }
 
 @media (max-width: 750px) {
-  main .row .content {
-    width: 100%;
+  main .row .top-image .image-heading .image-heading-block-icon i {
+    font-size: 3.6rem;
   }
+}
+
+main .row .top-image .image-heading .image-heading-block-text {
+  display: block;
+  float: left;
+  margin-left: 15px;
+  margin-bottom: 5px;
+}
+
+main .row .top-image .image-heading .image-heading-block-text p {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+main .row .top-image .image-heading .image-heading-block-text .text1 {
+  font-size: 1.8rem;
+}
+
+@media (max-width: 750px) {
+  main .row .top-image .image-heading .image-heading-block-text p {
+    font-size: 1rem;
+  }
+
+  main .row .top-image .image-heading .image-heading-block-text .text1 {
+    font-size: 1.5rem;
+  }
+}
+
+main .row .top-image .image-heading-image {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+main .row .top-image .image-heading-image .title-box {
+  position: absolute;
+  margin: auto;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+main .row .top-image .image-heading-image .title-box h1 {
+  font-size: 4.8rem;
+  color: #fff;
+}
+
+main .row .top-image .image-heading-image .title-box p {
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+@media (max-width: 750px) {
+  main .row .top-image .image-heading-image .title-box h1 {
+    font-size: 3.2rem;
+    color: #fff;
+  }
+
+  main .row .top-image .image-heading-image .title-box p {
+    font-size: 1.6rem;
+    color: #fff;
+  }
+}
+
+main .row .top-image .image-heading-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+main .row .top-image .image-heading-text {
+  padding: 0 2%;
+}
+
+main .row .top-image .image-heading-text p {
+  font-size: 1.4rem;
+}
+
+@media (max-width: 750px) {
+  main .row .top-image .image-heading-text p {
+    font-size: 1rem;
+  }
+}
+
+main .row .top-image .image-heading-text h1 {
+  margin: 0;
+}
+
+main .row .top-image .image-heading-text i {
+  color: #1E90FF;
+  font-size: 1.6rem;
+  float: left;
+}
+
+main .row .top-image .image-heading-text a {
+  color: #1E90FF;
+  font-size: 1.4rem;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+main .row .contents-box {
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+main .row .contents-box .content {
+  display: block;
+  float: left;
+  width: 30.7%;
+  margin-left: 2%;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-bottom: 1px solid gainsboro;
+}
+
+main .row .contents-box .content h1 {
+  margin-bottom: 0;
+}
+
+main .row .contents-box .content i {
+  margin: 25px;
+  display: block;
+  float: left;
+  color: #888;
+  font-size: 4.8rem;
+}
+
+main .row .contents-box .content .yellow {
+  color: #FFBF11;
+}
+
+main .row .contents-box .content .orange {
+  color: #FF5A36;
+}
+
+main .row .contents-box .content .green {
+  color: #009999;
+}
+
+main .row .contents-box .content .content-text {
+  display: block;
+  float: left;
+}
+
+main .row .contents-box .content .content-text p {
+  display: block;
+  float: left;
+}
+
+@media (max-width: 750px) {
+  main .row .contents-box .content {
+    width: 96%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+  }
+}
+
+main .row .content-foot {
+  margin-top: 500px;
 }
 
 footer {
@@ -143,10 +365,11 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  margin-bottom: 25px;
+  padding-bottom: 25px;
   overflow: hidden;
   padding-top: 6px;
   border-top: 1px solid gainsboro;
+  background-color: #fff;
 }
 
 footer a {
@@ -178,12 +401,16 @@ footer .row li:last-child {
 footer .row li a {
   color: #888888;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 
-@media (max-width: 750px) {
-  footer {
-    margin-bottom: 25px;
-  }
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #eee;
+  margin: 0;
+  padding: 0;
 }
 

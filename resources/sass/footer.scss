@@ -3,10 +3,11 @@ footer {
     left:0;
     bottom:0;
     width: 100%;
-    margin-bottom: 25px;
+    padding-bottom: 25px;
     overflow: hidden;
     padding-top: 6px;
     border-top: 1px solid gainsboro;
+    background-color: #fff;
 
     a {
       text-decoration: none;
@@ -35,12 +36,8 @@ footer {
             a {
                 color: #888888;
                 text-transform: uppercase;
-                font-size: 12px;
+                font-size: 1.2rem;
             }
         }
-    }
-
-    @media (max-width: 750px) {
-        margin-bottom: 25px;
     }
 }

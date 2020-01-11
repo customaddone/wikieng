@@ -1,3 +1,13 @@
 @import 'header.scss';
 @import 'homeTop.scss';
 @import 'footer.scss';
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #eee;
+  margin: 0;
+  padding: 0;
+}
