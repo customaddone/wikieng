@@ -2,7 +2,8 @@ var vm = new Vue({
     el: 'header',
 
     data: {
-        toggle: false
+        toggle: false,
+        searchWord: ""
     },
 
     methods: {

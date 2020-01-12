@@ -1,5 +1,13 @@
 section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    margin-top: 55px;
+    background-color: rgba(0, 0, 0, 0.5);
+
     ul {
+        border-top: 1px solid gainsboro;
         max-width: 940px;
         margin: 0 auto;
         margin-top: 10px;

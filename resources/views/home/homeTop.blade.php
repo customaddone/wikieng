@@ -71,7 +71,6 @@
     </main>
 
     <!-- 他のscssはheader,footerでくくっているので下記のcssとコンフリクトしない -->
-    <script src="/js/homeTop.js" type="text/javascript"></script>
 
     @component('components.footer')
     @endcomponent
