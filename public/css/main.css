@@ -154,6 +154,45 @@ header .row .mobile-toggle span {
   }
 }
 
+section ul {
+  max-width: 940px;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 0;
+}
+
+section ul li {
+  width: 48%;
+  height: 70px;
+  margin: 0 1%;
+  float: left;
+  display: block;
+  list-style: none;
+  background-color: #fff;
+  border-bottom: 1px solid gainsboro;
+}
+
+section ul li .result-box {
+  height: 60px;
+  margin: 0 2%;
+  overflow: hidden;
+}
+
+section ul li .result-box h1 {
+  margin-top: 7px;
+  margin-bottom: 0;
+}
+
+section ul li .result-box p {
+  margin-top: 0;
+}
+
+@media (max-width: 750px) {
+  section ul li {
+    width: 98%;
+  }
+}
+
 main {
   width: 100%;
   padding-top: 17px;

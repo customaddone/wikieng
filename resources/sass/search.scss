@@ -1,0 +1,38 @@
+section {
+    ul {
+        max-width: 940px;
+        margin: 0 auto;
+        margin-top: 10px;
+        padding: 0;
+
+        li {
+            width: 48%;
+            height: 70px;
+            margin: 0 1%;
+            float: left;
+            display: block;
+            list-style: none;
+            background-color: #fff;
+            border-bottom: 1px solid gainsboro;
+
+            .result-box {
+                height: 60px;
+                margin: 0 2%;
+                overflow: hidden;
+
+                h1 {
+                    margin-top: 7px;
+                    margin-bottom: 0
+                }
+
+                p {
+                    margin-top: 0;
+                }
+            }
+
+            @media (max-width: 750px) {
+                width: 98%;
+            }
+        }
+    }
+}
