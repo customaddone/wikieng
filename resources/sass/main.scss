@@ -1,15 +1,14 @@
-$background-color: #ffdab9;
-$color: #0000DD;
-$margin: 10px 20px 30px 40px;
+@import 'header.scss';
+@import 'search.scss';
+@import 'homeTop.scss';
+@import 'footer.scss';
+
+html {
+  font-size: 62.5%;
+}
 
 body {
-  background-color: $background-color;
-}
-
-p {
-  color: $color;
-}
-
-.test-margin {
-  margin: $margin;
+  background-color: #eee;
+  margin: 0;
+  padding: 0;
 }

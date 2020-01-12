@@ -1,0 +1,201 @@
+main {
+    width: 100%;
+    padding-top: 17px;
+    padding-bottom: 6px;
+    margin: 0;
+
+    h1, p {
+        color: #333;
+    }
+
+    .row {
+        width: 100%;
+        max-width: 940px;
+        margin: 0 auto;
+        padding: 10px 0 0 0;
+        background-color: #fff;
+
+        .top-image {
+            padding-bottom: 15px;
+
+            .image-heading {
+                margin: 0 2%;
+
+                .image-heading-block-icon {
+                    display: block;
+                    float: left;
+                    background-color: rgba(200, 200, 200, 0.4);
+
+                    i {
+                        width: 80%;
+                        color: #fff;
+                        font-size: 4.8rem;
+                    }
+
+                    @media (max-width: 750px) {
+                        i {
+                            font-size: 3.6rem;
+                        }
+                    }
+                }
+
+                .image-heading-block-text {
+                    display: block;
+                    float: left;
+                    margin-left: 15px;
+                    margin-bottom: 5px;
+
+                    p {
+                        font-size: 1.3rem;
+                        margin: 0;
+                    }
+
+                    .text1 {
+                        font-size: 1.8rem
+                    }
+
+                    @media (max-width: 750px) {
+                        p {
+                            font-size: 1rem;
+                        }
+
+                        .text1 {
+                            font-size: 1.5rem
+                        }
+                    }
+                }
+            }
+
+            .image-heading-image {
+                position: relative;
+                margin-bottom: 15px;
+
+                .title-box {
+                    position: absolute;
+                    margin: auto;
+                    top: 25%;
+                    left: 25%;
+                    width: 50%;
+                    text-align: center;
+                    background-color: rgba(0, 0, 0, 0.2);
+
+                    h1 {
+                        font-size: 4.8rem;
+                        color: #fff;
+                    }
+
+                    p {
+                        font-size: 1.6rem;
+                        color: #fff;
+                    }
+
+                    @media (max-width: 750px) {
+                        h1 {
+                            font-size: 3.2rem;
+                            color: #fff;
+                        }
+
+                        p {
+                            font-size: 1.6rem;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+
+            .image-heading-text {
+                padding: 0 2%;
+
+                p {
+                    font-size: 1.4rem;
+
+                    @media (max-width: 750px) {
+                        font-size: 1rem;
+                    }
+                }
+
+                h1 {
+                    margin: 0;
+                }
+
+                i {
+                    color: #1E90FF;
+                    font-size: 1.6rem;
+                    float: left;
+                }
+
+                a {
+                    color: #1E90FF;
+                    font-size: 1.4rem;
+                    margin-left: 10px;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .contents-box {
+            margin: 0 auto;
+            margin-top: 10px;
+
+            .content {
+                display: block;
+                float: left;
+                width: 30.7%;
+                margin-left: 2%;
+                background-color: #fff;
+                box-sizing: border-box;
+                border-bottom: 1px solid gainsboro;
+
+                h1 {
+                    margin-bottom: 0;
+                }
+
+                i {
+                    margin: 25px;
+                    display: block;
+                    float: left;
+                    color: #888;
+                    font-size: 4.8rem;
+                }
+
+                .yellow {
+                    color:  #FFBF11
+                }
+
+                .orange {
+                    color:  #FF5A36
+                }
+
+                .green {
+                    color:  #009999
+                }
+
+                .content-text {
+                    display: block;
+                    float: left;
+
+                    p {
+                        display: block;
+                        float: left;
+                    }
+                }
+
+                @media (max-width: 750px) {
+                    width: 96%;
+                    margin-right: 2%;
+                    margin-bottom: 2%;
+                }
+            }
+        }
+
+
+        .content-foot {
+            margin-top: 500px;
+        }
+    }
+}

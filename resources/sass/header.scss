@@ -1,0 +1,151 @@
+header {
+  //z-index: 999;
+    width: 100%;
+    padding-top: 17px;
+    overflow: hidden;
+    padding-bottom: 6px;
+    border-bottom: 1px solid gainsboro;
+    background-color: #fff;
+
+    a {
+      text-decoration: none;
+    }
+
+    .row {
+        width: 100%;
+        max-width: 940px;
+        margin: 0 auto;
+        position: relative;
+        padding: 0 2%;
+
+
+        .logo {
+            font-size: 25px;
+            color: #8f8f8f;
+            line-height: 1;
+            margin-bottom: 10px;
+
+            a {
+                float: left;
+                display: block;
+                font-size: 35px;
+                color: #8f8f8f;
+            }
+
+            .find {
+                .search_container {
+                    margin-top: 1px;
+                    margin-left: 10px;
+                    float: left;
+                    display: block;
+                    background-color: white;
+                    width: 255px;
+                    height: 30px;
+                    border: 1px gainsboro solid;
+                    border-radius: 15px;
+
+                    input {
+                        vertical-align: top;
+                        margin: 0 0 0 10px;
+                        width: 160px;
+                        height: 100%;
+                        box-sizing: border-box;
+                        background-color: transparent;
+                        border: none;
+                        outline: 0;
+                    }
+
+                    i {
+                        float: right;
+                        margin: 5px 8px 0 0;
+                        font-size: 2rem;
+                    }
+
+                    // IphoneSE
+                    @media (max-width: 320px) {
+                        width: 200px;
+                    }
+                }
+            }
+
+            @media (max-width: 750px) {
+                float: none;
+            }
+        }
+
+        nav {
+            float: right;
+            width: 60%;
+
+            ul {
+                list-style: none;
+                overflow: hidden;
+                text-align: right;
+                float: right;
+
+                li {
+                    display: inline-block;
+                    margin-left: 35px;
+                    line-height: 1.5;
+
+                    @media (max-width: 750px) {
+                        width: 100%;
+                        padding: 7px 0;
+                        margin: 0;
+                    }
+
+                }
+
+                a {
+                    color: #888888;
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                }
+
+                @media (max-width: 750px) {
+                    padding-top: 10px;
+                    margin-bottom: 22px;
+                    float: left;
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+
+            @media (max-width: 750px) {
+                width: 100%;
+            }
+        }
+
+        .mobile-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 20px;
+            position: absolute;
+            right: 22px;
+            top: 0;
+            width: 30px;
+
+            span {
+                width: 30px;
+                height: 4px;
+                margin-bottom: 6px;
+                border-radius: 1000px;
+                background: #8f8f8f;
+                display: block;
+            }
+
+            @media (max-width: 750px) {
+                margin-top: 5px;
+                display: block;
+            }
+        }
+
+        .toggle {
+
+        }
+    }
+
+    @media (max-width: 750px) {
+        padding: 10px 0 10px 0;
+    }
+}
