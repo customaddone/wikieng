@@ -55,6 +55,7 @@ header .row .logo .find .search_container input {
   background-color: transparent;
   border: none;
   outline: 0;
+  font-size: 16px;
 }
 
 header .row .logo .find .search_container i {
