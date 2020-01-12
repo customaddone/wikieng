@@ -9,7 +9,7 @@
             <div class="find">
                 <a href="#">P/F</a>
                 <form method="get" action="#" class="search_container">
-                    <input type="text" size="25" placeholder="　キーワード検索">
+                    <input class="input-form" type="text" size="25" placeholder="　キーワード検索">
                     <i class="fa fa-search "></i>
                 </form>
             </div>

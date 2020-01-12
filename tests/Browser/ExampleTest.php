@@ -16,8 +16,11 @@ class ExampleTest extends DuskTestCase
     public function testBasicExample()
     {
         $this->browse(function (Browser $browser) {
+            /* 検索フォームに'frank'と打つとfrankelの記事が出るようにする */
             $browser->visit('/')
-                    ->assertSee('P');
+                    ->type('.input-form', 'frank')
+                    ->screenshot('test')
+                    ->assertSee('frankel');
         });
     }
 }
