@@ -28,6 +28,10 @@ section {
                 overflow: hidden;
 
                 h1 {
+                    width: 100%;
+                    text-overflow: ellipsis;
+                    // ２行目突入を禁止する
+                    white-space: nowrap;
                     margin-top: 7px;
                     margin-bottom: 0
                 }

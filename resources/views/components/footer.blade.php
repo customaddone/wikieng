@@ -30,6 +30,3 @@
 
     </ul>
 </footer>
-
-<!-- header用js -->
-<script src="/js/homeTop.js" type="text/javascript"></script>

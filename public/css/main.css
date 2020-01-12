@@ -189,6 +189,9 @@ section ul li .result-box {
 }
 
 section ul li .result-box h1 {
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   margin-top: 7px;
   margin-bottom: 0;
 }

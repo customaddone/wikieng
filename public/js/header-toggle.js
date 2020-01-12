@@ -3,9 +3,46 @@ var vm = new Vue({
 
     data: {
         toggle: false,
-        searchWord: ""
+
+        /* 記事検索用データ */
+        searchWord: "",
+        query: {
+            format: 'json',
+            action: 'query',
+            list: "search",
+            origin: '*',
+            srlimit: 8,
+            srsearch: "",
+        },
+        url: "https://en.wikipedia.org/w/api.php",
+
+        searchResults: [],
+        /* 記事検索用データ */
     },
 
+    // 記事検索用関数
+    watch: {
+        searchWord: function(newSearch) {
+            this.searchResults = [];
+            this.query.srsearch = this.searchWord;
+
+            // queryの各パラメータを用いてwikiAPIを検索
+            axios.get(this.url, {params: this.query})
+                 .then((response) => {
+                     for(var i = 0; i < 8; i++) {
+                     // 検索結果から８つだけ取って配列に入れる
+                     if (this.searchResults.length < 8) {
+                        this.searchResults.push(response.data.query.search[i]);
+                     } else {
+                        this.searchResults.shift();
+                        this.searchResults.push(response.data.query.search[i]);
+                     }
+                 }})
+                 .catch(response => console.log(response));
+        }
+    },
+
+    // 右上の三本線を押してメニューを出す関数
     methods: {
         handleResize: function() {
             // 750(三本線ライン)を越えるとtoggleがtrue（メニュー常に表示）になる

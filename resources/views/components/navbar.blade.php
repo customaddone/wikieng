@@ -15,6 +15,7 @@
             </div>
         </div>
 
+        <!-- toggle メニューが表示される-->
         <div @click="toggle=!toggle" class="mobile-toggle">
             <span></span>
             <span></span>
@@ -29,43 +30,26 @@
                 <li><a href=".sec04">Section 04</a></li>
             </ul>
         </nav>
-    </div> <!-- / row -->
+        <!-- toggle メニューが表示される-->
+        
+    </div>
 
+    <!-- 検索結果表示 -->
     <section class="search" v-if="searchWord.length > 0">
         <ul>
-            <li class="result">
+            <li class="result" v-for="(searchResult, index) in searchResults" v-bind:key="index">
                 <div class="result-box">
                     <h1>
-                        あ
+                        @{{ searchResult.title }}
                     </h1>
                     <p>
-                        size（記事サイズ）, wordcount（記事の単語数）, timestamp（記事の最終更新日時）, score（検索エンジンのスコア）, snippet（記事中の検索語を含む部分）
-                    </p>
-                </div>
-            </li>
-            <li class="result">
-                <div class="result-box">
-                    <h1>
-                        あ
-                    </h1>
-                    <p>
-                        size（記事サイズ）, wordcount（記事の単語数）, timestamp（記事の最終更新日時）, score（検索エンジンのスコア）, snippet（記事中の検索語を含む部分）
-                    </p>
-                </div>
-            </li>
-            <li class="result">
-                <div class="result-box">
-                    <h1>
-                        あ
-                    </h1>
-                    <p>
-                        size（記事サイズ）, wordcount（記事の単語数）, timestamp（記事の最終更新日時）, score（検索エンジンのスコア）, snippet（記事中の検索語を含む部分）
-                        size（記事サイズ）, wordcount（記事の単語数）, timestamp（記事の最終更新日時）, score（検索エンジンのスコア）, snippet（記事中の検索語を含む部分）
+                        <div v-html="searchResult.snippet"></div>
                     </p>
                 </div>
             </li>
         </ul>
     </section>
+    <!-- 検索結果表示 -->
 
 </header>
 
