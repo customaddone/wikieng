@@ -31,21 +31,22 @@
             </ul>
         </nav>
         <!-- toggle メニューが表示される-->
-        
+
     </div>
 
     <!-- 検索結果表示 -->
     <section class="search" v-if="searchWord.length > 0">
         <ul>
             <li class="result" v-for="(searchResult, index) in searchResults" v-bind:key="index">
-                <div class="result-box">
+                <a :href="'searchArticleDetail/' + searchResult.title "
+                    class="result-box">
                     <h1>
                         @{{ searchResult.title }}
                     </h1>
                     <p>
                         <div v-html="searchResult.snippet"></div>
                     </p>
-                </div>
+                </a>
             </li>
         </ul>
     </section>

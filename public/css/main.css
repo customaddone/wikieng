@@ -184,17 +184,18 @@ section ul li {
 }
 
 section ul li .result-box {
-  height: 60px;
-  margin: 0 2%;
+  height: 65px;
+  display: block;
+  margin: 2%;
   overflow: hidden;
+  color: black;
 }
 
 section ul li .result-box h1 {
   width: 100%;
   text-overflow: ellipsis;
   white-space: nowrap;
-  margin-top: 7px;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 section ul li .result-box p {

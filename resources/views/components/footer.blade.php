@@ -1,28 +1,28 @@
 <footer>
     <ul class="row">
         <li>
-            <a href="#">
+            <a href="/">
 	            <i></i><br>
                 <span>ホーム</span>
             </a>
         </li>
 
         <li class="menu-width-max">
-            <a href="#">
+            <a href="/">
                 <i></i><br>
                 <span>おすすめ</span>
             </a>
         </li>
 
         <li>
- 	        <a href="" target="_blank">
+ 	        <a href="/" target="_blank">
 	            <i></i><br>
                 <span>読者登録</span>
             </a>
         </li>
 
         <li>
-            <a href="">
+            <a href="/">
 	            <i></i><br>
                 <span class="mini-text">Follow</span>
             </a>
