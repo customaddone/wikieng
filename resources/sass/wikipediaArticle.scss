@@ -1,12 +1,78 @@
-/* wikipedia用css*/
-.wikipedia-container {
-  margin: 0 auto;
-  width: 95%;
+.mw-parser-output {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 3%;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding-bottom: 300px;
+
+// ここで文字の設定
+div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, ins, em, img, small, strike, strong, sub, sup, tt, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, input, button, select, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: sans-serif;
+    font-size: 105%;
+    vertical-align: baseline;
+    color: #555;
+    background:none
 }
 
+table, caption, tbody, tfoot, thead, tr, th, td {
+    font-size:105%
+}
+
+p {
+  font-size: 16px;
+  line-height: 3rem;
+}
+
+caption {
+    font-weight:bold
+}
+
+button {
+    border: 0;
+    background-color: transparent;
+    cursor:pointer
+}
+
+input {
+    line-height:normal
+}
+
+ul {
+    list-style:none
+}
+
+table {
+    border-collapse:collapse
+}
+
+html, body {
+    height:100%
+}
+
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust:none
+}
+
+body {
+    background-color: #ffffff;
+    color: #222222;
+    margin: 0;
+    line-height:1
+}
+
+main {
+    display:block
+}
+// ここで文字の設定
+
 .client-js #mw-subcategories ul {
-    list-style: none none;
-    margin-left:0.25em
+list-style: none none;
+margin-left:0.25em
 }
 
 #mw-panel div.portal div.body .CategoryTreeTag {
@@ -547,62 +613,6 @@ a.mw-ui-button:hover, a.mw-ui-button:focus {
     .client-js [onclick] + .collapsible-block {
         display:block
     }
-}
-
-div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, ins, em, img, small, strike, strong, sub, sup, tt, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, input, button, select, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font: inherit;
-    font-size: 100%;
-    vertical-align: baseline;
-    background:none
-}
-
-table, caption, tbody, tfoot, thead, tr, th, td {
-    font-size:100%
-}
-
-caption {
-    font-weight:bold
-}
-
-button {
-    border: 0;
-    background-color: transparent;
-    cursor:pointer
-}
-
-input {
-    line-height:normal
-}
-
-ul {
-    list-style:none
-}
-
-table {
-    border-collapse:collapse
-}
-
-html, body {
-    height:100%
-}
-
-html {
-    font-size: 100%;
-    -webkit-text-size-adjust:none
-}
-
-body {
-    background-color: #ffffff;
-    color: #222222;
-    margin: 0;
-    line-height:1
-}
-
-main {
-    display:block
 }
 
 #content {
@@ -2175,4 +2185,5 @@ a.external--reference {
 
 .page-Main_Page #page-secondary-actions a {
     margin-top: 1em
+}
 }

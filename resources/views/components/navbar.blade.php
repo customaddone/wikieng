@@ -38,7 +38,7 @@
     <section class="search" v-if="searchWord.length > 0">
         <ul>
             <li class="result" v-for="(searchResult, index) in searchResults" v-bind:key="index">
-                <a :href="'searchArticleDetail/' + searchResult.title "
+                <a :href="'/searchArticleDetail/' + searchResult.title "
                     class="result-box">
                     <h1>
                         @{{ searchResult.title }}
