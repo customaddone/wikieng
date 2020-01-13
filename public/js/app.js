@@ -19280,15 +19280,27 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/sass/wikipediaArticle.scss":
+/*!**********************************************!*\
+  !*** ./resources/sass/wikipediaArticle.scss ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!**************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/main.scss ***!
-  \**************************************************************/
+/*!*****************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/main.scss ./resources/sass/wikipediaArticle.scss ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/fujisawakenyuu/sampleapp/laravel/wikieng/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/fujisawakenyuu/sampleapp/laravel/wikieng/resources/sass/main.scss */"./resources/sass/main.scss");
+__webpack_require__(/*! /Users/fujisawakenyuu/sampleapp/laravel/wikieng/resources/sass/main.scss */"./resources/sass/main.scss");
+module.exports = __webpack_require__(/*! /Users/fujisawakenyuu/sampleapp/laravel/wikieng/resources/sass/wikipediaArticle.scss */"./resources/sass/wikipediaArticle.scss");
 
 
 /***/ })

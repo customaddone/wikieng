@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('home.homeTop');
 });
 
-Route::get('/searchArticle/searchArticleDetail/{word}', function () {
+Route::get('/searchArticleDetail/{word}', function () {
     return view('articles.showArticleDetail');
 });
