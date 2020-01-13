@@ -24,8 +24,7 @@ class ExampleTest extends DuskTestCase
                     ->append('.input-form', 'kel')
                     ->pause(1000)
                     ->append('.input-form', ' ')
-                    ->pause(1000)
-                    ->append('.input-form', ' ')
+                    ->waitFor('.result-box')
                     ->pause(1000)
                     ->assertSee('horse')
                     ->screenShot('test');
