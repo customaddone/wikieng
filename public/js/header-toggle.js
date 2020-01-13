@@ -6,16 +6,6 @@ var vm = new Vue({
 
         /* 記事検索用データ */
         searchWord: "",
-        query: {
-            format: 'json',
-            action: 'query',
-            list: "search",
-            origin: '*',
-            srlimit: 8,
-            srsearch: "",
-        },
-        url: "https://en.wikipedia.org/w/api.php",
-
         searchResults: [],
         /* 記事検索用データ */
     },
@@ -24,10 +14,9 @@ var vm = new Vue({
     watch: {
         searchWord: function(newSearch) {
             this.searchResults = [];
-            this.query.srsearch = this.searchWord;
 
             // queryの各パラメータを用いてwikiAPIを検索
-            axios.get(this.url, {params: this.query})
+            axios.get("/api/searchArticle/" + newSearch)
                  .then((response) => {
                      for(var i = 0; i < 8; i++) {
                      // 検索結果から８つだけ取って配列に入れる

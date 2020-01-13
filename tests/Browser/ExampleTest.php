@@ -17,10 +17,13 @@ class ExampleTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             /* 検索フォームに'frankel'と打つとfrankelの記事が出るようにする */
+            /* guzzle使うと処理が遅くなるのか */
             $browser->visit('/')
                     ->type('.input-form', 'fran')
                     ->pause(1000)
                     ->append('.input-form', 'kel')
+                    ->pause(1000)
+                    ->append('.input-form', ' ')
                     ->pause(1000)
                     ->append('.input-form', ' ')
                     ->pause(1000)
