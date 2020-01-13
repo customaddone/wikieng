@@ -2,19 +2,20 @@
 <link href='https://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
 
 
-<header>
+<header id="header">
 
-    <div class="row"　id="header">
+    <div class="row">
         <div class="logo">
             <div class="find">
                 <a href="#">P/F</a>
                 <form method="get" action="#" class="search_container">
-                    <input type="text" size="25" placeholder="　キーワード検索">
+                    <input class="input-form" type="text" size="25" v-model="searchWord">
                     <i class="fa fa-search "></i>
                 </form>
             </div>
         </div>
 
+        <!-- toggle メニューが表示される-->
         <div @click="toggle=!toggle" class="mobile-toggle">
             <span></span>
             <span></span>
@@ -29,8 +30,26 @@
                 <li><a href=".sec04">Section 04</a></li>
             </ul>
         </nav>
+        <!-- toggle メニューが表示される-->
+        
+    </div>
 
-    </div> <!-- / row -->
+    <!-- 検索結果表示 -->
+    <section class="search" v-if="searchWord.length > 0">
+        <ul>
+            <li class="result" v-for="(searchResult, index) in searchResults" v-bind:key="index">
+                <div class="result-box">
+                    <h1>
+                        @{{ searchResult.title }}
+                    </h1>
+                    <p>
+                        <div v-html="searchResult.snippet"></div>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <!-- 検索結果表示 -->
 
 </header>
 

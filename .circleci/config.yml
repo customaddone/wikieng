@@ -58,7 +58,9 @@ jobs:
           background: true
       - run:
           name: run dusk
-          command: APP_URL=http://127.0.0.1:8000 php artisan dusk
+          command: |
+            composer require guzzlehttp/guzzle
+            APP_URL=http://127.0.0.1:8000 php artisan dusk
   deploy:
     docker:
       # Specify the version you desire here

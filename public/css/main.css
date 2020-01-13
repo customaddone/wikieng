@@ -1,4 +1,5 @@
 header {
+  z-index: 999;
   width: 100%;
   padding-top: 17px;
   overflow: hidden;
@@ -54,6 +55,7 @@ header .row .logo .find .search_container input {
   background-color: transparent;
   border: none;
   outline: 0;
+  font-size: 16px;
 }
 
 header .row .logo .find .search_container i {
@@ -154,6 +156,15 @@ header .row .mobile-toggle span {
   }
 }
 
+section {
+  position: absolute;
+  width: 100%;
+  height: 3000%;
+  z-index: 998;
+  margin-top: 46px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 section ul {
   max-width: 940px;
   margin: 0 auto;
@@ -179,6 +190,9 @@ section ul li .result-box {
 }
 
 section ul li .result-box h1 {
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   margin-top: 7px;
   margin-bottom: 0;
 }
@@ -404,7 +418,6 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  padding-bottom: 25px;
   overflow: hidden;
   padding-top: 6px;
   border-top: 1px solid gainsboro;
