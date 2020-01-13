@@ -17,4 +17,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// wikipedia記事検索
 Route::get("/searchArticle/{word}", "SearchController@searchArticle");

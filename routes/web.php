@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('home.homeTop');
 });
+
+Route::get('/searchArticle/searchArticleDetail/{word}', function () {
+    return view('articles.showArticleDetail');
+});
