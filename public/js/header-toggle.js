@@ -1,4 +1,4 @@
-var vm = new Vue({
+var head = new Vue({
     el: 'header',
 
     data: {

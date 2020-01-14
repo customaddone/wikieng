@@ -1,5 +1,5 @@
 <footer>
-    <ul class="row">
+    <ul class="row" id="footer-function">
         <li>
             <a href="/">
 	            <i></i><br>
@@ -8,7 +8,7 @@
         </li>
 
         <li class="menu-width-max">
-            <a href="/">
+            <a href="/myArticles">
                 <i></i><br>
                 <span>おすすめ</span>
             </a>
@@ -22,11 +22,12 @@
         </li>
 
         <li>
-            <a href="/">
+            <a href="#" @click="saveArticle">
 	            <i></i><br>
                 <span class="mini-text">Follow</span>
-            </a>
+            <a>
         </li>
-
     </ul>
 </footer>
+
+<script src="/js/footer-function.js" type="text/javascript"></script>
