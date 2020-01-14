@@ -22,3 +22,9 @@ Route::get("/searchArticle/{word}", "SearchController@searchArticle");
 
 // 検索記事表示
 Route::get("/searchArticleDetail/{word}", "SearchController@searchArticleDetail");
+
+// 検索記事表示
+Route::get("/searchArticleSummary/{word}", "SearchController@searchArticleSummary");
+
+// 記事のインポート用
+Route::post('/articles/import',  'ArticlesController@import');

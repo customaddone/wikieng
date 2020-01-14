@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('home.homeTop');
 });
 
+// 保存している記事一覧
+Route::get('/myArticles', 'ArticlesController@index');
+// 詳細表示
+Route::get('/articles/{id}', 'ArticlesController@show');
+
 Route::get('/searchArticleDetail/{word}', function () {
     return view('articles.showArticleDetail');
 });

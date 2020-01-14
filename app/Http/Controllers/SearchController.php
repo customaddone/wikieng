@@ -49,4 +49,17 @@ class SearchController extends Controller
             ]
         );
     }
+
+    // 記事の見出しを検索
+    public function searchArticleSummary($word)
+    {
+        return self::searchMediaWiki(
+            [
+                'format' => 'json',
+                'action' => 'query',
+                'prop' =>  'extracts',
+                'titles' => $word,
+            ]
+        );
+    }
 }

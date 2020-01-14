@@ -6,23 +6,24 @@
   box-sizing: border-box;
   background-color: #fff;
   padding-bottom: 300px;
+  font-size: 160%;
 }
 .mw-parser-output div, .mw-parser-output span, .mw-parser-output h1, .mw-parser-output h2, .mw-parser-output h3, .mw-parser-output h4, .mw-parser-output h5, .mw-parser-output h6, .mw-parser-output p, .mw-parser-output blockquote, .mw-parser-output pre, .mw-parser-output a, .mw-parser-output abbr, .mw-parser-output acronym, .mw-parser-output address, .mw-parser-output big, .mw-parser-output cite, .mw-parser-output code, .mw-parser-output del, .mw-parser-output ins, .mw-parser-output em, .mw-parser-output img, .mw-parser-output small, .mw-parser-output strike, .mw-parser-output strong, .mw-parser-output sub, .mw-parser-output sup, .mw-parser-output tt, .mw-parser-output b, .mw-parser-output u, .mw-parser-output i, .mw-parser-output center, .mw-parser-output dl, .mw-parser-output dt, .mw-parser-output dd, .mw-parser-output ol, .mw-parser-output ul, .mw-parser-output li, .mw-parser-output fieldset, .mw-parser-output form, .mw-parser-output label, .mw-parser-output legend, .mw-parser-output input, .mw-parser-output button, .mw-parser-output select, .mw-parser-output audio, .mw-parser-output video {
   margin: 0;
   padding: 0;
   border: 0;
   font-family: sans-serif;
-  font-size: 105%;
+  font-size: 100%;
   vertical-align: baseline;
   color: #555;
   background: none;
 }
-.mw-parser-output table, .mw-parser-output caption, .mw-parser-output tbody, .mw-parser-output tfoot, .mw-parser-output thead, .mw-parser-output tr, .mw-parser-output th, .mw-parser-output td {
-  font-size: 105%;
-}
 .mw-parser-output p {
-  font-size: 16px;
-  line-height: 3rem;
+  line-height: 4rem;
+}
+.mw-parser-output table, .mw-parser-output caption, .mw-parser-output tbody, .mw-parser-output tfoot, .mw-parser-output thead, .mw-parser-output tr, .mw-parser-output th, .mw-parser-output td {
+  font-size: 100%;
+  line-height: 4rem;
 }
 .mw-parser-output caption {
   font-weight: bold;
@@ -43,10 +44,6 @@
 }
 .mw-parser-output html, .mw-parser-output body {
   height: 100%;
-}
-.mw-parser-output html {
-  font-size: 100%;
-  -webkit-text-size-adjust: none;
 }
 .mw-parser-output body {
   background-color: #ffffff;

@@ -2,18 +2,20 @@ var vm = new Vue({
    el: '#showArticleDetail',
 
    data: {
-     encodeSearchWord: "",
-     showArticleDetail: ""
+     searchName: "",
+     showArticleDetail: "",
+     summary: ""
    },
 
    mounted: function () {
        var pathname= location.pathname;
-       var searchname = pathname.split("/");
+       this.searchName = pathname.split("/");
        // スペースをアンダーバーに変えてエンコード
-       var underVarJoin = searchname[2].split("%20").join('_')
-       this.encodeSearchWord = (searchname.length == 3) ? encodeURI(underVarJoin) : "";
+       var underVarJoin = this.searchName[2].split("%20").join('_')
+       var encodeSearchWord = (this.searchName.length == 3) ? encodeURI(underVarJoin) : "";
 
-       axios.get("/api/searchArticleDetail/" + this.encodeSearchWord)
+       // 記事本体の検索
+       axios.get("/api/searchArticleDetail/" + encodeSearchWord)
             .then((response) => {
 
               　this.showArticleDetail = response.data.parse.text["*"]
@@ -36,5 +38,15 @@ var vm = new Vue({
                 )
             })
             .catch(response => console.log(response));
+
+        // 記事見出しの検索
+        axios.get("/api/searchArticleSummary/" + encodeSearchWord)
+             .then((response) => {
+                  var keyId = Object.keys(response.data.query.pages)
+                  this.summary = response.data.query.pages[keyId].extract
+                                     .replace(/<.+?>/g, "")
+                                     .slice(0, 120);
+             })
+        .catch(response => console.log(response));
     },
 })
