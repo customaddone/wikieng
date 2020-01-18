@@ -41,3 +41,12 @@ services:
       dockerfile: docker/selenium/Dockerfile
     ports:
       - '4444:4444'
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=example.cw5hony92ugy.ap-northeast-1.rds.amazonaws.com
+      - PMA_USER=root
+      - PMA_PASSWORD=topsecret
+    ports:
+      - 8080:80

@@ -28,6 +28,16 @@ resource "aws_ecs_task_definition" "sample-task" {
   network_mode  = "bridge"
 }
 
+data "template_file" "migrate_container_definition" {
+    template = file("./container_definitions_migration.json.tpl")
+}
+
+resource "aws_ecs_task_definition" "sample-app-migrate" {
+    family = "sample-app-migrate"
+    container_definitions = data.template_file.migrate_container_definition.rendered
+    task_role_arn = data.terraform_remote_state.iam.outputs.ecs_role_arn
+    network_mode  = "bridge"
+}
 
 
 data "terraform_remote_state" "vpc" {

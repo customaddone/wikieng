@@ -5,3 +5,7 @@ resource "aws_cloudwatch_log_group" "sample-service" {
 resource "aws_cloudwatch_log_group" "app" {
   name = "app"
 }
+
+resource "aws_cloudwatch_log_group" "migration" {
+  name = "migration"
+}

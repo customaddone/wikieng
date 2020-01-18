@@ -19,6 +19,9 @@ yarn-error.log
 /terraform/**/*.tfstate
 /terraform/**/*.tfstate.*
 
+/terraform/ec2/*.pem
+/terraform/ec2/*.pem.*
+
 # Crash log files
 /terraform/crash.log
 

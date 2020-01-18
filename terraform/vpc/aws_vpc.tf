@@ -22,3 +22,7 @@ resource "aws_vpc" "example" {
 output "example_id" {
   value = aws_vpc.example.id
 }
+
+output "cidr_block" {
+  value = aws_vpc.example.cidr_block 
+}

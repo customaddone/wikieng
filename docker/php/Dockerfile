@@ -40,3 +40,5 @@ RUN set -x \
 USER ${UNAME}
 
 EXPOSE 9000
+
+RUN ls
