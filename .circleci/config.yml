@@ -100,9 +100,9 @@ jobs:
             aws ecs describe-task-definition --task-definition example | jq '.taskDefinition | { containerDefinitions: .containerDefinitions }' > task_definition.json
             aws ecs register-task-definition --family example --cli-input-json file://task_definition.json
             aws ecs update-service --cluster sample-ecs-cluster --service example --task-definition example
-      - run:
-          name: migration # マイグレーションタスクを実行
-          command: aws ecs run-task --cluster sample-ecs-cluster --task-definition sample-app-migrate
+      #- run:
+          #name: migration # マイグレーションタスクを実行
+          #command: aws ecs run-task --cluster sample-ecs-cluster --task-definition sample-app-migrate
 
 workflows:
   version: 2

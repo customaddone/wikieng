@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home.homeTop');
 });
 
 // 保存している記事一覧
@@ -24,6 +24,7 @@ Route::get('/searchArticleDetail/{word}', function () {
     return view('articles.showArticleDetail');
 });
 
+// 認証用
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

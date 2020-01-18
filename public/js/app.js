@@ -49595,10 +49595,21 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/sass/app.scss":
-/*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
-  \*********************************/
+/***/ "./resources/sass/main.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/main.scss ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/wikipediaArticle.scss":
+/*!**********************************************!*\
+  !*** ./resources/sass/wikipediaArticle.scss ***!
+  \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -49607,14 +49618,15 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
-  \*************************************************************/
+/*!*****************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/main.scss ./resources/sass/wikipediaArticle.scss ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/fujisawakenyuu/sampleapp/laravel/wikieng/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/fujisawakenyuu/sampleapp/laravel/wikieng/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/fujisawakenyuu/sampleapp/laravel/wikieng/resources/sass/main.scss */"./resources/sass/main.scss");
+module.exports = __webpack_require__(/*! /Users/fujisawakenyuu/sampleapp/laravel/wikieng/resources/sass/wikipediaArticle.scss */"./resources/sass/wikipediaArticle.scss");
 
 
 /***/ })
