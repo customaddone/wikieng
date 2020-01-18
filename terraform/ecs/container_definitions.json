@@ -38,11 +38,5 @@
          "awslogs-stream-prefix": "app"
        }
      },
-     "environment": [
-       {
-         "name": "APP_KEY",
-         "value": "base64:Rha6fhgYifnvVBnwm81FCal18ULvEgiMnqpLLwlvyKI="
-       }
-     ]
    }
 ]

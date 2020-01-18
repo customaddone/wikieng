@@ -2,11 +2,12 @@ resource "aws_db_instance" "example" {
   identifier                 = "example"
   engine                     = "mysql"
   engine_version             = "5.7.25"
-  instance_class             = "db.t1.small"
+  instance_class             = "db.t3.small"
   allocated_storage          = 20
   max_allocated_storage      = 100
   storage_type               = "gp2"
   storage_encrypted          = true
+  name                       = "wikieng"
   username                   = "root"
   password                   = "topsecret"
   multi_az                   = true
@@ -33,7 +34,7 @@ module "mysql_sg" {
   name        = "mysql-sg"
   vpc_id      = data.terraform_remote_state.vpc.outputs.example_id
   port        = 3306
-  cidr_blocks = ["0.0.0.0/0"]
+  cidr_blocks = [data.terraform_remote_state.vpc.outputs.cidr_block]
 }
 
 data "terraform_remote_state" "vpc" {

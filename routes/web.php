@@ -23,3 +23,8 @@ Route::get('/articles/{id}', 'ArticlesController@show');
 Route::get('/searchArticleDetail/{word}', function () {
     return view('articles.showArticleDetail');
 });
+
+// 認証用
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
