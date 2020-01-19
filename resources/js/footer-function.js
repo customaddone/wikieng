@@ -1,10 +1,6 @@
 var foot = new Vue({
     el: '#footer-function',
 
-    data: {
-        selectedObject: vm.selectedObjectForSend,
-    },
-
     // 記事のインポート
     methods: {
         saveArticle: function () {
@@ -28,10 +24,6 @@ var foot = new Vue({
 
             });
         },
-
-        hello: function() {
-          alert(vm.selectedObjectForSend);
-        }
     }
     // 記事のインポート
 })

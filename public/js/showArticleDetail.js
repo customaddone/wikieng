@@ -6,9 +6,8 @@ var vm = new Vue({
      showArticleDetail: "",
      summary: "",
 
-     // 青枠で範囲指定したもの footerに渡す
-     selectedObjectForSend: "あ",
-     nowHighlightColor: "FF89FF"
+     // ハイライトの色
+     nowHighlightColor: "#ff89ff"
    },
 
    mounted: function () {
@@ -18,7 +17,7 @@ var vm = new Vue({
        var underVarJoin = this.searchName[2].split("%20").join('_')
        var encodeSearchWord = (this.searchName.length == 3) ? encodeURI(underVarJoin) : "";
 
-       // 記事本体の検索
+       /* 記事本体の検索 */
        axios.get("/api/searchArticleDetail/" + encodeSearchWord)
             .then((response) => {
 
@@ -53,16 +52,49 @@ var vm = new Vue({
              })
         .catch(response => console.log(response));
     },
+    /* 記事本体の検索 */
 
-    // 記事内で青枠で範囲指定した文字列を取り込む
     methods: {
+        /* ハイライトを描く */
         selected: function() {
             // 現在青枠で囲んでいる範囲を取得して、その後Rangeオブジェクトを取得
             var selection = window.getSelection();
             var range = selection.getRangeAt(0);
+            // HTML要素spanを生成
             var span = document.createElement("span");
-            span.style.backgroundColor = "#ffff00";
+            // 色を指定
+            span.style.backgroundColor = this.nowHighlightColor;
+            // 範囲選択した要素をspanで囲む
             range.surroundContents(span);
+        },
+        /* ハイライトを描く */
+
+        /* ハイライトを消す */
+        clicked: function() {
+            var selection = window.getSelection();
+            // 選択した部分の最初のRangeオブジェクトを取得
+            // 親ノード内の一番先頭のノード
+            var startRange = selection.getRangeAt(0).startContainer;
+
+            // ハイライトを消す関数を宣言
+            var deleteHighlight = function (child) {
+                while (child) {
+                    // startRangeのノードがSPANだった場合処理実行、そうでなければ素通りして次のノードに
+                    if (child.nodeName == "SPAN") {
+                        // 範囲指定した部分のテキストをtextノードにする
+                        var insertChild = document.createTextNode(child.textContent);
+                        // 親ノード取得
+                        var palent = child.parentNode;
+                        palent.insertBefore(insertChild, child);
+                        child.parentNode.removeChild(child);
+                    }
+
+                    child = child.previousSibling;
+                }
+            }
+
+            deleteHighlight(startRange)
         }
+        /* ハイライトを消す */
     }
 })
