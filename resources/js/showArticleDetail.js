@@ -4,7 +4,11 @@ var vm = new Vue({
    data: {
      searchName: "",
      showArticleDetail: "",
-     summary: ""
+     summary: "",
+
+     // 青枠で範囲指定したもの footerに渡す
+     selectedObjectForSend: "あ",
+     nowHighlightColor: "FF89FF"
    },
 
    mounted: function () {
@@ -49,4 +53,16 @@ var vm = new Vue({
              })
         .catch(response => console.log(response));
     },
+
+    // 記事内で青枠で範囲指定した文字列を取り込む
+    methods: {
+        selected: function() {
+            // 現在青枠で囲んでいる範囲を取得して、その後Rangeオブジェクトを取得
+            var selection = window.getSelection();
+            var range = selection.getRangeAt(0);
+            var span = document.createElement("span");
+            span.style.backgroundColor = "#ffff00";
+            range.surroundContents(span);
+        }
+    }
 })

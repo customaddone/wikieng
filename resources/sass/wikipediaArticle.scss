@@ -28,29 +28,29 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 
 caption {
-    font-weight:bold
+    font-weight:bold;
 }
 
 button {
     border: 0;
     background-color: transparent;
-    cursor:pointer
+    cursor:pointer;
 }
 
 input {
-    line-height:normal
+    line-height:normal;
 }
 
 ul {
-    list-style:none
+    list-style:none;
 }
 
 table {
-    border-collapse:collapse
+    border-collapse:collapse;
 }
 
 html, body {
-    height:100%
+    height:100%;
 }
 
 body {
@@ -61,13 +61,13 @@ body {
 }
 
 main {
-    display:block
+    display:block;
 }
 // ここで文字の設定
 
 .client-js #mw-subcategories ul {
-list-style: none none;
-margin-left:0.25em
+    list-style: none none;
+    margin-left:0.25em
 }
 
 #mw-panel div.portal div.body .CategoryTreeTag {
@@ -610,6 +610,7 @@ a.mw-ui-button:hover, a.mw-ui-button:focus {
     }
 }
 
+
 #content {
     border-top: 1px solid transparent;
     padding-bottom:32px
@@ -856,24 +857,24 @@ input.search::-webkit-search-decoration, input.search::-webkit-search-cancel-but
 .page-actions-menu__list-item:first-child {
     flex-grow: 1;
     justify-content: flex-start;
-    margin-left:-8px;
+    margin-left:-8px
 }
 
 .page-actions-menu__list-item:last-child {
-    margin-right:-8px;
+    margin-right:-8px
 }
 
 .page-actions-overflow-list {
     top: 100%;
-    right:-0.75em;
+    right:-0.75em
 }
 
 .client-nojs .watch-this-article {
-    visibility:hidden;
+    visibility:hidden
 }
 
 .client-nojs .is-authenticated .watch-this-article {
-    visibility:visible;
+    visibility:visible
 }
 
 @media all and (max-width: 320px - 1) {
@@ -1056,238 +1057,6 @@ footer > .post-content .hlist, footer > .post-content .license {
     }
 }
 
-@media print and (max-device-width: 720px) {
-    @page {
-        margin:50px 0
-    }
-
-    html {
-        padding:0 50px
-    }
-
-    .header-container {
-        background: #ffffff !important;
-        box-shadow:none !important
-    }
-
-    .header {
-        border-top: 0;
-        display: block;
-        height: auto;
-        padding:0 16px
-    }
-
-    .header .branding-box {
-        padding-left:0 !important
-    }
-
-    .header .branding-box sup {
-        display:none !important
-    }
-
-    .header > div {
-        display:none !important
-    }
-
-    .header > .branding-box {
-        height: auto;
-        display: block !important;
-        padding:0 0 51px 50px
-    }
-
-    .header > .branding-box h1 {
-        font-size:inherit
-    }
-
-    .header > .branding-box h1 > * {
-        float:none
-    }
-
-    .header > .branding-box h1 img {
-        height: 41px;
-        width: auto;
-        vertical-align:inherit
-    }
-
-    .hatnote {
-        display:none
-    }
-
-    .pre-content {
-        display: block;
-        padding:51px 0 35px
-    }
-
-    .pre-content h1 {
-        font-size: 70px;
-        font-weight: normal;
-        font-style: italic;
-        font-stretch: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        text-align: left;
-        color:#000000
-    }
-
-    .pre-content .tagline {
-        font-size:36px
-    }
-
-    .pre-content #page-actions {
-        display:none
-    }
-
-    #bodyContent {
-        padding-top: 55px;
-        position:relative
-    }
-
-    #bodyContent:before {
-        top:0
-    }
-
-    .thumbinner {
-        width:auto !important
-    }
-
-    .thumbinner > a {
-        width:100%
-    }
-
-    .thumb {
-        position: relative;
-        padding: 58px 0 !important;
-        text-align: left;
-        margin:0 !important
-    }
-
-    .thumb:after {
-        bottom:30px
-    }
-
-    .thumb:after, #bodyContent:before {
-        position: absolute;
-        left: 0;
-        content: '';
-        display: block;
-        width: 55px;
-        height: 2px;
-        background:#999999
-    }
-
-    .thumbcaption {
-        margin-top: 23px !important;
-        width: 100%;
-        font-style: italic;
-        font-size:28px
-    }
-
-    #mw-content-text {
-        font-size:36px
-    }
-
-    #mw-content-text a {
-        text-decoration: underline;
-        color:#222222
-    }
-
-    #mw-content-text blockquote {
-        color: #54595d;
-        padding: 5px 39px;
-        font-style:italic
-    }
-
-    #mw-content-text .section-heading {
-        border-bottom: 0;
-        padding-bottom: 0;
-        margin-bottom:16px
-    }
-
-    #mw-content-text h2 {
-        font-size:48px
-    }
-
-    #mw-content-text h3 {
-        font-size: 40px;
-        margin-bottom:13px
-    }
-
-    #mw-content-text h4, #mw-content-text h5, #mw-content-text h6 {
-        font-size: 36px;
-        margin-bottom:12px
-    }
-
-    #mw-content-text .wikitable {
-        font-size:16px
-    }
-
-    #mw-content-text table.infobox {
-        font-size:30px
-    }
-
-    .references .mw-cite-backlink {
-        display:none
-    }
-
-    .references .reference-text {
-        font-style:italic
-    }
-
-    .references a {
-        text-decoration:none
-    }
-
-    .references .external.text {
-        background-image:none
-    }
-
-    .printfooter {
-        display: block;
-        padding-top: 108px;
-        font-size:30px
-    }
-
-    #mw-mf-page-center > footer {
-        border-top: solid 4px #000;
-        padding-top: 23px;
-        background:#fff !important
-    }
-
-    #mw-mf-page-center > footer .mw-ui-icon:before {
-        display:none !important
-    }
-
-    #mw-mf-page-center > footer .last-modified-bar {
-        background: none !important;
-        border:0 !important
-    }
-
-    #mw-mf-page-center > footer .last-modifier-tagline {
-        font-size: 36px;
-        padding-top: 0 !important;
-        padding-bottom:16px !important
-    }
-
-    #mw-mf-page-center > footer .last-modified-bar, #mw-mf-page-center > footer .last-modified-bar a {
-        font-weight: bold !important;
-        color:#000 !important
-    }
-
-    #mw-mf-page-center > footer .post-content {
-        margin-top: 15px !important;
-        display:block !important
-    }
-
-    #mw-mf-page-center > footer .post-content .hlist, #mw-mf-page-center > footer .post-content h2 {
-        display:none
-    }
-
-    #mw-mf-page-center > footer .post-content .license a, #mw-mf-page-center > footer .post-content .license {
-        font-size: 30px;
-        color: #999999;
-        font-weight:normal
-    }
-}
 
 #toc.toc-mobile {
     display:none

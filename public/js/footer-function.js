@@ -1,6 +1,11 @@
 var foot = new Vue({
     el: '#footer-function',
 
+    data: {
+        selectedObject: vm.selectedObjectForSend,
+    },
+
+    // 記事のインポート
     methods: {
         saveArticle: function () {
             axios.post('/api/articles/import',{
@@ -22,6 +27,11 @@ var foot = new Vue({
                 console.log(error);
 
             });
+        },
+
+        hello: function() {
+          alert(vm.selectedObjectForSend);
         }
     }
+    // 記事のインポート
 })

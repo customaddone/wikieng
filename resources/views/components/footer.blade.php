@@ -10,7 +10,7 @@
         <li class="menu-width-max">
             <a href="/myArticles">
                 <i></i><br>
-                <span>おすすめ</span>
+                <span>記事一覧</span>
             </a>
         </li>
 

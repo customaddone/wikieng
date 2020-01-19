@@ -4,7 +4,9 @@
     @component('components.navbar')
     @endcomponent
         <div id="showArticleDetail">
-            <div v-html="showArticleDetail"></div>
+            <div @click="selected">
+                <div v-html="showArticleDetail"></div>
+            </div>
         </div>
 
         <!-- js -->
