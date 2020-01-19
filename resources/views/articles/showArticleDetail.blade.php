@@ -4,7 +4,7 @@
     @component('components.navbar')
     @endcomponent
         <div id="showArticleDetail">
-            <div @click="clicked" @mousedown="selected">
+            <div @mousedown="selected" @click="clicked" @touchstart="selected" @touchmove="clicked">
                 <div v-html="showArticleDetail"></div>
             </div>
         </div>
