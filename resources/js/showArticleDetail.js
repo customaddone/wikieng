@@ -85,7 +85,9 @@ var vm = new Vue({
                         var insertChild = document.createTextNode(child.textContent);
                         // 親ノード取得
                         var palent = child.parentNode;
+                        // textノードを新しく旧ノードの前に置く
                         palent.insertBefore(insertChild, child);
+                        // 旧ノードを消す
                         child.parentNode.removeChild(child);
                     }
 
@@ -93,7 +95,23 @@ var vm = new Vue({
                 }
             }
 
+            // 上記の関数だと一番後ろのノードまでハイライトがかかっている場合消せない　
+            var deleteHighlightEnd = function (child) {
+                while (child) {
+                    if (child.nodeName == "SPAN") {
+                        var insertChild = document.createTextNode(child.textContent);
+                        var palent = child.parentNode;
+                        palent.insertBefore(insertChild, child);
+                        child.parentNode.removeChild(child);
+                    }
+
+                    // 上の関数とは逆に終わったら前の子ノードへ行く
+                    child = child.nextSibling;
+                }
+            }
+
             deleteHighlight(startRange)
+            deleteHighlightEnd(startRange)
         }
         /* ハイライトを消す */
     }
