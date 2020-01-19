@@ -1,6 +1,7 @@
 var foot = new Vue({
     el: '#footer-function',
 
+    // 記事のインポート
     methods: {
         saveArticle: function () {
             axios.post('/api/articles/import',{
@@ -22,6 +23,7 @@ var foot = new Vue({
                 console.log(error);
 
             });
-        }
+        },
     }
+    // 記事のインポート
 })
