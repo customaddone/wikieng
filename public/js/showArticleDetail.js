@@ -55,8 +55,22 @@ var vm = new Vue({
     /* 記事本体の検索 */
 
     methods: {
+        // ハイライト、単語検索の切り替え
+        selected: function () {
+            if (foot.switchFooterFunction == 1) {
+                this.drowHighlight()
+            } else if (foot.switchFooterFunction == 2) {
+
+            }
+        },
+        clicked: function () {
+            if (foot.switchFooterFunction == 1) {
+                this.deleteHighlight()
+            }
+        },
+
         /* ハイライトを描く */
-        selected: function() {
+        drowHighlight: function() {
             // 現在青枠で囲んでいる範囲を取得して、その後Rangeオブジェクトを取得
             var selection = window.getSelection();
             var range = selection.getRangeAt(0);
@@ -70,7 +84,7 @@ var vm = new Vue({
         /* ハイライトを描く */
 
         /* ハイライトを消す */
-        clicked: function() {
+        deleteHighlight: function() {
             var selection = window.getSelection();
             // 選択した部分の最初のRangeオブジェクトを取得
             // 親ノード内の一番先頭のノード

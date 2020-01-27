@@ -529,6 +529,77 @@ footer .row li a {
   font-size: 1.2rem;
 }
 
+.dictionary p {
+  color: #333;
+}
+
+.dictionary .dictionary-card {
+  z-index: 5;
+  position: fixed;
+  right: 50px;
+  top: 100px;
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 0 8px #668AD8;
+  border-radius: 25px;
+  background-color: #fff;
+}
+
+.dictionary .dictionary-card .dictionary-header {
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.dictionary .dictionary-card .dictionary-header i {
+  float: right;
+  font-size: 2rem;
+}
+
+.dictionary .dictionary-card .dictionary-text {
+  margin: 0px 15px;
+}
+
+.dictionary .dictionary-card .dictionary-text .dictionary-title {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.dictionary .dictionary-card .dictionary-text .dictionary-title p {
+  margin-bottom: 0px;
+}
+
+.dictionary .dictionary-card .dictionary-text .dictionary-article {
+  font-size: 1.4rem;
+}
+
+.dictionary .dictionary-card .dictionary-text .dictionary-article p {
+  margin-top: 5px;
+}
+
+.dictionary .dictionary-card .dictionary-footer {
+  margin: 0px 15px;
+}
+
+.dictionary .dictionary-card .dictionary-footer i {
+  float: left;
+  font-size: 3rem;
+}
+
+.dictionary .dictionary-card .dictionary-footer p {
+  float: left;
+  font-size: 1.4rem;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+@media (max-width: 750px) {
+  .dictionary .dictionary-card {
+    right: 5%;
+    top: 12%;
+  }
+}
+
 html {
   font-size: 62.5%;
 }

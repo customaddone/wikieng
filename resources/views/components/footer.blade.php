@@ -8,16 +8,16 @@
         </li>
 
         <li class="menu-width-max">
-            <a href="/myArticles">
+            <a href="#" @click="switchFooterFunctionHighlight">
                 <i></i><br>
-                <span>記事一覧</span>
+                <span>ハイライト</span>
             </a>
         </li>
 
         <li>
- 	        <a href="/" target="_blank">
+ 	        <a href="#" @click="switchFooterFunctionDictionary">
 	            <i></i><br>
-                <span>読者登録</span>
+                <span>単語検索</span>
             </a>
         </li>
 
