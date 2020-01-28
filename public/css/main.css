@@ -568,6 +568,7 @@ footer .row li a {
 
 .dictionary .dictionary-card .dictionary-text .dictionary-title {
   margin-top: 30px;
+  height: 15px;
   text-align: center;
   font-size: 20px;
 }
@@ -583,11 +584,11 @@ footer .row li a {
 }
 
 .dictionary .dictionary-card .dictionary-text .dictionary-article p {
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .dictionary .dictionary-card .dictionary-footer {
-  margin: 0px 15px;
+  margin: 10px 15px;
 }
 
 .dictionary .dictionary-card .dictionary-footer i {

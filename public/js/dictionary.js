@@ -16,7 +16,7 @@ var dictionary = new Vue({
             var translateCut = function(word) {
 
                 /* 配列の中の要素が末尾にあれば切り取る */
-                var endword = ['ing', 'es', 's', 'ed', 'd'];
+                var endword = ['ing', 'es', 's', 'ed', 'd', ' '];
 
                 for (var i = 0; i < endword.length; i++) {
 

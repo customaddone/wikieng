@@ -133,6 +133,7 @@ var vm = new Vue({
         },
         /* ハイライトを消す */
 
+        /* 単語の検索 */
         searchWordMean: function () {
             /* 検索ワードが空であれば何もしない */
             if (window.getSelection().toString() !== "") {
