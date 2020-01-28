@@ -28,3 +28,7 @@ Route::get("/searchArticleSummary/{word}", "SearchController@searchArticleSummar
 
 // 記事のインポート用
 Route::post('/articles/import',  'ArticlesController@import');
+
+// 辞書機能使用用
+Route::get("/wordIdSearch/{pass}", "SearchController@wordIdSearch");
+Route::get("/wordSearch/{passId}", "SearchController@wordSearch");

@@ -1,31 +1,31 @@
 <footer>
     <ul class="row" id="footer-function">
         <li>
-            <a href="/">
+            <div>
 	            <i></i><br>
                 <span>ホーム</span>
-            </a>
+            </div>
         </li>
 
         <li class="menu-width-max">
-            <a href="/myArticles">
+            <div @click="switchFooterFunctionHighlight">
                 <i></i><br>
-                <span>記事一覧</span>
-            </a>
+                <span>ハイライト</span>
+            </div>
         </li>
 
         <li>
- 	        <a href="/" target="_blank">
+ 	        <div @click="switchFooterFunctionDictionary">
 	            <i></i><br>
-                <span>読者登録</span>
-            </a>
+                <span>単語検索</span>
+            </div>
         </li>
 
         <li>
-            <a href="#" @click="saveArticle">
+            <div @click="saveArticle">
 	            <i></i><br>
                 <span class="mini-text">Follow</span>
-            <a>
+            <div>
         </li>
     </ul>
 </footer>

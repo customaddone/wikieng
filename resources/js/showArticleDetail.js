@@ -7,7 +7,11 @@ var vm = new Vue({
      summary: "",
 
      // ハイライトの色
-     nowHighlightColor: "#ff89ff"
+     nowHighlightColor: "#ff89ff",
+
+     // 検索結果
+     seeWord: "",
+     translatedWord: ""
    },
 
    mounted: function () {
@@ -43,20 +47,34 @@ var vm = new Vue({
             .catch(response => console.log(response));
 
         // 記事見出しの検索
-        axios.get("/api/searchArticleSummary/" + encodeSearchWord)
+        /* axios.get("/api/searchArticleSummary/" + encodeSearchWord)
              .then((response) => {
                   var keyId = Object.keys(response.data.query.pages)
                   this.summary = response.data.query.pages[keyId].extract
                                      .replace(/<.+?>/g, "")
                                      .slice(0, 120);
              })
-        .catch(response => console.log(response));
+        .catch(response => console.log(response)); */
     },
     /* 記事本体の検索 */
 
     methods: {
+        // ハイライト、単語検索の切り替え
+        selected: function () {
+            if (foot.switchFooterFunction == 1) {
+                this.drowHighlight()
+            } 
+        },
+        clicked: function () {
+            if (foot.switchFooterFunction == 1) {
+                this.deleteHighlight()
+            } else if (foot.switchFooterFunction == 2) {
+                this.searchWordMean()
+            }
+        },
+
         /* ハイライトを描く */
-        selected: function() {
+        drowHighlight: function() {
             // 現在青枠で囲んでいる範囲を取得して、その後Rangeオブジェクトを取得
             var selection = window.getSelection();
             var range = selection.getRangeAt(0);
@@ -70,7 +88,7 @@ var vm = new Vue({
         /* ハイライトを描く */
 
         /* ハイライトを消す */
-        clicked: function() {
+        deleteHighlight: function() {
             var selection = window.getSelection();
             // 選択した部分の最初のRangeオブジェクトを取得
             // 親ノード内の一番先頭のノード
@@ -112,7 +130,16 @@ var vm = new Vue({
 
             deleteHighlight(startRange)
             deleteHighlightEnd(startRange)
-        }
+        },
         /* ハイライトを消す */
+
+        searchWordMean: function () {
+            /* 検索ワードが空であれば何もしない */
+            if (window.getSelection().toString() !== "") {
+                this.seeWord = window.getSelection().toString()
+            }
+
+            dictionary.searchWordMean(this.seeWord)
+        }
     }
 })

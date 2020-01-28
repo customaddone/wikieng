@@ -1,0 +1,72 @@
+.dictionary {
+    p {
+        color: #333;
+    }
+
+    .dictionary-card {
+        z-index: 5;
+        position: fixed;
+        right: 50px;
+	      top: 100px;
+        width:200px;
+        height: 200px;
+        box-shadow: 0 0 8px #668AD8;
+        border-radius: 25px;
+        background-color: #fff;
+
+        .dictionary-header {
+            margin-top: 10px;
+            margin-right: 20px;
+
+            i {
+                float: right;
+                font-size: 2rem;
+            }
+        }
+
+        .dictionary-text {
+            margin: 0px 15px;
+
+            .dictionary-title {
+                margin-top: 30px;
+                text-align: center;
+                font-size: 20px;
+
+                p {
+                    margin-bottom: 0px;
+                }
+            }
+
+            .dictionary-article {
+                height: 110px;
+                font-size: 1.4rem;
+                overflow: hidden;
+
+                p {
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        .dictionary-footer {
+            margin: 0px 15px;
+
+            i {
+                float:left;
+                font-size: 3rem;
+            }
+
+            p {
+                float:left;
+                font-size: 1.4rem;
+                margin-top: 5px;
+                margin-left: 10px;
+            }
+        }
+
+        @media (max-width: 750px) {
+            right: 5%;
+            top: 12%;
+        }
+    }
+}
