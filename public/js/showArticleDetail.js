@@ -63,7 +63,7 @@ var vm = new Vue({
         selected: function () {
             if (foot.switchFooterFunction == 1) {
                 this.drowHighlight()
-            } 
+            }
         },
         clicked: function () {
             if (foot.switchFooterFunction == 1) {
@@ -133,12 +133,14 @@ var vm = new Vue({
         },
         /* ハイライトを消す */
 
+        /* 単語の検索 */
         searchWordMean: function () {
             /* 検索ワードが空であれば何もしない */
             if (window.getSelection().toString() !== "") {
                 this.seeWord = window.getSelection().toString()
             }
 
+            // dictionary.jsの関数を使用
             dictionary.searchWordMean(this.seeWord)
         }
     }
