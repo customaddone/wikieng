@@ -43,9 +43,7 @@
                     <h1>
                         @{{ searchResult.title }}
                     </h1>
-                    <p>
-                        <div v-html="searchResult.snippet"></div>
-                    </p>
+                    <div class="result-box-text" v-html="searchResult.snippet"></div>
                 </a>
             </li>
         </ul>

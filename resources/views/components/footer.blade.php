@@ -1,10 +1,10 @@
 <footer>
     <ul class="row" id="footer-function">
         <li>
-            <div>
+            <a href="/">
 	            <i></i><br>
                 <span>ホーム</span>
-            </div>
+            </a>
         </li>
 
         <li class="menu-width-max">
@@ -24,7 +24,7 @@
         <li>
             <div @click="saveArticle">
 	            <i></i><br>
-                <span class="mini-text">Follow</span>
+                <span class="mini-text">記事保存</span>
             <div>
         </li>
     </ul>

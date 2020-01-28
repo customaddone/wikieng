@@ -7,11 +7,11 @@ var foot = new Vue({
 
     methods: {
         // ハイライトと単語検索（とアクションなし）を切り替える
-        // まとめろ
+        // なんでfootの値をdictionaryインスタンスに渡せないんですか
         switchFooterFunctionHighlight: function () {
             if (this.switchFooterFunction != 1) {
                 this.switchFooterFunction = 1
-                dictionary.switchFooterFunction = 0
+                dictionary.switchFooterFunction = 1
             } else {
                 this.switchFooterFunction = 0
                 dictionary.switchFooterFunction = 0

@@ -32,10 +32,11 @@ footer {
                 border-right: 1px solid gainsboro;
             }
 
-            div {
+            div, a {
                 color: #888888;
                 text-transform: uppercase;
                 font-size: 1.2rem;
+                cursor:pointer;
             }
         }
     }
