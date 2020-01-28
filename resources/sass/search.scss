@@ -27,18 +27,24 @@ section {
                 display: block;
                 margin: 2%;
                 overflow: hidden;
-                color: black;
+                color: #333;
 
                 h1 {
                     width: 100%;
+                    font-size: 2rem;
                     text-overflow: ellipsis;
                     // ２行目突入を禁止する
                     white-space: nowrap;
                     margin: 0
                 }
 
-                p {
-                    margin-top: 0;
+                .result-box-text {
+                    font-size: 1.4rem;
+                    margin-top: 10px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    // ２行目突入を禁止する
+                    white-space: nowrap;
                 }
             }
 

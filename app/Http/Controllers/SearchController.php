@@ -8,6 +8,7 @@ use GuzzleHttp\Client;
 class SearchController extends Controller
 {
     // 同じ関数内で関数を呼び出したいときはstaticで
+    // wikipediaの記事を検索
     private static function searchMediaWiki($searchquery)
     {
         $client = new \GuzzleHttp\Client();
@@ -24,13 +25,14 @@ class SearchController extends Controller
     }
 
     // 辞書APIを使用
-    private static function dictionarySearch($searchquery)
+    // Urlとクエリーが引数
+    private static function dictionarySearch($searchUrl, $searchquery)
     {
         $client = new \GuzzleHttp\Client();
 
         $response = $client->request(
             'GET',
-            $url = "http://public.dejizo.jp/NetDicV09.asmx/GetDicItemLite",
+            $url = $searchUrl,
             [ 'query' => $searchquery ],
             // パラメーターがあれば設定
         );
@@ -66,15 +68,12 @@ class SearchController extends Controller
         );
     }
 
-    // 記事の見出しを検索
+    // 調べたい単語のIDを検索（検索結果の上から１番目）
     public function wordIdSearch($pass)
     {
-        $client = new \GuzzleHttp\Client();
-
-        $response = $client->request(
-            'GET',
-            $url = "http://public.dejizo.jp/NetDicV09.asmx/SearchDicItemLite",
-            [ 'query' => [
+        return self::dictionarySearch(
+            "http://public.dejizo.jp/NetDicV09.asmx/SearchDicItemLite",
+            [
                 'Dic' => 'EJdict',
                 'Word' => $pass,
                 'Scope' => 'HEADWORD',
@@ -83,32 +82,21 @@ class SearchController extends Controller
                 'Prof' => 'JSON',
                 'PageSize' => 1,
                 'PageIndex' => 0
-            ]],
-            // パラメーターがあれば設定
+            ]
         );
-        // レスポンスボディを取得
-        $responseBody = $response->getBody()->getContents();
-        return $responseBody;
     }
 
-    //
+    // 調べたい単語の詳細について検索
     public function wordSearch($passId)
     {
-        $client = new \GuzzleHttp\Client();
-
-        $response = $client->request(
-            'GET',
-            $url = "http://public.dejizo.jp/NetDicV09.asmx/GetDicItemLite",
-            [ 'query' => [
+        return self::dictionarySearch(
+            "http://public.dejizo.jp/NetDicV09.asmx/GetDicItemLite",
+            [
                 'Dic' => 'EJdict',
                 'Item' => $passId,
                 'Loc' => "",
                 'Prof' => 'XHTML',
-            ]],
-            // パラメーターがあれば設定
+            ]
         );
-        // レスポンスボディを取得
-        $responseBody = $response->getBody()->getContents();
-        return $responseBody;
     }
 }

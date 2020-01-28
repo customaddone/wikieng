@@ -11,7 +11,6 @@ var dictionary = new Vue({
         // ハイライトと単語検索（とアクションなし）を切り替える
         /* 単語を辞書で検索 */
         searchWordMean: function (seeWord) {
-
             this.seeWord = seeWord;
             /* 選択した単語が名詞の複数形、動詞の過去形だった場合整形 */
             var translateCut = function(word) {
