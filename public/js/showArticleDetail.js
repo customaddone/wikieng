@@ -7,7 +7,11 @@ var vm = new Vue({
      summary: "",
 
      // ハイライトの色
-     nowHighlightColor: "#ff89ff"
+     nowHighlightColor: "#ff89ff",
+
+     // 検索結果
+     seeWord: "",
+     translatedWord: ""
    },
 
    mounted: function () {
@@ -43,14 +47,14 @@ var vm = new Vue({
             .catch(response => console.log(response));
 
         // 記事見出しの検索
-        axios.get("/api/searchArticleSummary/" + encodeSearchWord)
+        /* axios.get("/api/searchArticleSummary/" + encodeSearchWord)
              .then((response) => {
                   var keyId = Object.keys(response.data.query.pages)
                   this.summary = response.data.query.pages[keyId].extract
                                      .replace(/<.+?>/g, "")
                                      .slice(0, 120);
              })
-        .catch(response => console.log(response));
+        .catch(response => console.log(response)); */
     },
     /* 記事本体の検索 */
 
@@ -59,13 +63,13 @@ var vm = new Vue({
         selected: function () {
             if (foot.switchFooterFunction == 1) {
                 this.drowHighlight()
-            } else if (foot.switchFooterFunction == 2) {
-
-            }
+            } 
         },
         clicked: function () {
             if (foot.switchFooterFunction == 1) {
                 this.deleteHighlight()
+            } else if (foot.switchFooterFunction == 2) {
+                this.searchWordMean()
             }
         },
 
@@ -126,7 +130,16 @@ var vm = new Vue({
 
             deleteHighlight(startRange)
             deleteHighlightEnd(startRange)
-        }
+        },
         /* ハイライトを消す */
+
+        searchWordMean: function () {
+            /* 検索ワードが空であれば何もしない */
+            if (window.getSelection().toString() !== "") {
+                this.seeWord = window.getSelection().toString()
+            }
+
+            dictionary.searchWordMean(this.seeWord)
+        }
     }
 })

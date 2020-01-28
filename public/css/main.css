@@ -523,7 +523,7 @@ footer .row li:last-child {
   border-right: 1px solid gainsboro;
 }
 
-footer .row li a {
+footer .row li div {
   color: #888888;
   text-transform: uppercase;
   font-size: 1.2rem;
@@ -570,7 +570,9 @@ footer .row li a {
 }
 
 .dictionary .dictionary-card .dictionary-text .dictionary-article {
+  height: 110px;
   font-size: 1.4rem;
+  overflow: hidden;
 }
 
 .dictionary .dictionary-card .dictionary-text .dictionary-article p {

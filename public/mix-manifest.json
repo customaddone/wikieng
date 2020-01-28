@@ -4,5 +4,6 @@
     "/css/wikipediaArticle.css": "/css/wikipediaArticle.css",
     "/js/header-toggle.js": "/js/header-toggle.js",
     "/js/showArticleDetail.js": "/js/showArticleDetail.js",
-    "/js/footer-function.js": "/js/footer-function.js"
+    "/js/footer-function.js": "/js/footer-function.js",
+    "/js/dictionary.js": "/js/dictionary.js"
 }

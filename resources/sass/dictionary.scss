@@ -38,7 +38,9 @@
             }
 
             .dictionary-article {
+                height: 110px;
                 font-size: 1.4rem;
+                overflow: hidden;
 
                 p {
                     margin-top: 5px;

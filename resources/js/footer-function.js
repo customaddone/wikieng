@@ -7,21 +7,26 @@ var foot = new Vue({
 
     methods: {
         // ハイライトと単語検索（とアクションなし）を切り替える
+        // まとめろ
         switchFooterFunctionHighlight: function () {
             if (this.switchFooterFunction != 1) {
                 this.switchFooterFunction = 1
+                dictionary.switchFooterFunction = 0
             } else {
                 this.switchFooterFunction = 0
+                dictionary.switchFooterFunction = 0
             }
         },
         switchFooterFunctionDictionary: function () {
             if (this.switchFooterFunction != 2) {
                 this.switchFooterFunction = 2
+                dictionary.switchFooterFunction = 2
             } else {
                 this.switchFooterFunction = 0
+                dictionary.switchFooterFunction = 0
             }
         },
-        
+
         // 記事のインポート
         saveArticle: function () {
             axios.post('/api/articles/import',{
