@@ -10,7 +10,7 @@ class ArticlesController extends Controller
     public function index() {
         // idとタイトルだけgetする
         // idの前にはテーブルの名前をつける
-       $articles = Article::select('id', 'title')
+       $articles = Article::select('id', 'title', 'summary')
            ->get();
        return view('articles.myArticles', [ 'articles' => $articles ]);
     }
@@ -20,6 +20,13 @@ class ArticlesController extends Controller
         return view('articles.myArticlesDetail', [ 'article' => $article ]);
     }
 
+    public function destroy($id) {
+        $article = Article::find($id);
+        $article->delete();
+        return redirect('/myArticles');
+    }
+
+    // 記事の保存
     public function import(Request $request) {
         $article = Article::create([
             'title' => $request->title,

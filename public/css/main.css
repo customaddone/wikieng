@@ -460,29 +460,65 @@ main .row .content-foot {
   border-bottom: 1px solid gainsboro;
 }
 
+.myArticles ul li .buttons {
+  width: 25%;
+  height: 92%;
+  margin-top: 1%;
+  float: right;
+  border-left: solid 1px gainsboro;
+}
+
+.myArticles ul li .buttons form {
+  display: inline-block;
+}
+
+.myArticles ul li .buttons button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.myArticles ul li .buttons i {
+  font-size: 2rem;
+  margin-top: 38px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+@media (max-width: 750px) {
+  .myArticles ul li .buttons i {
+    margin-right: 0px;
+  }
+}
+
 .myArticles ul li .result-box {
   display: block;
-  margin: 2%;
-  overflow: hidden;
-  color: black;
-}
-
-.myArticles ul li .result-box h1 {
-  width: 100%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  width: 75%;
+  height: 100%;
   text-decoration: none;
-  color: #555;
-  margin: 0;
 }
 
-.myArticles ul li .result-box h1 a {
-  text-decoration: none;
-  color: #555;
+.myArticles ul li .result-box .result-box-text {
+  margin: 0 5px;
 }
 
-.myArticles ul li .result-box p {
-  margin-top: 0;
+.myArticles ul li .result-box .result-box-text h1 {
+  color: #333;
+}
+
+.myArticles ul li .result-box .result-box-text p {
+  margin-top: 5px;
+  color: #333;
+  font-size: 1.4rem;
+}
+
+.myArticles ul li .result-box:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 750px) {
@@ -516,7 +552,7 @@ footer .row {
 
 footer .row li {
   float: left;
-  width: 25%;
+  width: 20%;
   padding-bottom: 15px;
   list-style-type: none;
   text-align: center;

@@ -17,8 +17,10 @@ Route::get('/', function () {
 
 // 保存している記事一覧
 Route::get('/myArticles', 'ArticlesController@index');
-// 詳細表示
+// 保存した記事の詳細表示
 Route::get('/articles/{id}', 'ArticlesController@show');
+// 保存した記事の削除
+Route::delete('/articles/{id}', 'ArticlesController@destroy');
 
 Route::get('/searchArticleDetail/{word}', function () {
     return view('articles.showArticleDetail');

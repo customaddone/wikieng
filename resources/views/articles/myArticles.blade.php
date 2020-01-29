@@ -13,13 +13,21 @@
         <ul>
             @foreach ($articles as $article)
                 <li class="result">
-                    <a　class="result-box">
-                        <h1>
-                            <a href="/articles/{{ $article->id }}">{{ $article->title }}</a>
-                        </h1>
-                        <p>
-                            {{ $article->summary }}
-                        </p>
+                    <div class="buttons">
+                        <i class="fa fa-hand-o-right "></i>
+                        <form action="/articles/{{ $article->id }}" method="POST" class="form-horizontal">
+                            {{ csrf_field() }}
+                            {{ method_field('delete') }}
+                            <button type="submit">
+                                <i class="fa fa-times-circle-o "></i>
+                            </button>
+                        </form>
+                    </div>
+                    <a class="result-box" href="/articles/{{ $article->id }}">
+                        <div class="result-box-text">
+                            <h1>{{ $article->title }}</h1>
+                            <p>{{ $article->summary }}</p>
+                        </div>
                     </a>
                 </li>
             @endforeach
