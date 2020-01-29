@@ -8,6 +8,13 @@
         </li>
 
         <li class="menu-width-max">
+            <a href="/myArticles">
+                <i></i><br>
+                <span>My記事</span>
+            </a>
+        </li>
+
+        <li class="menu-width-max">
             <div @click="switchFooterFunctionHighlight">
                 <i></i><br>
                 <span>ハイライト</span>

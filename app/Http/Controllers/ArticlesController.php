@@ -20,6 +20,13 @@ class ArticlesController extends Controller
         return view('articles.myArticlesDetail', [ 'article' => $article ]);
     }
 
+    public function destroy($id) {
+        $article = Article::find($id);
+        $article->delete();
+        return redirect('/myArticles');
+    }
+
+    // 記事の保存
     public function import(Request $request) {
         $article = Article::create([
             'title' => $request->title,
