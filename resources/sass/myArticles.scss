@@ -77,8 +77,14 @@
                 .result-box-text {
                     margin: 0 5px;
 
-                    h1, p {
+                    h1 {
                         color: #333;
+                    }
+
+                    p {
+                        margin-top: 5px;
+                        color: #333;
+                        font-size: 1.4rem;
                     }
                 }
 

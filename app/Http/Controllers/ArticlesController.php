@@ -10,7 +10,7 @@ class ArticlesController extends Controller
     public function index() {
         // idとタイトルだけgetする
         // idの前にはテーブルの名前をつける
-       $articles = Article::select('id', 'title')
+       $articles = Article::select('id', 'title', 'summary')
            ->get();
        return view('articles.myArticles', [ 'articles' => $articles ]);
     }

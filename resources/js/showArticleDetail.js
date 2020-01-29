@@ -46,15 +46,15 @@ var vm = new Vue({
             })
             .catch(response => console.log(response));
 
-        // 記事見出しの検索
-        /* axios.get("/api/searchArticleSummary/" + encodeSearchWord)
+        // 記事のsummaryの検索（記事保存の時にfooterに渡す）
+        axios.get("/api/searchArticleSummary/" + encodeSearchWord)
              .then((response) => {
                   var keyId = Object.keys(response.data.query.pages)
                   this.summary = response.data.query.pages[keyId].extract
                                      .replace(/<.+?>/g, "")
                                      .slice(0, 120);
              })
-        .catch(response => console.log(response)); */
+        .catch(response => console.log(response));
     },
     /* 記事本体の検索 */
 

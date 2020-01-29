@@ -507,9 +507,14 @@ main .row .content-foot {
   margin: 0 5px;
 }
 
-.myArticles ul li .result-box .result-box-text h1,
-.myArticles ul li .result-box .result-box-text p {
+.myArticles ul li .result-box .result-box-text h1 {
   color: #333;
+}
+
+.myArticles ul li .result-box .result-box-text p {
+  margin-top: 5px;
+  color: #333;
+  font-size: 1.4rem;
 }
 
 .myArticles ul li .result-box:hover {

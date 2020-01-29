@@ -26,7 +26,7 @@
                     <a class="result-box" href="/articles/{{ $article->id }}">
                         <div class="result-box-text">
                             <h1>{{ $article->title }}</h1>
-                            <p>text-decorationプロパティは CSS1 や CSS2 から存在していますが、 CSS3 からはテキストの線・色・スタイルをまとめて指定できるショートハンド（短縮形）プロパティとして使用できます。</p>
+                            <p>{{ $article->summary }}</p>
                         </div>
                     </a>
                 </li>

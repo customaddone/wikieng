@@ -68,6 +68,18 @@ class SearchController extends Controller
         );
     }
 
+    public function searchArticleSummary($word)
+    {
+        return self::searchMediaWiki(
+            [
+                'format' => 'json',
+                'action' => 'query',
+                'prop' => 'extracts',
+                'titles' =>  $word,
+            ]
+        );
+    }
+
     // 調べたい単語のIDを検索（検索結果の上から１番目）
     public function wordIdSearch($pass)
     {
