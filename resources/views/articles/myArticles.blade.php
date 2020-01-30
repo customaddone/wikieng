@@ -31,7 +31,7 @@
                     </a>
                 </li>
             @endforeach
-            <li style="height: 300px;">
+            <li style="height: 300px; background-color: #eee; border: none;">
             </li>
         </ul>
     </div>
