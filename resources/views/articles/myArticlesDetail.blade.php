@@ -8,6 +8,9 @@
             {!! $article->article !!}
         </div>
     </div>
+    <!-- 記事編集保存用の印 外すと壊れる-->
+    <div style="height: 133px;">
+    </div>
 
     <!-- コンポーネント化できない？ -->
     <div class="dictionary" id="dictionary" >
@@ -36,6 +39,6 @@
 
     <!-- css -->
     <link href="/css/wikipediaArticle.css" rel="stylesheet" type="text/css">
-    @component('components.footer')
+    @component('components.footerEdit')
     @endcomponent
 @endsection

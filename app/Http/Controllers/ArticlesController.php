@@ -37,4 +37,11 @@ class ArticlesController extends Controller
 
         $article->save();
     }
+
+    // 記事の編集
+    public function edit(Request $request) {
+        $article = Article::find($request->id);
+        $article->article = $request->article;
+        $article->save();
+    }
 }
