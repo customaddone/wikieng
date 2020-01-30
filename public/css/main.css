@@ -508,6 +508,9 @@ main .row .content-foot {
 }
 
 .myArticles ul li .result-box .result-box-text h1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   color: #333;
 }
 

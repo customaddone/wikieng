@@ -23,7 +23,7 @@ class ArticlesController extends Controller
     public function destroy($id) {
         $article = Article::find($id);
         $article->delete();
-        return redirect('articles.myArticles');
+        return redirect('myArticles');
     }
 
     // 記事の保存
