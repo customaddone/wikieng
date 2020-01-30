@@ -23,7 +23,8 @@ class ArticlesController extends Controller
     public function destroy($id) {
         $article = Article::find($id);
         $article->delete();
-        return redirect('articles.myArticles', 302, [], true);
+        // redirectに引数つけないとhttpsに行かない
+        return redirect('/myArticles', 302, [], true);
     }
 
     // 記事の保存
