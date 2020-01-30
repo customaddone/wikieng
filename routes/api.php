@@ -20,14 +20,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // wikipedia記事検索
 Route::get("/searchArticle/{word}", "SearchController@searchArticle");
 
-// 検索記事表示
+// 記事検索結果表示
 Route::get("/searchArticleDetail/{word}", "SearchController@searchArticleDetail");
-
-// 検索記事表示
 Route::get("/searchArticleSummary/{word}", "SearchController@searchArticleSummary");
 
-// 記事のインポート用
+// wiki記事編集用
 Route::post('/articles/import',  'ArticlesController@import');
+Route::post('/articles/edit',  'ArticlesController@edit');
 
 // 辞書機能使用用
 Route::get("/wordIdSearch/{pass}", "SearchController@wordIdSearch");
