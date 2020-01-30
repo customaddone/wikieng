@@ -75,9 +75,14 @@
                 text-decoration: none;
 
                 .result-box-text {
+
                     margin: 0 5px;
 
                     h1 {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        // ２行目突入を禁止する
+                        white-space: nowrap;
                         color: #333;
                     }
 
