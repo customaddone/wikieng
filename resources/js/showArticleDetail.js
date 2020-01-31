@@ -160,6 +160,11 @@ var vm = new Vue({
 
             // dictionary.jsの関数を使用
             dictionary.searchWordMean(this.seeWord)
+        },
+
+        // 単語の保存
+        saveWord: function () {
+          
         }
     }
 })

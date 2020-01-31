@@ -19,7 +19,7 @@
                 <i class="fa fa-comment-o "></i>
             </div>
             <div class="dictionary-text">
-                <div class="dictionary-title">
+                <div class="dictionary-title" @click="saveWord">
                     <p>@{{ seeWord }}</p>
                 </div>
                 <div class="dictionary-article">
