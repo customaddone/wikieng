@@ -16,10 +16,10 @@
     <div class="dictionary" id="dictionary" >
         <div class="dictionary-card" v-if="switchFooterFunction == 2">
             <div class="dictionary-header">
-                <i class="fa fa-comment-o "></i>
+                <i class="fa fa-comment-o " @click="saveWord"></i>
             </div>
             <div class="dictionary-text">
-                <div class="dictionary-title" @click="saveWord">
+                <div class="dictionary-title">
                     <p>@{{ seeWord }}</p>
                 </div>
                 <div class="dictionary-article">

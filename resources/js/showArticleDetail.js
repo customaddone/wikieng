@@ -148,23 +148,20 @@ var vm = new Vue({
                 var text = sampleText.split(".");
 
                 // text内の全ての文を調べ、検索ワードを含む文を抽出
-                var matchText = text.map(function(sentence) {
-                    if (sentence.indexOf(selectWord) >= 0) {
-                        return sentence;
+                var matchText = "";
+
+                for (var i = 0; i < text.length; i++) {
+                    if (text[i].indexOf(selectWord) >= 0) {
+                        matchText = text[i];
+                        break;
                     }
-                })
+                }
 
                 this.seeWordsSampleText = matchText
-                alert(matchText)
             }
 
             // dictionary.jsの関数を使用
             dictionary.searchWordMean(this.seeWord)
-        },
-
-        // 単語の保存
-        saveWord: function () {
-          
         }
     }
 })

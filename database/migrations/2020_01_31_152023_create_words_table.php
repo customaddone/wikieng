@@ -17,8 +17,9 @@ class CreateWordsTable extends Migration
             $table->bigIncrements('id');
             $table->string('word');
             $table->string('mean');
-            $table->string('sampletext');
-            $table->string('article_id');
+            // 長さが足りませんでした
+            $table->mediumText('sampletext');
+            $table->integer('article_id');
             $table->timestamps();
         });
     }
