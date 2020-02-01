@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class WordsController extends Controller
 {
+    public function wordIndexPathId($articleId) {
+        return view('words.wordIndex', ['articleId' => $articleId]);
+    }
+
     public function show($articleId) {
         // getを忘れない
         $words = Word::where('article_id', '=', $articleId)->get();

@@ -31,9 +31,7 @@ Route::get('/searchArticleDetail/{word}', function () {
 
 
 // 登録単語一覧
-Route::get('/words/{articleId}', function () {
-    return view('words.wordIndex');
-});
+Route::get('/words/{articleId}', 'WordsController@wordIndexPathId');
 
 
 // 認証用

@@ -2,7 +2,10 @@ var head = new Vue({
     el: '#wordIndex',
 
     data: {
+        // 登録単語の配列
         words: [],
+        // toggle用
+        showWordsProperty: [],
     },
 
     mounted: function () {
@@ -12,10 +15,14 @@ var head = new Vue({
     methods: {
         indexWord: function () {
             var articleId= location.pathname.split("/");
+            this.showWordsProperty = [];
 
             axios.get("/api/words/" + articleId[2])
                  .then((response) => {
                      this.words = response.data;
+                     for (var i = 0; i < response.data.length; i++) {
+                         this.showWordsProperty.push(true);
+                     }
                  })
                  .catch(response => console.log(response));
         },
@@ -25,6 +32,15 @@ var head = new Vue({
                  .then((response) => {
                      this.indexWord();
                  }).catch(response => console.log(response));
-        }
+        },
+
+        showSwitchMean: function (index) {
+            // ただ値を変えるだけでは再描画されないのでspliceを使う
+            this.showWordsProperty.splice(index, 1, true);
+        },
+
+        showSwitchSampleText: function (index) {
+            this.showWordsProperty.splice(index, 1, false);
+        },
     }
 })

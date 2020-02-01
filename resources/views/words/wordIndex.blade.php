@@ -11,17 +11,18 @@
             </div>
         </div>
         <ul>
-            <li class="result" v-for="word in words" :key="number">
+            <li class="result" v-for="(word, index) in words" :key="index">
                 <div class="buttons">
                     <i class="fa fa-hand-o-right "></i>
                     <i class="fa fa-times-circle-o " @click="deleteWord(word.id)"></i>
                 </div>
                 <div class="result-box">
                     <div class="result-box-text">
-                        <p class="show-switch">意味</p>
-                        <p class="show-switch">例文</p>
+                        <p class="show-switch" @click="showSwitchSampleText(index)">例文</p>
+                        <p class="show-switch" @click="showSwitchMean(index)">意味</p>
                         <h1>@{{ word.word }}</h1>
-                        <p>@{{ word.sampletext }}</p>
+                        <p v-if="showWordsProperty[index]">@{{ word.mean }}</p>
+                        <p v-else>@{{ word.sampletext }}</p>
                     </div>
                 </div>
             </li>
@@ -31,7 +32,7 @@
         </ul>
 
         <!-- 元の記事に戻る -->
-        <a href="/" class="word-button word-article-button">
+        <a href="/articles/{{ $articleId }}" class="word-button word-article-button">
             <i class="fa fa-reply "></i>
         </a>
     </div>
