@@ -31,3 +31,6 @@ Route::post('/articles/edit',  'ArticlesController@edit');
 // 辞書機能使用用
 Route::get("/wordIdSearch/{pass}", "SearchController@wordIdSearch");
 Route::get("/wordSearch/{passId}", "SearchController@wordSearch");
+
+// 単語検索
+Route::post("/words/create", "WordsController@create");

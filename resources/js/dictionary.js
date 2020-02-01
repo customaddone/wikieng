@@ -72,6 +72,22 @@ var dictionary = new Vue({
                 });
             });
         },
+
+        // 単語の保存
+        saveWord: function () {
+            var articleId= location.pathname.split("/");
+
+            axios.post("/api/words/create", {
+                word: this.seeWord,
+                mean: this.translatedWord,
+                sampletext: vm.seeWordsSampleText,
+                article_id: articleId[2],
+            }).then((response) => {
+                alert('OK')
+            }).catch((response) => {
+                console.log(response);
+            });
+        }
     }
     // 記事のインポート
 })

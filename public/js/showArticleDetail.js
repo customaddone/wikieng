@@ -11,6 +11,7 @@ var vm = new Vue({
 
      // 検索結果
      seeWord: "",
+     seeWordsSampleText: "",
      translatedWord: ""
    },
 
@@ -135,9 +136,28 @@ var vm = new Vue({
 
         /* 単語の検索 */
         searchWordMean: function () {
+
+            var selectWord = window.getSelection()
             /* 検索ワードが空であれば何もしない */
-            if (window.getSelection().toString() !== "") {
-                this.seeWord = window.getSelection().toString()
+            if (selectWord.toString() !== "") {
+                this.seeWord = selectWord.toString()
+                // ①selectWord.getRangeAt(0)（選択した言葉の）②.startContainer.parentNode（親ノードの）
+                // ③textContent（テキストを抜き出す）
+                var sampleText = selectWord.getRangeAt(0).startContainer.parentNode.textContent
+                // ピリオドで分割（英文ごとに区切る）
+                var text = sampleText.split(".");
+
+                // text内の全ての文を調べ、検索ワードを含む文を抽出
+                var matchText = "";
+
+                for (var i = 0; i < text.length; i++) {
+                    if (text[i].indexOf(selectWord) >= 0) {
+                        matchText = text[i];
+                        break;
+                    }
+                }
+
+                this.seeWordsSampleText = matchText
             }
 
             // dictionary.jsの関数を使用
