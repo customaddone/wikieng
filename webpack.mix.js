@@ -18,4 +18,5 @@ mix.js('resources/js/app.js', 'public/js')
    .scripts('resources/js/showArticleDetail.js', 'public/js/showArticleDetail.js')
    .scripts('resources/js/footer-function.js', 'public/js/footer-function.js')
    .scripts('resources/js/footer-edit-function.js', 'public/js/footer-edit-function.js')
-   .scripts('resources/js/dictionary.js', 'public/js/dictionary.js');
+   .scripts('resources/js/dictionary.js', 'public/js/dictionary.js')
+   .scripts('resources/js/wordIndex.js', 'public/js/wordIndex.js');

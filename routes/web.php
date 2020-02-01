@@ -11,28 +11,28 @@
 |
 */
 
+// ホーム画面
 Route::get('/', function () {
     return view('home.homeTop');
 });
 
+
+
 // 保存している記事一覧
 Route::get('/myArticles', 'ArticlesController@index');
-// 保存した記事の詳細表示
 Route::get('/articles/{id}', 'ArticlesController@show');
-// 保存した記事の削除
 Route::delete('/articles/{id}', 'ArticlesController@destroy');
 
 
-
+// 検索した語のwiki記事を見る
 Route::get('/searchArticleDetail/{word}', function () {
     return view('articles.showArticleDetail');
 });
 
 
+// 登録単語一覧
+Route::get('/words/{articleId}', 'WordsController@wordIndexPathId');
 
-// 記事内の登録単語用
-Route::get('/words/{articleId}', 'WordsController@show');
-Route::delete('/words/{id}', 'WordsController@destroy');
 
 // 認証用
 Auth::routes();
