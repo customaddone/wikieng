@@ -1,5 +1,5 @@
 var head = new Vue({
-    el: 'header',
+    el: '#header',
 
     data: {
         toggle: false,

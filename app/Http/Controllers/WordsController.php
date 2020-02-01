@@ -10,7 +10,7 @@ class WordsController extends Controller
     public function show($articleId) {
         // getを忘れない
         $words = Word::where('article_id', '=', $articleId)->get();
-        return view('words.wordIndex', ['words' => $words]);
+        return $words;
     }
 
     public function create(Request $request) {
@@ -28,7 +28,5 @@ class WordsController extends Controller
     public function destroy($id) {
         $word = Word::find($id);
         $word->delete();
-        // redirectに引数つけないとhttpsに行かない
-        return redirect('/myArticles', 302, [], true);
     }
 }

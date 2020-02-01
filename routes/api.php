@@ -32,5 +32,7 @@ Route::post('/articles/edit',  'ArticlesController@edit');
 Route::get("/wordIdSearch/{pass}", "SearchController@wordIdSearch");
 Route::get("/wordSearch/{passId}", "SearchController@wordSearch");
 
-// 単語検索
+// 記事内の登録単語用
+Route::get('/words/{articleId}', 'WordsController@show');
 Route::post("/words/create", "WordsController@create");
+Route::delete('/words/{id}', 'WordsController@destroy');

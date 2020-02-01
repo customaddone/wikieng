@@ -649,6 +649,119 @@ footer .row li a {
   }
 }
 
+.wordIndex {
+  position: absolute;
+  width: 100%;
+}
+
+.wordIndex h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.wordIndex .userName {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.wordIndex .userName .userNameBox {
+  width: 98%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fff;
+  border-bottom: 1px double gainsboro;
+}
+
+.wordIndex ul {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.wordIndex ul li {
+  width: 48%;
+  height: 110px;
+  margin: 0 1%;
+  float: left;
+  display: block;
+  list-style: none;
+  background-color: #fff;
+  border-bottom: 1px solid gainsboro;
+}
+
+.wordIndex ul li .buttons {
+  width: 25%;
+  height: 92%;
+  margin-top: 1%;
+  float: right;
+  border-left: solid 1px gainsboro;
+}
+
+.wordIndex ul li .buttons form {
+  display: inline-block;
+}
+
+.wordIndex ul li .buttons button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.wordIndex ul li .buttons i {
+  font-size: 2rem;
+  margin-top: 38px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+@media (max-width: 750px) {
+  .wordIndex ul li .buttons i {
+    margin-right: 0px;
+  }
+}
+
+.wordIndex ul li .result-box {
+  display: block;
+  width: 75%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.wordIndex ul li .result-box .result-box-text {
+  margin: 0 5px;
+}
+
+.wordIndex ul li .result-box .result-box-text h1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #333;
+}
+
+.wordIndex ul li .result-box .result-box-text p {
+  margin-top: 5px;
+  color: #333;
+  font-size: 1.4rem;
+}
+
+.wordIndex ul li .result-box .result-box-text p.show-switch {
+  float: right;
+  margin: 2px 20px 0 0;
+  font-size: 1.6rem;
+}
+
+@media (max-width: 750px) {
+  .wordIndex ul li {
+    width: 98%;
+  }
+}
+
 .word-button {
   position: fixed;
   right: 15%;
