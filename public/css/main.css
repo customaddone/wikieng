@@ -649,6 +649,48 @@ footer .row li a {
   }
 }
 
+.word-button {
+  position: fixed;
+  right: 15%;
+  bottom: 15%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #bbb;
+}
+
+.word-button i {
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 6rem;
+  color: #fff;
+}
+
+@media (max-width: 750px) {
+  .word-button i {
+    margin-left: 15px;
+    margin-top: 15px;
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .word-button {
+    right: 7%;
+    bottom: 15%;
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.word-index-button {
+  background-color: #86cecb;
+}
+
+.word-article-button {
+  background-color: #e12885;
+}
+
 html {
   font-size: 62.5%;
 }

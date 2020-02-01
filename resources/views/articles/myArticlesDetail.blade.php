@@ -12,6 +12,10 @@
     <div style="height: 133px;">
     </div>
 
+    <!-- 登録単語一覧を見る --> 
+    <a href="/words/{{ $article->id }}" class="word-button word-index-button">
+        <i class="fa fa-book "></i>
+    </a>
     <!-- コンポーネント化できない？ -->
     <div class="dictionary" id="dictionary" >
         <div class="dictionary-card" v-if="switchFooterFunction == 2">

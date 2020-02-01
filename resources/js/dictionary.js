@@ -76,7 +76,6 @@ var dictionary = new Vue({
         // 単語の保存
         saveWord: function () {
             var articleId= location.pathname.split("/");
-            alert(this.translatedWord);
 
             axios.post("/api/words/create", {
                 word: this.seeWord,

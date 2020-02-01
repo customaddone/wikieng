@@ -22,9 +22,17 @@ Route::get('/articles/{id}', 'ArticlesController@show');
 // 保存した記事の削除
 Route::delete('/articles/{id}', 'ArticlesController@destroy');
 
+
+
 Route::get('/searchArticleDetail/{word}', function () {
     return view('articles.showArticleDetail');
 });
+
+
+
+// 記事内の登録単語用
+Route::get('/words/{articleId}', 'WordsController@show');
+Route::delete('/words/{id}', 'WordsController@destroy');
 
 // 認証用
 Auth::routes();
