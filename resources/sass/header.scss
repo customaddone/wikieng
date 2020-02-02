@@ -34,13 +34,13 @@ header {
             }
 
             .find {
-                .search_container {
+                .search-container {
                     margin-top: 1px;
                     margin-left: 10px;
                     float: left;
                     display: block;
                     background-color: white;
-                    width: 255px;
+                    width: 240px;
                     height: 30px;
                     border: 1px gainsboro solid;
                     border-radius: 15px;
@@ -139,8 +139,9 @@ header {
                 }
             }
 
+            // 実際にスマホで表示するとtoggleの中身が少し右にずれる
             @media (max-width: 750px) {
-                width: 100%;
+                width: 105%;
             }
         }
 

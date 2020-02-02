@@ -31,7 +31,7 @@ class ArticlesController extends Controller
         $article = Article::find($id);
         $article->delete();
         // redirectに引数つけないとhttpsに行かない
-        return redirect('/myArticles', 302, [], true);
+        return redirect('/myArticles');
     }
 
     // 記事の保存
