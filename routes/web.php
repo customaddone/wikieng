@@ -36,5 +36,6 @@ Route::get('/words/{articleId}', 'WordsController@wordIndexPathId');
 
 // 認証用
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', function () {
+    return view('home.homeTop');
+});

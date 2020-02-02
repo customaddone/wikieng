@@ -4,13 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ArticlesController extends Controller
 {
+    // my記事に入ろうとするとログイン画面に飛ばされる
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index() {
         // idとタイトルだけgetする
         // idの前にはテーブルの名前をつける
-       $articles = Article::select('id', 'title', 'summary')
+       $articles = Article::where('user_id', '=', Auth::id())->select('id', 'title', 'summary')
            ->get();
        return view('articles.myArticles', [ 'articles' => $articles ]);
     }
@@ -31,6 +38,7 @@ class ArticlesController extends Controller
     public function import(Request $request) {
         $article = Article::create([
             'title' => $request->title,
+            'user_id' => Auth::id(),
             'article' => $request->article,
             'summary' => $request->summary,
             'status' => $request->status

@@ -64,12 +64,6 @@ header .row .logo .find .search_container i {
   font-size: 2rem;
 }
 
-@media (max-width: 320px) {
-  header .row .logo .find .search_container {
-    width: 200px;
-  }
-}
-
 @media (max-width: 750px) {
   header .row .logo {
     float: none;
@@ -82,6 +76,7 @@ header .row nav {
 }
 
 header .row nav ul {
+  margin: 0;
   list-style: none;
   overflow: hidden;
   text-align: right;
@@ -96,25 +91,59 @@ header .row nav ul li {
 
 @media (max-width: 750px) {
   header .row nav ul li {
-    width: 100%;
+    display: block;
     padding: 7px 0;
     margin: 0;
   }
 }
 
+header .row nav ul li.loginbutton {
+  display: inline-block;
+}
+
+@media (max-width: 750px) {
+  header .row nav ul li.loginbutton-last {
+    margin-left: 35px;
+  }
+}
+
+header .row nav ul p,
 header .row nav ul a {
+  margin: 0;
   color: #888888;
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+}
+
+header .row nav ul i {
+  font-size: 3rem;
+  color: #888888;
+}
+
+@media (max-width: 750px) {
+  header .row nav ul i {
+    font-size: 5rem;
+  }
+}
+
+header .row nav ul button {
+  padding: 0;
+  font-size: 1.4rem;
+  color: #888888;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 @media (max-width: 750px) {
   header .row nav ul {
-    padding-top: 10px;
-    margin-bottom: 22px;
-    float: left;
+    padding: 0;
     text-align: center;
-    width: 100%;
+    float: none;
   }
 }
 

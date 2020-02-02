@@ -21,7 +21,7 @@ var head = new Vue({
                  .then((response) => {
                      this.words = response.data;
                      for (var i = 0; i < response.data.length; i++) {
-                         this.showWordsProperty.push(true);
+                         this.showWordsProperty.push(0);
                      }
                  })
                  .catch(response => console.log(response));
@@ -36,11 +36,11 @@ var head = new Vue({
 
         showSwitchMean: function (index) {
             // ただ値を変えるだけでは再描画されないのでspliceを使う
-            this.showWordsProperty.splice(index, 1, true);
+            this.showWordsProperty.splice(index, 1, 0);
         },
 
         showSwitchSampleText: function (index) {
-            this.showWordsProperty.splice(index, 1, false);
+            this.showWordsProperty.splice(index, 1, 1);
         },
     }
 })

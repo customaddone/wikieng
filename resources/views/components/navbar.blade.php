@@ -7,7 +7,7 @@
     <div class="row">
         <div class="logo">
             <div class="find">
-                <a href="#">P/F</a>
+                <a href="#">W/E</a>
                 <form method="get" action="#" class="search_container">
                     <input class="input-form" type="text" size="25" v-model="searchWord">
                     <i class="fa fa-search "></i>
@@ -24,10 +24,35 @@
 
         <nav v-if="toggle" class="toggle">
             <ul>
-                <li><a href=".sec01">Section 01</a></li>
-                <li><a href=".sec02">Section 02</a></li>
-                <li><a href=".sec03">Section 03</a></li>
-                <li><a href=".sec04">Section 04</a></li>
+                <li><i class="fa fa-user "></i></li>
+                @guest
+                    <li><p>guest</p></li>
+                    <li class="loginbutton">
+                        <a href="/login">ログイン</a>
+                    </li>
+                    <li class="loginbutton loginbutton-last">
+                        <form method="POST" action="/login">
+                            @csrf
+                            <input name="email" type="hidden" value="laravel@gmail.com">
+                            <input name="password" type="hidden" value="laravelpassword">
+                            <button type="submit">簡単ログイン</button>
+                        </form>
+                    </li>
+                    <li class="loginbutton loginbutton-last">
+                        <a href="/register">新規登録</a>
+                    </li>
+                @endguest
+                @auth
+                    <li><p>{{ Auth::user()->name }}</p></li>
+                    <li>
+                        <form action="/logout" method="POST">
+                            <button type="submit" class="login-button">
+                                @csrf
+                                <p>ログアウト</p>
+                            </button>
+                        </form>
+                    </li>
+                @endauth
             </ul>
         </nav>
         <!-- toggle メニューが表示される-->

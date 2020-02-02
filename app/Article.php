@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
     protected $fillable = [
-        'title', 'article', 'summary', 'status'
+        // fillableちゃんと入れる
+        'title', 'user_id', 'article', 'summary', 'status'
     ];
 }
