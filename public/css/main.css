@@ -64,12 +64,6 @@ header .row .logo .find .search_container i {
   font-size: 2rem;
 }
 
-@media (max-width: 320px) {
-  header .row .logo .find .search_container {
-    width: 200px;
-  }
-}
-
 @media (max-width: 750px) {
   header .row .logo {
     float: none;
@@ -105,7 +99,12 @@ header .row nav ul li {
 
 header .row nav ul li.loginbutton {
   display: inline-block;
-  margin: 0 10px;
+}
+
+@media (max-width: 750px) {
+  header .row nav ul li.loginbutton-last {
+    margin-left: 35px;
+  }
 }
 
 header .row nav ul p,
@@ -125,6 +124,17 @@ header .row nav ul i {
   header .row nav ul i {
     font-size: 5rem;
   }
+}
+
+header .row nav ul button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 @media (max-width: 750px) {

@@ -25,9 +25,28 @@
         <nav v-if="toggle" class="toggle">
             <ul>
                 <li><i class="fa fa-user "></i></li>
-                <li><p>ユーザー</p></li>
-                <li class="loginbutton"><a href="/login">ログイン</a></li>
-                <li class="loginbutton"><a href="/register">新規登録</a></li>
+                <li>
+                    @guest
+                        <p>guest</p>
+                    @endguest
+                    @auth
+                        <p>{{ Auth::user()->name }}</p>
+                    @endauth
+                </li>
+                <li class="loginbutton">
+                    @guest
+                        <a href="/login">ログイン</a>
+                    @endguest
+                    @auth
+                        <form action="/logout" method="POST">
+                            <button type="submit" class="login-button">
+                                @csrf
+                                <p>ログアウト</p>
+                            </button>
+                        </form>
+                    @endauth
+                </li>
+                <li class="loginbutton loginbutton-last"><a href="/register">新規登録</a></li>
             </ul>
         </nav>
         <!-- toggle メニューが表示される-->
