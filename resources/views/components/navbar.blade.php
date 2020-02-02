@@ -7,7 +7,7 @@
     <div class="row">
         <div class="logo">
             <div class="find">
-                <a href="#">P/F</a>
+                <a href="#">W/E</a>
                 <form method="get" action="#" class="search_container">
                     <input class="input-form" type="text" size="25" v-model="searchWord">
                     <i class="fa fa-search "></i>
@@ -24,10 +24,10 @@
 
         <nav v-if="toggle" class="toggle">
             <ul>
-                <li><a href=".sec01">Section 01</a></li>
-                <li><a href=".sec02">Section 02</a></li>
-                <li><a href=".sec03">Section 03</a></li>
-                <li><a href=".sec04">Section 04</a></li>
+                <li><i class="fa fa-user "></i></li>
+                <li><p>ユーザー</p></li>
+                <li class="loginbutton"><a href="/login">ログイン</a></li>
+                <li class="loginbutton"><a href="/register">新規登録</a></li>
             </ul>
         </nav>
         <!-- toggle メニューが表示される-->
