@@ -7,7 +7,7 @@
     <div class="myArticles">
         <div class="userName">
             <div class="userNameBox">
-                <h1>◯◯さんの記事一覧</h1>
+                <h1>{{ Auth::user()->name }}さんの記事一覧</h1>
             </div>
         </div>
         <ul>
