@@ -5,9 +5,16 @@ jobs:
     docker:
       # Specify the version you desire here
       - image: circleci/php:7.3-node-browsers
+        environment:
+          APP_ENV: circleci
+          APP_DEBUG: true
+          DB_CONNECTION: sqlite
+
       # duskテスト用
       - image: circleci/node:7.10-browsers
+
       - image: selenium/standalone-chrome
+
     environment:
       - APP_DEBUG: true
       - APP_ENV: testing
@@ -20,6 +27,7 @@ jobs:
 
       - run: sudo apt update # PHP CircleCI 2.0 Configuration File# PHP CircleCI 2.0 Configuration File sudo apt install zlib1g-dev libsqlite3-dev
       - run: sudo docker-php-ext-install zip
+      - run: touch database/database.sqlite
       - run: composer install -n --prefer-dist
       - run:
           name: install-npm
