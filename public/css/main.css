@@ -34,19 +34,19 @@ header .row .logo a {
   color: #8f8f8f;
 }
 
-header .row .logo .find .search_container {
+header .row .logo .find .search-container {
   margin-top: 1px;
   margin-left: 10px;
   float: left;
   display: block;
   background-color: white;
-  width: 255px;
+  width: 240px;
   height: 30px;
   border: 1px gainsboro solid;
   border-radius: 15px;
 }
 
-header .row .logo .find .search_container input {
+header .row .logo .find .search-container input {
   vertical-align: top;
   margin: 0 0 0 10px;
   width: 160px;
@@ -58,7 +58,7 @@ header .row .logo .find .search_container input {
   font-size: 16px;
 }
 
-header .row .logo .find .search_container i {
+header .row .logo .find .search-container i {
   float: right;
   margin: 5px 8px 0 0;
   font-size: 2rem;
@@ -149,7 +149,7 @@ header .row nav ul button {
 
 @media (max-width: 750px) {
   header .row nav {
-    width: 100%;
+    width: 105%;
   }
 }
 
