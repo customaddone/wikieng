@@ -48,7 +48,9 @@ jobs:
       #unit and browser test
       - run:
           name: run unit test
-          command: ./vendor/bin/phpunit
+          command: |
+            php artisan migrate
+            ./vendor/bin/phpunit
       - run:
           name: run selenium　
           command: docker run -d -p 4444:4444 selenium/standalone-chrome
