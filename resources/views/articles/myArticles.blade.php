@@ -13,22 +13,21 @@
         <ul>
             @foreach ($articles as $article)
                 <li class="result">
-                    <div class="buttons">
-                        <i class="fa fa-hand-o-right "></i>
-                        <form action="/articles/{{ $article->id }}" method="POST">
-                            {{ csrf_field() }}
-                            {{ method_field('delete') }}
-                            <button type="submit">
-                                <i class="fa fa-times-circle-o "></i>
-                            </button>
-                        </form>
-                    </div>
-                    <a class="result-box" href="/articles/{{ $article->id }}">
+                    <div class="result-box">
                         <div class="result-box-text">
+                            <div class="buttons">
+                                <form action="/articles/{{ $article->id }}" method="POST">
+                                    {{ csrf_field() }}
+                                    {{ method_field('delete') }}
+                                    <button type="submit">
+                                        <i class="fa fa-times-circle-o "></i>
+                                    </button>
+                                </form>
+                            </div>
                             <h1>{{ $article->title }}</h1>
-                            <p>{{ $article->summary }}</p>
+                            <a href="/articles/{{ $article->id }}">{{ $article->summary }}</a>
                         </div>
-                    </a>
+                    </div>
                 </li>
             @endforeach
             <li style="height: 300px; background-color: #eee; border: none;">

@@ -489,45 +489,9 @@ main .row .content-foot {
   border-bottom: 1px solid gainsboro;
 }
 
-.myArticles ul li .buttons {
-  width: 25%;
-  height: 92%;
-  margin-top: 1%;
-  float: right;
-  border-left: solid 1px gainsboro;
-}
-
-.myArticles ul li .buttons form {
-  display: inline-block;
-}
-
-.myArticles ul li .buttons button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  padding: 0;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-
-.myArticles ul li .buttons i {
-  font-size: 2rem;
-  margin-top: 38px;
-  margin-right: 15px;
-  margin-left: 15px;
-}
-
-@media (max-width: 750px) {
-  .myArticles ul li .buttons i {
-    margin-right: 0px;
-  }
-}
-
 .myArticles ul li .result-box {
   display: block;
-  width: 75%;
+  width: 100%;
   height: 100%;
   text-decoration: none;
 }
@@ -543,14 +507,36 @@ main .row .content-foot {
   color: #333;
 }
 
-.myArticles ul li .result-box .result-box-text p {
+.myArticles ul li .result-box .result-box-text a {
   margin-top: 5px;
   color: #333;
   font-size: 1.4rem;
+  text-decoration: none;
 }
 
-.myArticles ul li .result-box:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+.myArticles ul li .result-box .result-box-text .buttons {
+  float: right;
+}
+
+.myArticles ul li .result-box .result-box-text .buttons form {
+  display: inline-block;
+}
+
+.myArticles ul li .result-box .result-box-text .buttons button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.myArticles ul li .result-box .result-box-text .buttons i {
+  margin-right: 15px;
+  font-size: 2.5rem;
+  color: #e12885;
 }
 
 @media (max-width: 750px) {
@@ -710,7 +696,7 @@ footer .row li a {
 
 .wordIndex ul li {
   width: 48%;
-  height: 110px;
+  height: 135px;
   margin: 0 1%;
   float: left;
   display: block;
@@ -719,45 +705,9 @@ footer .row li a {
   border-bottom: 1px solid gainsboro;
 }
 
-.wordIndex ul li .buttons {
-  width: 25%;
-  height: 92%;
-  margin-top: 1%;
-  float: right;
-  border-left: solid 1px gainsboro;
-}
-
-.wordIndex ul li .buttons form {
-  display: inline-block;
-}
-
-.wordIndex ul li .buttons button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  padding: 0;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-
-.wordIndex ul li .buttons i {
-  font-size: 2rem;
-  margin-top: 38px;
-  margin-right: 15px;
-  margin-left: 15px;
-}
-
-@media (max-width: 750px) {
-  .wordIndex ul li .buttons i {
-    margin-right: 0px;
-  }
-}
-
 .wordIndex ul li .result-box {
   display: block;
-  width: 75%;
+  width: 100%;
   height: 100%;
   text-decoration: none;
 }
@@ -783,6 +733,14 @@ footer .row li a {
   float: right;
   margin: 2px 20px 0 0;
   font-size: 1.6rem;
+}
+
+.wordIndex ul li .result-box .result-box-text i {
+  font-size: 2.5rem;
+  float: right;
+  margin-top: 1px;
+  margin-right: 15px;
+  color: #e12885;
 }
 
 @media (max-width: 750px) {

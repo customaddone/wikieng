@@ -12,12 +12,9 @@
         </div>
         <ul>
             <li class="result" v-for="(word, index) in words" :key="index">
-                <div class="buttons">
-                    <i class="fa fa-hand-o-right "></i>
-                    <i class="fa fa-times-circle-o " @click="deleteWord(word.id)"></i>
-                </div>
                 <div class="result-box">
                     <div class="result-box-text">
+                        <i class="fa fa-times-circle-o " @click="deleteWord(word.id)"></i>
                         <p class="show-switch" @click="showSwitchSampleText(index)">例文</p>
                         <p class="show-switch" @click="showSwitchMean(index)">意味</p>
                         <h1>@{{ word.word }}</h1>
