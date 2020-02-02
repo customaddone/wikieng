@@ -149,7 +149,7 @@ header .row nav ul button {
 
 @media (max-width: 750px) {
   header .row nav {
-    width: 105%;
+    width: 102%;
   }
 }
 
@@ -674,7 +674,7 @@ footer .row li a {
 @media (max-width: 750px) {
   .dictionary .dictionary-card {
     right: 5%;
-    top: 12%;
+    top: 2%;
   }
 }
 
@@ -819,7 +819,7 @@ footer .row li a {
 @media (max-width: 750px) {
   .word-button {
     right: 7%;
-    bottom: 15%;
+    bottom: 10%;
     width: 70px;
     height: 70px;
   }
