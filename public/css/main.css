@@ -127,11 +127,13 @@ header .row nav ul i {
 }
 
 header .row nav ul button {
+  padding: 0;
+  font-size: 1.4rem;
+  color: #888888;
   background-color: transparent;
   border: none;
   cursor: pointer;
   outline: none;
-  padding: 0;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
