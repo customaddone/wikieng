@@ -8,6 +8,12 @@ use Illuminate\Support\Facades\Auth;
 
 class ArticlesController extends Controller
 {
+    // my記事に入ろうとするとログイン画面に飛ばされる
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index() {
         // idとタイトルだけgetする
         // idの前にはテーブルの名前をつける
