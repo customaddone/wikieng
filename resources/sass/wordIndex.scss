@@ -16,6 +16,7 @@
           width: 98%;
           margin: 0 auto;
           text-align: center;
+          color: #333;
           background-color: #fff;
           border-bottom: 1px double gainsboro;
         }
@@ -28,7 +29,7 @@
 
         li {
             width: 48%;
-            height: 135px;
+            height: 140px;
             margin: 0 1%;
             float: left;
             display: block;
@@ -55,6 +56,8 @@
                     }
 
                     p {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                         margin-top: 5px;
                         color: #333;
                         font-size: 1.4rem;

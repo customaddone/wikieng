@@ -468,6 +468,7 @@ main .row .content-foot {
   width: 98%;
   margin: 0 auto;
   text-align: center;
+  color: #333;
   background-color: #fff;
   border-bottom: 1px double gainsboro;
 }
@@ -684,6 +685,7 @@ footer .row li a {
   width: 98%;
   margin: 0 auto;
   text-align: center;
+  color: #333;
   background-color: #fff;
   border-bottom: 1px double gainsboro;
 }
@@ -696,7 +698,7 @@ footer .row li a {
 
 .wordIndex ul li {
   width: 48%;
-  height: 135px;
+  height: 140px;
   margin: 0 1%;
   float: left;
   display: block;
@@ -724,6 +726,8 @@ footer .row li a {
 }
 
 .wordIndex ul li .result-box .result-box-text p {
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin-top: 5px;
   color: #333;
   font-size: 1.4rem;
