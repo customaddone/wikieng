@@ -27,7 +27,7 @@ jobs:
 
       - run: sudo apt update # PHP CircleCI 2.0 Configuration File# PHP CircleCI 2.0 Configuration File sudo apt install zlib1g-dev libsqlite3-dev
       - run: sudo docker-php-ext-install zip
-      - run: touch database/database.sqlite
+      - run: touch database/database_test.sqlite
       - run: composer install -n --prefer-dist
       - run:
           name: install-npm
