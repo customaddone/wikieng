@@ -58,8 +58,8 @@ class ViewTest extends TestCase
         // idが作った記事の数より多いとサーバーエラー
         $response = $this->get('/articles/2');
         $response->assertStatus(500);
-        // 200が返る?
+        // idが作った記事の数より多いとリダイレクトする（ステータス200でのリダイレクト）
         $response = $this->get('/words/2');
-        $response->assertStatus(500);
+        $response->assertStatus(200);
     }
 }

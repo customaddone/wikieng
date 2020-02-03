@@ -45,7 +45,10 @@ var vm = new Vue({
                 '$2'
                 )
             })
-            .catch(response => console.log(response));
+            .catch((response) => {
+                location.href="/";
+                console.log(response);
+            });
 
         // 記事のsummaryの検索（記事保存の時にfooterに渡す）
         axios.get("/api/searchArticleSummary/" + encodeSearchWord)
