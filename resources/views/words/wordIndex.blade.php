@@ -19,7 +19,7 @@
                         <p class="show-switch" @click="showSwitchMean(index)">意味</p>
                         <h1>@{{ word.word }}</h1>
                         <p v-if="showWordsProperty[index] == 0">@{{ word.mean }}</p>
-                        <p v-if="showWordsProperty[index] == 1">@{{ word.sampletext }}</p>
+                        <p v-if="showWordsProperty[index] == 1" class="sampletext">@{{ word.sampletext }}</p>
                     </div>
                 </div>
             </li>

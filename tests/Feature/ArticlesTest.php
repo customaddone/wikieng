@@ -28,7 +28,28 @@ class ArticlesTest extends TestCase
         parent::setUp();
     }
 
-    public function testArticle()
+    public function testArticleIndex()
+    {
+        $article = new ArticlesController;
+
+        $this->assertNotEmpty($article->index());
+
+    }
+
+    public function testArticleShow()
+    {
+        $article = new ArticlesController;
+
+        $request = new Request;
+        $request->merge([
+            'id' => 1,
+        ]);
+
+        $this->assertNotEmpty($article->show($request));
+
+    }
+
+    public function testArticleImport()
     {
         $article = new ArticlesController;
 
