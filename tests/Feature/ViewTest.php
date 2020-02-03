@@ -61,5 +61,15 @@ class ViewTest extends TestCase
         // idが作った記事の数より多いとリダイレクトする（ステータス200でのリダイレクト）
         $response = $this->get('/words/2');
         $response->assertStatus(200);
+
+        // 記事をdeleteすると$this->get('/articles/1')で入ろうとしてもサーバーエラーが出る
+        $this->delete('/articles/1');
+        $response->assertStatus(200);
+        $response = $this->get('/articles/1');
+        $response->assertStatus(500);
+
+        // 存在しないid番号の記事を削除しようとしてもエラーが出る
+        $this->delete('/articles/1');
+        $response->assertStatus(500);
     }
 }
