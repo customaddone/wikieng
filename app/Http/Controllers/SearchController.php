@@ -13,6 +13,10 @@ class SearchController extends Controller
     {
         $client = new \GuzzleHttp\Client();
 
+        // ヘッダーに'Content-Type' => 'application/x-www-form-urlencoded'をつける
+        // はてなマークがついてる単語の記事も見ることができる
+        $headers = [ 'Content-Type' => 'application/x-www-form-urlencoded' ];
+
         $response = $client->request(
             'GET',
             $url = "https://en.wikipedia.org/w/api.php",

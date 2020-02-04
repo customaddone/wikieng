@@ -19,11 +19,10 @@ var vm = new Vue({
        var pathname= location.pathname;
        this.searchName = pathname.split("/");
        // スペースをアンダーバーに変えてエンコード
-       var underVarJoin = this.searchName[2].split("%20").join('_')
-       var encodeSearchWord = (this.searchName.length == 3) ? encodeURI(underVarJoin) : "";
+       var underVarJoin = this.searchName[2].split("%20").join('_');
 
        /* 記事本体の検索 */
-       axios.get("/api/searchArticleDetail/" + encodeSearchWord)
+       axios.get("/api/searchArticleDetail/" + underVarJoin)
             .then((response) => {
 
               　this.showArticleDetail = response.data.parse.text["*"]
@@ -50,7 +49,7 @@ var vm = new Vue({
             });
 
         // 記事のsummaryの検索（記事保存の時にfooterに渡す）
-        axios.get("/api/searchArticleSummary/" + encodeSearchWord)
+        axios.get("/api/searchArticleSummary/" + underVarJoin)
              .then((response) => {
                   var keyId = Object.keys(response.data.query.pages)
                   this.summary = response.data.query.pages[keyId].extract

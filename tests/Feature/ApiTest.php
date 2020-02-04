@@ -49,11 +49,13 @@ class ApiTest extends TestCase
                 ]
             ]);
 
-        // "invalidreason": "The requested page title contains invalid characters: \"%3F\".",
-        $this->get('api/searchArticleDetail/Is_the_Order_a_Rabbit?')
+        // SearchControllerのsearchMediaWiki関数にヘッダーをつけて、
+        // 特殊文字が入った単語を閲覧できない（api/searchArticleDetailでアクセスできない）
+        // 問題は解決
+        $this->get('api/searchArticleDetail/Is_the_Order_a_Rabbit%3F')
             ->assertJson([
-                "error" => [
-                    "code" => "missingtitle",
+                "parse" => [
+                    "title" => "Is the Order a Rabbit?",
                 ]
             ]);
     }

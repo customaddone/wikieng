@@ -53,10 +53,12 @@ jobs:
           paths:
             - node_modules
 
-      #unit and browser test
+      # unit and browser test
+      # guzzle無いとapiのテストできませんよ
       - run:
           name: run unit test
           command: |
+            composer require guzzlehttp/guzzle
             php artisan migrate
             ./vendor/bin/phpunit
       - run:
