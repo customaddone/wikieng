@@ -19,11 +19,8 @@ var head = new Vue({
 
             axios.get("/api/words/" + articleId[2])
                  .then((response) => {
-                     // 内容がなければホームにリダイレクト
-                     if (response.data.length == 0) {
-                         location.href="/";
-                     }
-                     
+                     // リダイレクトはまずい
+
                      this.words = response.data;
                      for (var i = 0; i < response.data.length; i++) {
                          this.showWordsProperty.push(0);

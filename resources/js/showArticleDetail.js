@@ -46,7 +46,6 @@ var vm = new Vue({
                 )
             })
             .catch((response) => {
-                location.href="/";
                 console.log(response);
             });
 

@@ -25,9 +25,36 @@ class ApiTest extends TestCase
         $this->get('api/searchArticle/テスト')
             ->assertStatus(404);
 
-        // はてなマーク等がついた単語でapiを用いて検索するとステータス200が出る
-        // しかしブラウザで実際に検索しても画面が出ない
-        $this->get('api/searchArticle/Is_the_Order_a_Rabbit%3F')
-            ->assertStatus(200);
+        // ページ取得成功
+        $this->get('api/searchArticleDetail/Vodka')
+            ->assertJson([
+                "parse" => [
+                    "title" => "Vodka",
+                ]
+            ]);
+
+        // ページ取得成功（エンコードしたもの）
+        $this->get('api/searchArticleDetail/Sound%20of%20the%20Sky')
+            ->assertJson([
+                "parse" => [
+                    "title" => "Sound of the Sky",
+                ]
+            ]);
+
+        // ページ取得失敗
+        $this->get('api/searchArticleDetail/VodkaVodka')
+            ->assertJson([
+                "error" => [
+                     "code" => "missingtitle",
+                ]
+            ]);
+
+        // "invalidreason": "The requested page title contains invalid characters: \"%3F\".",
+        $this->get('api/searchArticleDetail/Is_the_Order_a_Rabbit?')
+            ->assertJson([
+                "error" => [
+                    "code" => "missingtitle",
+                ]
+            ]);
     }
 }
