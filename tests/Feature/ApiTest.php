@@ -2,12 +2,20 @@
 
 namespace Tests\Feature;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
+use Illuminate\Http\Request;
+use App\User;
+use App\Article;
+use App\Http\Controllers\ArticlesController;
+use Illuminate\Support\Facades\Auth;
 
 class ApiTest extends TestCase
 {
+    use DatabaseMigrations;
+    use DatabaseTransactions;
     /**
      * A basic feature test example.
      *
@@ -55,5 +63,23 @@ class ApiTest extends TestCase
                     "title" => "Is the Order a Rabbit?",
                 ]
             ]);
+
+        $this->get('api/searchArticleSummary/Is_the_Order_a_Rabbit%3F')
+            ->assertOK();
+
+        $user = factory(User::class)->create();
+
+        $this->be($user);
+
+        $response = $this->post('api/articles/import' , [
+            'title' => 'article',
+            'article' => 'article_body',
+            'summary' => 'article_summary',
+            'status' => 'status'
+        ]);
+
+        $response->assertOK();
+        // ちゃんとarticleが生成されるか？
+        $this->assertNotEmpty(Article::where('title', '=', 'article'));
     }
 }

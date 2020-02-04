@@ -46,7 +46,7 @@ class ArticlesTest extends TestCase
         ]);
 
         $this->assertNotEmpty($article->show($request));
-
+        $this->assertEmpty(Auth::id());
     }
 
     public function testArticleImport()
@@ -64,7 +64,6 @@ class ArticlesTest extends TestCase
         $request = new Request;
         $request->merge([
             'title' => 'article',
-            'user_id' => Auth::id(),
             'article' => 'article_body',
             'summary' => 'article_summary',
             'status' => 'status'
@@ -72,8 +71,12 @@ class ArticlesTest extends TestCase
 
         // importには戻り値はないので、import($request)自体はnullになる
         $article->import($request);
+
         // ちゃんとarticleが生成されるか？
         $this->assertNotEmpty(Article::where('title', '=', 'article'));
 
+        //  記事をdestroyする
+        $article->destroy(1);
+        $this->assertEmpty(Article::all());
     }
 }

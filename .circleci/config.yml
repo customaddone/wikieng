@@ -61,18 +61,22 @@ jobs:
             composer require guzzlehttp/guzzle
             php artisan migrate
             ./vendor/bin/phpunit
+
       - run:
           name: run selenium　
           command: docker run -d -p 4444:4444 selenium/standalone-chrome
+
       - run:
           name: run browser
           command: php artisan serve
           background: true
+
       - run:
           name: run dusk
           command: |
             composer require guzzlehttp/guzzle
             APP_URL=http://127.0.0.1:8000 php artisan dusk
+            
   deploy:
     docker:
       # Specify the version you desire here
@@ -88,12 +92,14 @@ jobs:
             curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
             unzip awscli-bundle.zip
             sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+
       - run:
           name: build image
           command: |
             $(aws ecr get-login --no-include-email --region ap-northeast-1)
             docker build -f ./docker/php/Dockerfile -t ${ECR_DOMAIN_APP}:$CIRCLE_SHA1 -t ${ECR_DOMAIN_APP}:latest .
             docker build -f ./docker/nginx/Dockerfile -t ${ECR_DOMAIN_NGINX}:$CIRCLE_SHA1 -t ${ECR_DOMAIN_NGINX}:latest  .
+
       - run:
           name: Push docker image
           command: |
@@ -101,11 +107,13 @@ jobs:
             docker push ${ECR_DOMAIN_APP}:latest
             docker push ${ECR_DOMAIN_NGINX}:$CIRCLE_SHA1
             docker push ${ECR_DOMAIN_NGINX}:latest
+
       - run:
           name: download jq # JSONファイルを簡単に操作するためにjqをインストール
           command: |
             wget https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
             mv jq-linux64 jq
+
       - run:
           name: deploy # 新しいタスク定義ファイルを作成し、ECSに反映させる
           command: |

@@ -11,6 +11,7 @@ var vm = new Vue({
 
      // 検索結果
      seeWord: "",
+     articleTitle: "",
      seeWordsSampleText: "",
      translatedWord: ""
    },
@@ -42,7 +43,9 @@ var vm = new Vue({
                 .replace(
                 /<a href="((?=Help).*?)".*?>(.*?)<\/a>/g,
                 '$2'
-                )
+              );
+
+                this.articleTitle = response.data.parse.title;
             })
             .catch((response) => {
                 console.log(response);
