@@ -21,9 +21,6 @@ class ApiTest extends TestCase
         // 日本語でも検索できる
         $this->get('api/searchArticle/%E3%83%86%E3%82%B9%E3%83%88')
             ->assertStatus(200);
-        // 404エラー
-        $this->get('api/searchArticle/テスト')
-            ->assertStatus(404);
 
         // ページ取得成功
         $this->get('api/searchArticleDetail/Vodka')
