@@ -511,7 +511,7 @@ main .row .content-foot {
 .myArticles ul li .result-box .result-box-text a {
   margin-top: 5px;
   color: #333;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   text-decoration: none;
 }
 
@@ -737,6 +737,10 @@ footer .row li a {
   float: right;
   margin: 2px 20px 0 0;
   font-size: 1.6rem;
+}
+
+.wordIndex ul li .result-box .result-box-text p.sampletext {
+  font-size: 1.8rem;
 }
 
 .wordIndex ul li .result-box .result-box-text i {

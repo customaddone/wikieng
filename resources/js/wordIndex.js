@@ -19,12 +19,16 @@ var head = new Vue({
 
             axios.get("/api/words/" + articleId[2])
                  .then((response) => {
+                     // リダイレクトはまずい
+
                      this.words = response.data;
                      for (var i = 0; i < response.data.length; i++) {
                          this.showWordsProperty.push(0);
                      }
                  })
-                 .catch(response => console.log(response));
+                 .catch((response) => {
+                     console.log(response);
+                 });
         },
 
         deleteWord: function (id) {
