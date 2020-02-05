@@ -21,7 +21,7 @@ class ApiTest extends TestCase
      *
      * @return void
      */
-    public function testApi()
+    public function testArticlesApi()
     {
         // ヘッダーでのwikipedia記事検索
         $this->get('api/searchArticle/123456789')
@@ -29,6 +29,10 @@ class ApiTest extends TestCase
         // 日本語でも検索できる
         $this->get('api/searchArticle/%E3%83%86%E3%82%B9%E3%83%88')
             ->assertStatus(200);
+
+        // なんらかの理由でエンコードできなかった場合はエラー
+        $this->get('api/searchArticle/テスト')
+            ->assertStatus(404);
 
         // ページ取得成功
         $this->get('api/searchArticleDetail/Vodka')
@@ -71,15 +75,40 @@ class ApiTest extends TestCase
 
         $this->be($user);
 
+        // summaryはnullable,statusは初期値あり
         $response = $this->post('api/articles/import' , [
-            'title' => 'article',
+            'title' => 'article1',
             'article' => 'article_body',
-            'summary' => 'article_summary',
-            'status' => 'status'
         ]);
 
         $response->assertOK();
-        // ちゃんとarticleが生成されるか？
-        $this->assertNotEmpty(Article::where('title', '=', 'article'));
+        $this->assertNotEmpty(Article::find(1));
+
+        $response = $this->post('api/articles/import' , [
+            'title' => 'article2',
+            'summary' => 'article_summary',
+            'status' => 'status'
+        ]);
+        $response->assertStatus(500);
+        $this->assertEmpty(Article::find(2));
+
+        // edit
+        $response = $this->post('api/articles/edit' , [
+            'id' => '1',
+            'article' => 'article_summary_edit',
+        ]);
+        $response->assertStatus(200);
+        // しっかりeditできている
+        $this->assertEquals('article_summary_edit', Article::find(1)->article);
+
+    }
+
+    public function testWordsApi() {
+        // article内での小さい枠の中での単語検索
+        $response = $this->get('api/wordIdSearch/import')
+            ->assertStatus(200);
+
+        $response = $this->get('api/wordIdSearch/テスト')
+            ->assertStatus(200);
     }
 }

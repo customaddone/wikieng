@@ -64,6 +64,7 @@ class ArticlesTest extends TestCase
         $request = new Request;
         $request->merge([
             'title' => 'article',
+            'user_id' => Auth::id(),
             'article' => 'article_body',
             'summary' => 'article_summary',
             'status' => 'status'
