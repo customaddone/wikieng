@@ -34,6 +34,8 @@ class SearchController extends Controller
     {
         $client = new \GuzzleHttp\Client();
 
+        $headers = [ 'Content-Type' => 'application/x-www-form-urlencoded' ];
+
         $response = $client->request(
             'GET',
             $url = $searchUrl,
@@ -72,6 +74,7 @@ class SearchController extends Controller
         );
     }
 
+    // 冒頭を抽出
     public function searchArticleSummary($word)
     {
         return self::searchMediaWiki(

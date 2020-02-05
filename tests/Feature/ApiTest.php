@@ -9,6 +9,7 @@ use Tests\TestCase;
 use Illuminate\Http\Request;
 use App\User;
 use App\Article;
+use App\Word;
 use App\Http\Controllers\ArticlesController;
 use Illuminate\Support\Facades\Auth;
 
@@ -29,10 +30,6 @@ class ApiTest extends TestCase
         // 日本語でも検索できる
         $this->get('api/searchArticle/%E3%83%86%E3%82%B9%E3%83%88')
             ->assertStatus(200);
-
-        // なんらかの理由でエンコードできなかった場合はエラー
-        $this->get('api/searchArticle/テスト')
-            ->assertStatus(404);
 
         // ページ取得成功
         $this->get('api/searchArticleDetail/Vodka')
@@ -104,11 +101,43 @@ class ApiTest extends TestCase
     }
 
     public function testWordsApi() {
+
         // article内での小さい枠の中での単語検索
-        $response = $this->get('api/wordIdSearch/import')
+        $response = $this->get("api/wordIdSearch/pass")
             ->assertStatus(200);
 
-        $response = $this->get('api/wordIdSearch/テスト')
+        // データはxmlで返ってくる
+        $response = $this->get('api/wordSearch/123')
             ->assertStatus(200);
+
+        $response = $this->get('api/wordIdSearch/66')
+            ->assertStatus(200);
+
+        // article_idが1,2,3のwordを計１０個作成
+        for ($i = 0; $i < 10; $i++) {
+            $array = [1, 2, 3];
+
+            Word::create([
+                'word' => 'sample',
+                'mean' => 'example',
+                'sampletext' => 'dummy data',
+                'article_id' => $array[ ($i % 3) ],
+            ]);
+        }
+
+        $user = factory(User::class)->create();
+        $this->be($user);
+
+        // article_idが１のものを全て抽出
+        $response = $this->get('api/words/1');
+        $response->assertStatus(200)
+            ->assertJsonFragment([
+            'id' => 1,
+            'id' => 4,
+            'id' => 7,
+            'id' => 10,
+        ]);
+
+
     }
 }
