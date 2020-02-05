@@ -125,6 +125,7 @@ class ApiTest extends TestCase
             ]);
         }
 
+        // 認証
         $user = factory(User::class)->create();
         $this->be($user);
 
@@ -138,6 +139,33 @@ class ApiTest extends TestCase
             'id' => 10,
         ]);
 
+        // 'api/words/create'でwordが生成されて
+        $response = $this->post('api/words/create', [
+            'word' => 'will',
+            'mean' => 'next',
+            'sampletext' => 'dummy data',
+            'article_id' => 1,
+        ])->assertStatus(200);
 
+        // article_id = 5のデータが１つ増える
+        $this->assertEquals(5, count(Word::where( 'article_id', '=', '1')->get()));
+
+        // １つでも抜かすとエラーが出る
+        $response = $this->post('api/words/create', [
+            'word' => null,
+            'mean' => 'next',
+            'sampletext' => 'dummy data',
+            'article_id' => 1,
+        ])->assertStatus(500);
+
+        // id = 1のレコードを破壊
+        $response = $this->delete("api/words/1")
+            ->assertStatus(200);
+        // article_id = 5のデータが１つ減る
+        $this->assertEquals(4, count(Word::where( 'article_id', '=', '1')->get()));
+
+        // id = 1のレコードをもう一度破壊しようとするとエラー
+        $response = $this->delete("api/words/1")
+            ->assertStatus(500);
     }
 }

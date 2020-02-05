@@ -27,13 +27,16 @@ class ViewTest extends TestCase
         $response->assertStatus(404);
 
         // ログインしないとmy記事画面、記事詳細画面及び単語一覧画面には入れない（リダイレクトされる）
-        $response = $this->get('/myArticles');
+        $response = $this->get('/myArticles')
+            ->assertRedirect('/login');
         $response->assertDontSee('記事一覧');
 
-        $response = $this->get('/articles/1');
+        $response = $this->get('/articles/1')
+            ->assertRedirect('/login');
         $response->assertStatus(302);
 
-        $response = $this->get('/words/1');
+        $response = $this->get('/words/1')
+            ->assertRedirect('/login');
         $response->assertStatus(302);
     }
 
