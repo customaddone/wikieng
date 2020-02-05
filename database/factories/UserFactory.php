@@ -3,6 +3,7 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 use App\User;
 use App\Article;
+use App\Word;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 
@@ -34,5 +35,14 @@ $factory->define(Article::class, function (Faker $faker) {
         'article' => $faker->text,
         'summary' => $faker->text,
         'status' => 'draft',
+    ];
+});
+
+$factory->define(Word::class, function (Faker $faker) {
+    return [
+        'word' => $faker->name,
+        'mean' => $faker->name,
+        'sampletext' => $faker->text,
+        'article_id' => $faker->randomDigit(),
     ];
 });

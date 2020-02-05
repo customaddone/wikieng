@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class ArticlesController extends Controller
 {
-    // my記事に入ろうとするとログイン画面に飛ばされる
+    // ログインしないままmy記事に入ろうとするとログイン画面に飛ばされる
     public function __construct()
     {
         $this->middleware('auth');
@@ -27,13 +27,6 @@ class ArticlesController extends Controller
         return view('articles.myArticlesDetail', [ 'article' => $article ]);
     }
 
-    public function destroy($id) {
-        $article = Article::find($id);
-        $article->delete();
-        // redirectに引数つけないとhttpsに行かない
-        return redirect('/myArticles');
-    }
-
     // 記事の保存
     public function import(Request $request) {
         $article = Article::create([
@@ -47,10 +40,16 @@ class ArticlesController extends Controller
         $article->save();
     }
 
-    // 記事の編集
+    // 記事の編集（ハイライトの反映）
     public function edit(Request $request) {
         $article = Article::find($request->id);
         $article->article = $request->article;
         $article->save();
+    }
+
+    public function destroy($id) {
+        $article = Article::find($id);
+        $article->delete();
+        return redirect('/myArticles');
     }
 }

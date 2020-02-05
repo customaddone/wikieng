@@ -30,7 +30,7 @@ var foot = new Vue({
         // 記事のインポート
         saveArticle: function () {
             axios.post('/api/articles/import',{
-                title: decodeURI(vm.searchName[2].toString()),
+                title: vm.articleTitle,
 
                 // wikiの記事のaリンクを消す replaceは非破壊的メソッド
                 article: vm.showArticleDetail
