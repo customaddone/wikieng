@@ -19,7 +19,7 @@ var dictionary = new Vue({
 
         for (var i = 0; i < endword.length; i++) {
           /* 配列の中の要素が末尾にあるか、配列の前から順に調べていく
-            　　       あれば末尾を切り取りfunctionの戻り値にしてループを抜ける */
+          あれば末尾を切り取りfunctionの戻り値にしてループを抜ける */
           var pattern = new RegExp('^(.+)' + endword[i] + '$')
           var searchWord = word.match(pattern)
           if (searchWord) {

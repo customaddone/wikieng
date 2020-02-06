@@ -1,5 +1,11 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/main.css": "/css/main.css",
-    "/css/wikipediaArticle.css": "/css/wikipediaArticle.css"
+    "/css/wikipediaArticle.css": "/css/wikipediaArticle.css",
+    "/js/header-toggle.js": "/js/header-toggle.js",
+    "/js/showArticleDetail.js": "/js/showArticleDetail.js",
+    "/js/footer-function.js": "/js/footer-function.js",
+    "/js/footer-edit-function.js": "/js/footer-edit-function.js",
+    "/js/dictionary.js": "/js/dictionary.js",
+    "/js/wordIndex.js": "/js/wordIndex.js"
 }
