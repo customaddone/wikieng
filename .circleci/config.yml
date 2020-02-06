@@ -53,12 +53,12 @@ jobs:
           paths:
             - node_modules
 
-      # phpの静的解析ツール
+      # phpの静的解析ツール larastan
       - run:
           name: static analysis
           command: |
-            composer require --dev phpstan/phpstan
-            vendor/bin/phpstan analyse -l 0 app
+            composer require --dev nunomaduro/larastan
+            ./vendor/bin/phpstan analyse
 
       # unit and browser test
       # guzzle無いとapiのテストできませんよ
