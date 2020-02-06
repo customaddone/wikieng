@@ -133,11 +133,10 @@ class ApiTest extends TestCase
         $response = $this->get('api/words/1');
         $response->assertStatus(200)
             ->assertJsonFragment([
-            'id' => 1,
-            'id' => 4,
-            'id' => 7,
             'id' => 10,
-        ]);
+            ])->assertJsonFragment([
+            'id' => 4,
+            ]);
 
         // 'api/words/create'でwordが生成されて
         $response = $this->post('api/words/create', [

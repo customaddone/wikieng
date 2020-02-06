@@ -4,4 +4,4 @@ parameters:
     level: 3
     paths:
         - app
-        - tests
+        - resources
