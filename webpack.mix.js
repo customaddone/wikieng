@@ -10,6 +10,21 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
+ if (!mix.inProduction()) { // 本番環境ではESLintは使用しない
+   mix.webpackConfig({
+     module: {
+       rules: [
+         {
+           enforce: 'pre',
+           exclude: /node_modules/,
+           loader: 'eslint-loader',
+           test: /\.(js|vue)?$/,
+         },
+       ],
+     },
+   })
+ }
+
   // まとめろ
 mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/main.scss', 'public/css')
@@ -20,3 +35,14 @@ mix.js('resources/js/app.js', 'public/js')
    .scripts('resources/js/footer-edit-function.js', 'public/js/footer-edit-function.js')
    .scripts('resources/js/dictionary.js', 'public/js/dictionary.js')
    .scripts('resources/js/wordIndex.js', 'public/js/wordIndex.js');
+   /* .js(
+     [
+       'resources/js/header-toggle.js',
+       'resources/js/showArticleDetail.js',
+       'resources/js/footer-function.js',
+       'resources/js/footer-edit-function.js',
+       'resources/js/dictionary.js',
+       'resources/js/wordIndex.js'
+     ],
+     'public/js/app.js'
+   ); */

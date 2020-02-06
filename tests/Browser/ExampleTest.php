@@ -20,11 +20,11 @@ class ExampleTest extends DuskTestCase
             /* guzzle使うと処理が遅くなるのか */
             $browser->visit('/')
                     ->type('.input-form', 'fran')
-                    ->pause(1000)
+                    ->pause(2000)
                     ->append('.input-form', 'kel')
-                    ->pause(1000)
+                    ->pause(2000)
                     ->append('.input-form', ' ')
-                    ->pause(1000)
+                    ->pause(2000)
                     ->assertSee('horse')
                     ->screenShot('test');
         });

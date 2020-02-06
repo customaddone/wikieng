@@ -53,6 +53,13 @@ jobs:
           paths:
             - node_modules
 
+      # phpの静的解析ツール larastan
+      - run:
+          name: static analysis
+          command: |
+            composer require --dev nunomaduro/larastan
+            ./vendor/bin/phpstan analyse
+
       # unit and browser test
       # guzzle無いとapiのテストできませんよ
       - run:
@@ -76,7 +83,7 @@ jobs:
           command: |
             composer require guzzlehttp/guzzle
             APP_URL=http://127.0.0.1:8000 php artisan dusk
-            
+
   deploy:
     docker:
       # Specify the version you desire here

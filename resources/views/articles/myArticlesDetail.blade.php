@@ -12,7 +12,7 @@
     <div style="height: 133px;">
     </div>
 
-    <!-- 登録単語一覧を見る --> 
+    <!-- 登録単語一覧を見る -->
     <a href="/words/{{ $article->id }}" class="word-button word-index-button">
         <i class="fa fa-book "></i>
     </a>
