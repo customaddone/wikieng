@@ -18,15 +18,8 @@ class ExampleTest extends DuskTestCase
         $this->browse(function (Browser $browser) {
             /* 検索フォームに'frankel'と打つとfrankelの記事が出るようにする */
             /* guzzle使うと処理が遅くなるのか */
-            $browser->visit('/')
-                    ->type('.input-form', 'fran')
-                    ->pause(2000)
-                    ->append('.input-form', 'kel')
-                    ->pause(2000)
-                    ->append('.input-form', ' ')
-                    ->pause(2000)
-                    ->assertSee('horse')
-                    ->screenShot('test');
+            $browser->visit('/');
+
         });
     }
 }
