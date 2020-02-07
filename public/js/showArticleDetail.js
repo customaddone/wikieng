@@ -6,9 +6,6 @@ var vm = new Vue({
     showArticleDetail: '',
     summary: '',
 
-    // ハイライトの色
-    nowHighlightColor: '#ff89ff',
-
     // 検索結果
     seeWord: '',
     articleTitle: '',
@@ -82,7 +79,7 @@ var vm = new Vue({
       // HTML要素spanを生成
       var span = document.createElement('span')
       // 色を指定
-      span.style.backgroundColor = this.nowHighlightColor
+      span.style.backgroundColor = dictionary.nowHighlightColor
       // 範囲選択した要素をspanで囲む
       range.surroundContents(span)
     },

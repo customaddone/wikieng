@@ -5,6 +5,11 @@ var dictionary = new Vue({
     switchFooterFunction: 0,
     seeWord: 'Search',
     translatedWord: '',
+
+    // ハイライトの色
+    nowHighlightColor: "#FF89FF",
+    // ハイライトの色の配列
+    highlightColor: ["#FF89FF", "#89DB89", "#90AFEE", "#C8AAF2", "#8BDEDE", "#FF9999"],
   },
 
   methods: {
@@ -88,6 +93,11 @@ var dictionary = new Vue({
           console.log(response)
         })
     },
+
+    // ハイライトの色変更
+    switchHighlightColor: function(colorId) {
+      this.nowHighlightColor = this.highlightColor[colorId]
+    }
   },
-  // 記事のインポート
+
 })
