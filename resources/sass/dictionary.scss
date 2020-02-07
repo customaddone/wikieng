@@ -14,6 +14,22 @@
         border-radius: 25px;
         background-color: #fff;
 
+        .highlight-box {
+            h1 {
+                text-align: center;
+                color: #555;
+            }
+            .color-image {
+                display: inline-block;
+                margin-top: 10px;
+                margin-left: 10px;
+                border-radius: 5px;
+                width: 52px;
+                height: 52px;
+                background-color: #bbb;
+            }
+        }
+
         .dictionary-header {
             margin-top: 10px;
             margin-right: 20px;
