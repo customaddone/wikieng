@@ -185,6 +185,80 @@ header .row .mobile-toggle span {
   }
 }
 
+.login {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.login .login-box {
+  width: 98%;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-sizing: border-box;
+  border: 1px lightblue solid;
+}
+
+.login .login-box .login-title {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: lightblue;
+}
+
+.login .login-box .login-title h1 {
+  margin: 0;
+  margin-left: 30px;
+  padding-top: 15px;
+  color: #fff;
+}
+
+.login .login-box .login-title p {
+  margin-top: 0px;
+  margin-right: 15px;
+  font-size: 1.4rem;
+  padding-bottom: 5px;
+  text-align: right;
+  color: #fff;
+}
+
+.login .login-box .login-value-form {
+  width: 94%;
+  margin: 0 auto;
+}
+
+.login .login-box .login-value-form input {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 5%;
+  outline: none;
+  border: 1px solid gainsboro;
+  border-radius: 0;
+}
+
+.login .login-box .login-value-form input[type=submit] {
+  margin-top: 30px;
+  background-color: lightblue;
+  border-radius: 5px;
+  border: 1px solid #90CDDB;
+  color: #fff;
+}
+
+.login .login-box .login-value-form p {
+  font-size: 1.4rem;
+  color: #51C1E2;
+}
+
+@media (max-width: 750px) {
+  .login .login-box h1 {
+    font-size: 2.5rem;
+  }
+}
+
 section {
   position: absolute;
   width: 100%;

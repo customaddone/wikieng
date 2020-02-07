@@ -1,7 +1,25 @@
-@extends('layouts.app')
+@extends('layouts.layouts')
 
 @section('content')
-<div class="container">
+    @component('components.loginNavbar')
+    @endcomponent
+
+    <div class="login">
+        <div class="login-box">
+            <div class="login-title">
+                <h1>Sign in</h1>
+                <p>Forgot password?</p>
+            </div>
+            <div class="login-value-form">
+                <p>ユーザー名</p>
+                <input type="text" name="name" placeholder="NAME">
+                <p>パスワード</p>
+                <input type="text" name="name" placeholder="NAME">
+                <input type="submit" value="SEND">
+            </div>
+        </div>
+    </div>
+<!-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -69,5 +87,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 @endsection
