@@ -42,13 +42,29 @@
             input {
                 display: block;
                 width: 90%;
-                font-size: 1.4rem;
+                font-size: 16px;
                 margin: 0 auto;
                 margin-bottom: 10px;
                 padding: 5%;
+                -webkit-appearance:none;
                 outline: none;
                 border: 1px solid gainsboro;
                 border-radius: 0;
+            }
+
+            input[type="submit"],
+            input[type="button"] {
+                -webkit-box-sizing: content-box;
+                -webkit-appearance: button;
+                appearance: button;
+                border: none;
+                box-sizing: border-box;
+                &::-webkit-search-decoration {
+                    display: none;
+                }
+                &:focus {
+                    outline-offset: -2px;
+                }
             }
 
             input[type=submit] {
