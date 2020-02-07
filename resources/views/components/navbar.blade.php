@@ -7,7 +7,7 @@
     <div class="row">
         <div class="logo">
             <div class="find">
-                <a href="#">W/E</a>
+                <a href="/">W/E</a>
                 <form method="get" action="#" class="search-container">
                     <input class="input-form" type="text" size="25" v-model="searchWord">
                     <i class="fa fa-search "></i>

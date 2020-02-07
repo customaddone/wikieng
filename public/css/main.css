@@ -232,6 +232,7 @@ header .row .mobile-toggle span {
 .login .login-box .login-value-form input {
   display: block;
   width: 90%;
+  font-size: 1.4rem;
   margin: 0 auto;
   margin-bottom: 10px;
   padding: 5%;
@@ -241,16 +242,23 @@ header .row .mobile-toggle span {
 }
 
 .login .login-box .login-value-form input[type=submit] {
-  margin-top: 30px;
+  margin-top: 60px;
   background-color: lightblue;
   border-radius: 5px;
+  cursor: pointer;
   border: 1px solid #90CDDB;
   color: #fff;
 }
 
 .login .login-box .login-value-form p {
+  margin-bottom: 5px;
   font-size: 1.4rem;
   color: #51C1E2;
+}
+
+.login .login-box .login-value-form .invalid-feedback {
+  font-size: 1.4rem;
+  color: #e12885;
 }
 
 @media (max-width: 750px) {

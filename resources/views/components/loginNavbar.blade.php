@@ -7,7 +7,7 @@
     <div class="row">
         <div class="logo">
             <div class="find">
-                <a href="#">W/E</a>
+                <a href="/">W/E</a>
             </div>
         </div>
 
@@ -21,16 +21,9 @@
         <nav v-if="toggle" class="toggle">
             <ul>
                 @guest
+                    <hr color="#eee">
                     <li class="loginbutton">
                         <a href="/login">ログイン</a>
-                    </li>
-                    <li class="loginbutton loginbutton-last">
-                        <form method="POST" action="/login">
-                            @csrf
-                            <input name="email" type="hidden" value="laravel@gmail.com">
-                            <input name="password" type="hidden" value="laravelpassword">
-                            <button type="submit">簡単ログイン</button>
-                        </form>
                     </li>
                     <li class="loginbutton loginbutton-last">
                         <a href="/register">新規登録</a>
