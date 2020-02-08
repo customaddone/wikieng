@@ -52,7 +52,7 @@ Wikieng
 
 その他
 アプリ内でMediawiki API(wikipediaのAPI)、デ辞蔵（英和辞書API)使用
- 
+
 # Note
  
 簡単ログインを用いるとゲストユーザー用のユーザーでログインできます
