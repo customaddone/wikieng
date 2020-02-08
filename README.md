@@ -1,6 +1,6 @@
 # Name
  
-Wikieng<br>
+Wikieng<br><br>
 英語版Wikipediaで英語を学習するためのアプリです。
  
 #  Inspire
@@ -66,6 +66,6 @@ https://wikiforlearningenglish.com
  
 # Comment
  
-皆さま、英語版Wikiを読みましょう。
+皆さん、英語版Wikiを読みましょう。
  
 
