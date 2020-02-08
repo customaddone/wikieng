@@ -12,30 +12,30 @@ Wikieng
 
 # Tools
 - フロント
- - Vue.js 2.6.11
- - Scss
+  - Vue.js 2.6.11
+  - Scss
 - バックエンド
- - php 7.3
- - laravel 6.11.0
+  - php 7.3
+  - laravel 6.11.0
 - サーバー
- - nginx 1.15
+  - nginx 1.15
 - DB
- - mysql 5.7(ローカル)
- - RDS(AWS)
+  - mysql 5.7(ローカル)
+  - RDS(AWS)
 - インフラ
- - Docker
-  - docker-compose（ローカル環境でdockerを用いて開発するため）
- - AWS 
-  - ECS/ECR
-  - RDS(mysql)
-  - EC2
-  - S3
-  - VPC
-  - Route53
-  - ALB
-  - ACM
- - Terraform（AWSをコード化するため）
- - CircleCI
+  - Docker
+    - docker-compose（ローカル環境でdockerを用いて開発するため）
+  - AWS 
+    - ECS/ECR
+    - RDS(mysql)
+    - EC2
+    - S3
+    - VPC
+    - Route53
+    - ALB
+    - ACM
+  - Terraform（AWSをコード化するため）
+  - CircleCI
 
 その他
 アプリ内でMediawiki API(wikipediaのAPI)、デ辞蔵（英和辞書API)使用
