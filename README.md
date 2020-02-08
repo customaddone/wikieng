@@ -11,6 +11,9 @@ Wikieng
 →自分で作ろう！！<br>
 という理由でアプリを作成しました。
 
+# Link
+https://wikiforlearningenglish.com
+
 # Functions
 
 - ログイン無しで利用可能な機能
