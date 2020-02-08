@@ -21,7 +21,6 @@
         <nav v-if="toggle" class="toggle">
             <ul>
                 @guest
-                    <hr color="#eee">
                     <li class="loginbutton">
                         <a href="/login">ログイン</a>
                     </li>

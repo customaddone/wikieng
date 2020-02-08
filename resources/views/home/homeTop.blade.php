@@ -27,39 +27,37 @@
                     <img src="/images/cafe02.jpg" class="main-image">
                 </div>
                 <div class="image-heading-text">
-                    <h1>ノストラダムス</h1>
-                    <p>ルネサンス期フランスの医師、占星術師[注釈 1]、詩人。また料理研究の著作も
-                        著している。日本では「ノストラダムスの大予言」の名で知られる詩集を著した。
-                        彼の予言は、現在に至るまで非常に多くの信奉者を生み出し、様々な論争を引き起こしてきた。</p>
+                    <p>英語版wikipediaで英語を学習するためのアプリです。<br>
+                        wikipediaの記事の検索、保存、記事へのハイライトの書き込み、単語の検索、単語の意味を例文と共に保存することができます</p>
                     <i class="fa fa-hand-o-right "></i>
-                    <a href="">read more</a>
+                    <a href="/explain">アプリの使い方について</a>
                 </div>
             </div>
 
             <!-- contents -->
             <div class="contents-box">
                 <div class="content">
-                    <i class="fa fa-copy yellow"></i>
+                    <i class="fa fa-copy orange"></i>
                     <div class="content-text">
-                        <h1>Article</h1>
-                        <p>目的に応じて様々な角度から<br>
-                            データを分析・解析します。</p>
+                        <h1>ハイライト機能</h1>
+                        <p>ハイライトを書き込み、消去できます<br>
+                            構文解析などでご利用ください</p>
                     </div>
                 </div>
                 <div class="content">
                     <i class="fa fa-book orange"></i>
                     <div class="content-text" style="margin-left: 2px;">
-                        <h1>Word</h1>
-                        <p>目的に応じて様々な角度から<br>
-                            データを分析・解析します。</p>
+                        <h1>単語検索機能</h1>
+                        <p>記事内の単語について意味を検索でき<br>
+                            ます</p>
                     </div>
                 </div>
                 <div class="content">
-                    <i class="fa fa-pencil  green"></i>
+                    <i class="fa fa-database  orange"></i>
                     <div class="content-text" style="margin-left: 6px;">
-                        <h1>Test</h1>
-                        <p>目的に応じて様々な角度から<br>
-                            データを分析・解析します。</p>
+                        <h1>意味、例文保存機能</h1>
+                        <p>検索した単語の意味と例文を保存でき<br>
+                            ます</p>
                     </div>
                 </div>
             </div>

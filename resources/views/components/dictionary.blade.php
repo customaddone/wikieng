@@ -36,7 +36,7 @@
         </div>
         <div class="dictionary-footer">
             <i class="fa fa-edit "></i>
-            <p>See more</p>
+            <p></p>
         </div>
     </div>
 </div>
