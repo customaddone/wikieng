@@ -1,6 +1,6 @@
 # Name
  
-Wikieng
+Wikieng<br>
 英語版Wikipediaで英語を学習するためのアプリです。
  
 #  Inspire
@@ -58,7 +58,7 @@ https://wikiforlearningenglish.com
 
 # Note
  
-スマホの方が操作性はいいと思います
+スマホの方が操作性はいいと思います<br>
 簡単ログインを用いるとゲストユーザー用のユーザーでログインできます
  
 # Comment
