@@ -56,6 +56,9 @@ https://wikiforlearningenglish.com
 その他
 アプリ内でMediawiki API(wikipediaのAPI)、デ辞蔵（英和辞書API)使用
 
+# Infrastructure
+![Untitled Diagram](https://user-images.githubusercontent.com/52350864/74077473-51094080-4a63-11ea-8cd6-57a9cabd0a9a.jpg)
+
 # Note
  
 スマホの方が操作性はいいと思います<br>
