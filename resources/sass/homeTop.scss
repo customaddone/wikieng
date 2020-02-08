@@ -8,6 +8,10 @@ main {
         color: #333;
     }
 
+    p {
+
+    }
+
     .row {
         width: 100%;
         max-width: 940px;
@@ -152,6 +156,7 @@ main {
                 border-bottom: 1px solid gainsboro;
 
                 h1 {
+                    font-size: 1.6rem;
                     margin-bottom: 0;
                 }
 

@@ -288,6 +288,44 @@ header .row .mobile-toggle span {
   }
 }
 
+.explain {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 3%;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding-bottom: 300px;
+  font-size: 160%;
+}
+
+.explain p,
+.explain h1,
+.explain h2 {
+  margin: 0;
+  padding: 0;
+  color: #777;
+}
+
+.explain p {
+  font-weight: bold;
+  font-size: 2.4rem;
+}
+
+@media (max-width: 750px) {
+  .explain h1 {
+    font-size: 1.8rem;
+  }
+
+  .explain h2 {
+    font-size: 1.2rem;
+  }
+
+  .explain p {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+}
+
 section {
   position: absolute;
   width: 100%;
@@ -506,6 +544,7 @@ main .row .contents-box .content {
 }
 
 main .row .contents-box .content h1 {
+  font-size: 1.6rem;
   margin-bottom: 0;
 }
 

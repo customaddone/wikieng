@@ -16,7 +16,10 @@ Route::get('/', function () {
     return view('home.homeTop');
 });
 
-
+// 使い方説明
+Route::get('/explain', function () {
+    return view('home.explain');
+});
 
 // 保存している記事一覧
 Route::get('/myArticles', 'ArticlesController@index');
