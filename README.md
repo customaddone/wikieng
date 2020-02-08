@@ -58,6 +58,7 @@ https://wikiforlearningenglish.com
 
 # Note
  
+スマホの方が操作性はいいと思います
 簡単ログインを用いるとゲストユーザー用のユーザーでログインできます
  
 # Comment
