@@ -7,52 +7,45 @@ Wikieng
 去年１年間（２０１８年）TOEICの勉強をしていて、その中で読解力をつけようとよく英語版Wikipediaをよく読んでいました<br>
 →途中で文構造が難しいところがあったり、難単語があったりして、そういった部分は読み飛ばしていた<br>
 →Wikipediaの記事にマーカーで書き込みできれば英文解釈が容易にできるのでは、難単語の意味を例文と共に保存して復習できるようにすれば語彙力がつくのでは<br>
-→自分で作ろう！！
+→自分で作ろう！！<br>
 という理由でアプリを作成しました。
 
-# Tool
-p
- 
-"hoge"を動かすのに必要なライブラリなどを列挙する
- 
-* huga 3.5.2
-* hogehuga 1.0.2
- 
-# Installation
- 
-Requirementで列挙したライブラリなどのインストール方法を説明する
- 
-```bash
-pip install huga_package
-```
- 
-# Usage
- 
-DEMOの実行方法など、"hoge"の基本的な使い方を説明する
- 
-```bash
-git clone https://github.com/hoge/~
-cd examples
-python demo.py
-```
+# Tools
+- フロント
+ - Vue.js 2.6.11
+ - Scss
+- バックエンド
+ - php 7.3
+ - laravel 6.11.0
+- サーバー
+ - nginx 1.15
+- DB
+ - mysql 5.7(ローカル)
+ - RDS(AWS)
+- インフラ
+ - Docker
+  - docker-compose（ローカル環境でdockerを用いて開発するため）
+ - AWS 
+  - ECS/ECR
+  - RDS(mysql)
+  - EC2
+  - S3
+  - VPC
+  - Route53
+  - ALB
+  - ACM
+ - Terraform（AWSをコード化するため）
+ - CircleCI
+
+その他
+アプリ内でMediawiki API(wikipediaのAPI)、デ辞蔵（英和辞書API)使用
  
 # Note
  
-注意点などがあれば書く
+簡単ログインを用いるとゲストユーザー用のユーザーでログインできます
  
-# Author
+# Comment
  
-作成情報を列挙する
+皆さま、英語版Wikiを読みましょう。
  
-* 作成者
-* 所属
-* E-mail
- 
-# License
-ライセンスを明示する
- 
-"hoge" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
- 
-社内向けなら社外秘であることを明示してる
- 
-"hoge" is Confidential.
+
