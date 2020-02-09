@@ -10,6 +10,9 @@ var dictionary = new Vue({
     nowHighlightColor: "#FF89FF",
     // ハイライトの色の配列
     highlightColor: ["#FF89FF", "#89DB89", "#90AFEE", "#C8AAF2", "#8BDEDE", "#FF9999"],
+
+    // 辞書の小枠の周りの影その１
+    dictionaryBoxShadow: '0 0 8px #6CAD77',
   },
 
   methods: {
@@ -77,6 +80,7 @@ var dictionary = new Vue({
 
     // 単語の保存
     saveWord: function() {
+      this.dictionaryBoxShadow = '0 0 50px #6CAD77'
       var articleId = location.pathname.split('/')
 
       axios
@@ -87,9 +91,10 @@ var dictionary = new Vue({
           article_id: articleId[2],
         })
         .then(response => {
-          alert('OK')
+          this.dictionaryBoxShadow = '0 0 8px #6CAD77'
         })
         .catch(response => {
+          this.dictionaryBoxShadow = '0 0 8px #FF3333'
           console.log(response)
         })
     },
