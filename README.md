@@ -1,8 +1,8 @@
 # Name
- 
+
 Wikieng<br><br>
 英語版Wikipediaで英語を学習するためのアプリです。
- 
+
 #  Inspire
 
 去年１年間（２０１８年）TOEICの勉強をしていて、その中で読解力をつけようとよく英語版Wikipediaをよく読んでいました<br>
@@ -41,7 +41,8 @@ https://wikiforlearningenglish.com
 - インフラ
   - Docker
     - docker-compose（ローカル環境でdockerを用いて開発するため）
-  - AWS 
+
+  - AWS
     - ECS/ECR
     - RDS(mysql)
     - EC2
@@ -60,12 +61,13 @@ https://wikiforlearningenglish.com
 ![Untitled Diagram](https://user-images.githubusercontent.com/52350864/74077473-51094080-4a63-11ea-8cd6-57a9cabd0a9a.jpg)
 
 # Note
- 
+
 スマホの方が操作性はいいと思います<br>
 簡単ログインを用いるとゲストユーザー用のユーザーでログインできます
- 
+
 # Comment
- 
+
 皆さん、英語版Wikiを読みましょう。
+
  
 
