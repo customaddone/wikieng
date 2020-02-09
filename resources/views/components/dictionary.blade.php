@@ -22,7 +22,8 @@
             </div>
         </div>
     </div>
-    <div class="dictionary-card" v-if="switchFooterFunction == 2">
+    <div class="dictionary-card" v-if="switchFooterFunction == 2"
+        v-bind:style="{ boxShadow: dictionaryBoxShadow }">
         <div class="dictionary-header">
             <i class="fa fa-comment-o "></i>
         </div>
