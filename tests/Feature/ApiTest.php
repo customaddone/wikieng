@@ -157,6 +157,14 @@ class ApiTest extends TestCase
             'article_id' => 1,
         ])->assertStatus(500);
 
+        // 検索結果が出ないものに対してはエラーが出るようにしたい
+        $response = $this->post('api/words/create', [
+            'word' => "meansNotFound",
+            'mean' => 'next',
+            'sampletext' => '検索結果は見つかりませんでした',
+            'article_id' => 1,
+        ])->assertStatus(500);
+
         // id = 1のレコードを破壊
         $response = $this->delete("api/words/1")
             ->assertStatus(200);

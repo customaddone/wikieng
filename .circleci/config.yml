@@ -54,6 +54,7 @@ jobs:
             - node_modules
 
       # phpの静的解析ツール larastan
+      # レベル５（６以上は型宣言要）
       - run:
           name: static analysis
           command: |
