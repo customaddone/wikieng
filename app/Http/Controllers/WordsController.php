@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Word;
 use Illuminate\Http\Request;
+use App\Http\Requests\WordsValidateRequest;
 
 class WordsController extends Controller
 {
@@ -22,7 +23,7 @@ class WordsController extends Controller
         return $words;
     }
 
-    public function create(Request $request) {
+    public function create(WordsValidateRequest $request) {
         $word = Word::create([
             'word' => $request->word,
             'mean' => $request->mean,

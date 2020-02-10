@@ -157,6 +157,9 @@ class ApiTest extends TestCase
             'article_id' => 1,
         ])->assertStatus(500);
 
+        // 検索結果が出ないものに対してはエラーが出るようにしたい
+        // →javascript側で実装
+
         // id = 1のレコードを破壊
         $response = $this->delete("api/words/1")
             ->assertStatus(200);
