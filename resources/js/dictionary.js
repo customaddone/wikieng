@@ -88,15 +88,15 @@ var dictionary = new Vue({
         })
         .then(() => {
           // v-bindにすると色が戻らなかった
-          event.target.style.background = 'rgba(230,255,230,0.8)';
+          event.target.style.boxShadow= '0 0 50px #00CCAA';
           setTimeout(() => {
-            event.target.style.background = '#fff';
+            event.target.style.boxShadow = '0 0 8px #00CCAA';
           }, 200);
         })
         .catch(response => {
-          event.target.style.background = 'rgba(255,230,230,0.8)';
+          event.target.style.boxShadow = '0 0 50px #CC297A';
           setTimeout(() => {
-            event.target.style.background = '#fff';
+            event.target.style.boxShadow = '0 0 8px #00CCAA';
           }, 200);
           console.log(response)
         })

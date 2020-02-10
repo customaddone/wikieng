@@ -118,7 +118,7 @@ class ApiTest extends TestCase
             $array = [1, 2, 3];
 
             Word::create([
-                'word' => 'sample',
+                'word' => $i,
                 'mean' => 'example',
                 'sampletext' => 'dummy data',
                 'article_id' => $array[ ($i % 3) ],
