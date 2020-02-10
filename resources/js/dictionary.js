@@ -78,11 +78,13 @@ var dictionary = new Vue({
     // 単語の保存
     saveWord: function(event) {
       var articleId = location.pathname.split('/')
+      var wordMean =  (this.translatedWord !== '検索に一致する項目はありませんでした...')?
+        this.translatedWord : ''
 
       axios
         .post('/api/words/create', {
           word: this.seeWord,
-          mean: this.translatedWord.slice(0, 140).concat('...'),
+          mean: wordMean.slice(0, 140).concat('.'),
           sampletext: vm.seeWordsSampleText,
           article_id: articleId[2],
         })
