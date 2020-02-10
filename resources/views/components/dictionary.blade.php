@@ -1,4 +1,6 @@
 <div class="dictionary" id="dictionary" >
+
+    <!-- ハイライト -->
     <div class="dictionary-card" v-if="switchFooterFunction == 1">
         <div class="highlight-box">
             <h1>Highlight Color</h1>
@@ -22,13 +24,15 @@
             </div>
         </div>
     </div>
-    <div class="dictionary-card" v-if="switchFooterFunction == 2"
-        v-bind:style="{ boxShadow: dictionaryBoxShadow }">
+    <!-- ハイライト -->
+
+    <!-- 辞書 -->
+    <div class="dictionary-card" v-if="switchFooterFunction == 2" @click="saveWord($event)">
         <div class="dictionary-header">
             <i class="fa fa-comment-o "></i>
         </div>
         <div class="dictionary-text">
-            <div class="dictionary-title"  @click="saveWord">
+            <div class="dictionary-title">
                 <p>@{{ seeWord }}</p>
             </div>
             <div class="dictionary-article">
@@ -40,6 +44,8 @@
             <p></p>
         </div>
     </div>
+    <!-- 辞書 -->
+
 </div>
 
 <script src="/js/dictionary.js" type="text/javascript"></script>
