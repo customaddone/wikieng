@@ -10,6 +10,7 @@
 	      top: 100px;
         width:200px;
         height: 200px;
+        box-shadow: 0 0 8px #00CCAA;
         transition: box-shadow 0.15s ease-in-out;
         border-radius: 25px;
         background-color: #fff;
@@ -31,6 +32,7 @@
         }
 
         .dictionary-header {
+            pointer-events: none;
             margin-top: 10px;
             margin-right: 20px;
 
@@ -41,6 +43,7 @@
         }
 
         .dictionary-text {
+            pointer-events: none;
             margin: 0px 15px;
 
             .dictionary-title {
@@ -66,6 +69,7 @@
         }
 
         .dictionary-footer {
+            pointer-events: none;
             margin: 10px 15px;
 
             i {

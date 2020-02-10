@@ -744,6 +744,7 @@ footer .row li a {
   top: 100px;
   width: 200px;
   height: 200px;
+  box-shadow: 0 0 8px #00CCAA;
   -webkit-transition: box-shadow 0.15s ease-in-out;
   transition: box-shadow 0.15s ease-in-out;
   border-radius: 25px;
@@ -766,6 +767,7 @@ footer .row li a {
 }
 
 .dictionary .dictionary-card .dictionary-header {
+  pointer-events: none;
   margin-top: 10px;
   margin-right: 20px;
 }
@@ -776,6 +778,7 @@ footer .row li a {
 }
 
 .dictionary .dictionary-card .dictionary-text {
+  pointer-events: none;
   margin: 0px 15px;
 }
 
@@ -801,6 +804,7 @@ footer .row li a {
 }
 
 .dictionary .dictionary-card .dictionary-footer {
+  pointer-events: none;
   margin: 10px 15px;
 }
 

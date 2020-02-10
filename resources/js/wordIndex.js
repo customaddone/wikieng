@@ -15,7 +15,6 @@ var head = new Vue({
   methods: {
     indexWord: function() {
       var articleId = location.pathname.split('/')
-      this.showWordsProperty = []
 
       axios
         .get('/api/words/' + articleId[2])
@@ -23,6 +22,7 @@ var head = new Vue({
           // リダイレクトはまずい
 
           this.words = response.data
+          this.showWordsProperty = []
           for (var i = 0; i < response.data.length; i++) {
             this.showWordsProperty.push(0)
           }
