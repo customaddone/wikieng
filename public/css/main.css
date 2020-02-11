@@ -199,13 +199,13 @@ header .row .mobile-toggle span {
   border-radius: 10px;
   background-color: #fff;
   box-sizing: border-box;
-  border: 1px lightblue solid;
+  border: 1px #00CCAA solid;
 }
 
 .login .login-box .login-title {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  background-color: lightblue;
+  background-color: #00CCAA;
 }
 
 .login .login-box .login-title h1 {
@@ -264,10 +264,10 @@ header .row .mobile-toggle span {
 
 .login .login-box .login-value-form input[type=submit] {
   margin-top: 60px;
-  background-color: lightblue;
+  background-color: #00CCAA;
   border-radius: 5px;
   cursor: pointer;
-  border: 1px solid #90CDDB;
+  border: 1px solid #00CCAA;
   color: #fff;
 }
 
@@ -827,6 +827,10 @@ footer .row li a {
   }
 }
 
+[v-cloak] {
+  display: none;
+}
+
 .wordIndex {
   position: absolute;
   width: 100%;
@@ -954,7 +958,7 @@ footer .row li a {
 }
 
 .word-index-button {
-  background-color: lightblue;
+  background-color: #00CCAA;
 }
 
 .word-article-button {
