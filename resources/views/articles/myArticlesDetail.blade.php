@@ -3,7 +3,7 @@
 @section('content')
     @component('components.navbar')
     @endcomponent
-    <div id="showArticleDetail">
+    <div id="showArticleDetail" v-cloak>
         <div @mousedown="selected" @click="clicked" @touchstart="selected" @touchmove="clicked">
             {!! $article->article !!}
         </div>
