@@ -65,6 +65,7 @@ class AuthTest extends TestCase
         $this->assertTrue(Auth::check());
         $response = $this->post('logout');
 
+        // 名前とパスワードは何語でもいける
         $response = $this->post('/register', [
             'name' => 'Матрёшка',
             'email'    => 'laravel@gmail.com',
@@ -72,7 +73,6 @@ class AuthTest extends TestCase
             'password_confirmation' => 'Санкт-Петербург'
         ]);
 
-        // 名前とパスワードは何語でもいける
         $this->assertTrue(Auth::check());
         $response = $this->post('logout');
 

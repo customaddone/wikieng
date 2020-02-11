@@ -11,12 +11,12 @@
         border-radius: 10px;
         background-color: #fff;
         box-sizing: border-box;
-        border: 1px lightblue solid;
+        border: 1px #00CCAA solid;
 
         .login-title {
             border-top-right-radius: 10px;
             border-top-left-radius: 10px;
-            background-color: lightblue;
+            background-color: #00CCAA;
 
             h1 {
                 margin: 0;
@@ -69,10 +69,10 @@
 
             input[type=submit] {
                 margin-top: 60px;
-                background-color: lightblue;
+                background-color: #00CCAA;
                 border-radius: 5px;
                 cursor: pointer;
-                border: 1px solid #90CDDB;
+                border: 1px solid #00CCAA;
                 color: #fff;
             }
 

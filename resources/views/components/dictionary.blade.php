@@ -1,4 +1,4 @@
-<div class="dictionary" id="dictionary" >
+<div class="dictionary" id="dictionary" v-cloak>
 
     <!-- ハイライト -->
     <div class="dictionary-card" v-if="switchFooterFunction == 1">
