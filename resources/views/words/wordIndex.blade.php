@@ -22,6 +22,7 @@
                         <p v-if="showWordsProperty[index] == 1" class="sampletext">@{{ word.sampletext }}</p>
                     </div>
                 </div>
+                <div class="hole"></div>
             </li>
 
             <li style="height: 300px; background-color: #eee; border: none;">
