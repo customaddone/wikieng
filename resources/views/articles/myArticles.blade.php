@@ -30,9 +30,9 @@
                     </div>
                 </li>
             @endforeach
-            <li style="height: 300px; background-color: #eee; border: none;">
-            </li>
         </ul>
+        <div style="height: 300px; background-color: #eee; border: none;">
+        </div>
     </div>
 
     @component('components.footer')

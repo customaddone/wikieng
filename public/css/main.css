@@ -622,14 +622,16 @@ main .row .content-foot {
 }
 
 .myArticles ul li {
+  position: relative;
   width: 48%;
   height: 110px;
   margin: 0 1%;
   float: left;
   display: block;
   list-style: none;
+  border-radius: 10px;
   background-color: #fff;
-  border-bottom: 1px solid gainsboro;
+  border-top: 1px solid gainsboro;
 }
 
 .myArticles ul li .result-box {
@@ -686,6 +688,22 @@ main .row .content-foot {
   .myArticles ul li {
     width: 98%;
   }
+}
+
+.myArticles ul li:after {
+  z-index: 5;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-width: 24px 72px 0 0;
+  border-top-left-radius: 10px;
+  border-style: solid;
+  border-color: #c3cfe2 #eee #fff #fff;
+  background: #bbb;
+  display: block;
+  width: 0;
+  box-shadow: 2px -2px 12px 3px #eee;
 }
 
 footer {
@@ -863,12 +881,14 @@ footer .row li a {
 }
 
 .wordIndex ul li {
+  position: relative;
   width: 48%;
   height: 140px;
   margin: 0 1%;
   float: left;
   display: block;
   list-style: none;
+  border-radius: 10px;
   background-color: #fff;
   border-bottom: 1px solid gainsboro;
 }
@@ -921,6 +941,19 @@ footer .row li a {
   .wordIndex ul li {
     width: 98%;
   }
+}
+
+.wordIndex ul .hole {
+  position: absolute;
+  z-index: 5px;
+  bottom: 10px;
+  right: 10px;
+  width: 17px;
+  height: 17px;
+  border: 1px solid gainsboro;
+  border-radius: 50%;
+  background-color: #eee;
+  box-shadow: 3px 3px 8px #ddd inset;
 }
 
 .word-button {

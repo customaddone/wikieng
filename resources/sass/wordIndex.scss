@@ -32,12 +32,14 @@
         padding: 0;
 
         li {
+            position: relative;
             width: 48%;
             height: 140px;
             margin: 0 1%;
             float: left;
             display: block;
             list-style: none;
+            border-radius: 10px;
             background-color: #fff;
             border-bottom: 1px solid gainsboro;
 
@@ -90,6 +92,19 @@
             @media (max-width: 750px) {
                 width: 98%;
             }
+        }
+
+        .hole {
+            position: absolute;
+            z-index: 5px;
+            bottom: 10px;
+            right: 10px;
+            width:  17px;
+            height: 17px;
+            border: 1px solid gainsboro;
+            border-radius: 50%;
+            background-color: #eee;
+            box-shadow: 3px 3px 8px #ddd inset,
         }
     }
 }
