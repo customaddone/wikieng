@@ -123,7 +123,7 @@
         }
 
         // カードに折り目追加
-        li:after {
+        .article-fold {
             z-index: 5;
             content: "";
             position:absolute;

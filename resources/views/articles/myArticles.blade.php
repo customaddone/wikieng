@@ -28,6 +28,10 @@
                             <a href="/articles/{{ $article->id }}">{{ $article->summary }}</a>
                         </div>
                     </div>
+                    @if ( count($article->words) > 0 )
+                        <div class="article-fold">
+                        </div>
+                    @endif
                 </li>
             @endforeach
         </ul>

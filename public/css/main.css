@@ -720,7 +720,7 @@ main .row .content-foot {
   }
 }
 
-.myArticles ul li:after {
+.myArticles ul .article-fold {
   z-index: 5;
   content: "";
   position: absolute;

@@ -10,4 +10,8 @@ class Article extends Model
         // fillableちゃんと入れる
         'title', 'user_id', 'article', 'summary', 'status'
     ];
+
+    public function words() {
+        return $this->hasMany('App\Word');
+    }
 }
