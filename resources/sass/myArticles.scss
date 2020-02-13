@@ -13,12 +13,41 @@
         padding: 0;
 
         .userNameBox {
+          position: relative;
           width: 98%;
           margin: 0 auto;
           text-align: center;
-          color: #333;
+          color: #777;
           background-color: #fff;
           border-bottom: 1px double gainsboro;
+        }
+
+        .userNameBox::before {
+            z-index: 5;
+            content: "";
+            position:absolute;
+            top: 0;
+            left: 0;
+            border-width: 15px;
+            border-style: solid;
+            border-color: rgba(0, 204, 170, 0.5);
+            background-color: #fff;
+            display:block; width:0;
+
+        }
+
+        .userNameBox::after {
+            z-index: 5;
+            content: "";
+            position:absolute;
+            bottom: 0;
+            right: 0;
+            border-width: 28px 28px 0 0 ;
+            border-top-left-radius: 10px;
+            border-style: solid;
+            border-color: #c3cfe2 #eee #fff #fff;
+            background: #bbb;
+            display:block; width:0;
         }
     }
 
