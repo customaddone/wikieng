@@ -9,6 +9,8 @@ class WordsTableSeeder extends Seeder
      *
      * @return void
      */
+
+    // ダミーの登録単語（ダミーmy記事に紐付けられる）
     public function run()
     {
         function InsertWordsSeeder($word, $mean) {

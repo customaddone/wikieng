@@ -12,7 +12,7 @@ class ArticlesTableSeeder extends Seeder
      */
 
 
-    // my記事作成用の
+    // ダミーのmy記事作成用
     public function run()
     {
         // privateなのでSSearchControllerのものは呼べない
@@ -36,11 +36,12 @@ class ArticlesTableSeeder extends Seeder
             return $responseBody;
         }
 
+        // 「競技プログラミング」の記事をAPIで呼び出す
         $dummyArticle = searchMediaWiki(
             [
                 'format' => 'json',
                 'action' => 'parse',
-                'page' =>  'laravel',
+                'page' =>  'Competitive_programming',
             ]
         );
 
@@ -51,7 +52,7 @@ class ArticlesTableSeeder extends Seeder
            'user_id' => 1,
            'title' => $dummyArticleTitle,
            'article' => preg_replace('/<a[\s\S]*?>/', '', $dummyArticleText), // aリンクは消す
-           'summary' => 'Laravel is a free, open-source[3] PHP web framework, created by Taylor Otwell and intended for the development of web applications.'
+           'summary' => 'Competitive programming is a mind sport usually held over the Internet or a local network, involving participants trying to program according to provided specifications. Contestants are referred to as sport programmers.'
         ]);
     }
 }
