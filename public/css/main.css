@@ -507,7 +507,7 @@ main .row .top-image .image-heading-text p {
 
 @media (max-width: 750px) {
   main .row .top-image .image-heading-text p {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -516,13 +516,13 @@ main .row .top-image .image-heading-text h1 {
 }
 
 main .row .top-image .image-heading-text i {
-  color: #1E90FF;
+  color: #00CCAA;
   font-size: 1.6rem;
   float: left;
 }
 
 main .row .top-image .image-heading-text a {
-  color: #1E90FF;
+  color: #00CCAA;
   font-size: 1.4rem;
   margin-left: 10px;
   text-decoration: none;
@@ -556,16 +556,8 @@ main .row .contents-box .content i {
   font-size: 4.8rem;
 }
 
-main .row .contents-box .content .yellow {
-  color: #FFBF11;
-}
-
-main .row .contents-box .content .orange {
-  color: #FF5A36;
-}
-
 main .row .contents-box .content .green {
-  color: #009999;
+  color: #00CCAA;
 }
 
 main .row .contents-box .content .content-text {

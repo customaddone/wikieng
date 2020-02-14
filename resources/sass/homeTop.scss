@@ -119,7 +119,7 @@ main {
                     font-size: 1.4rem;
 
                     @media (max-width: 750px) {
-                        font-size: 1rem;
+                        font-size: 1.4rem;
                     }
                 }
 
@@ -128,13 +128,13 @@ main {
                 }
 
                 i {
-                    color: #1E90FF;
+                    color: #00CCAA;
                     font-size: 1.6rem;
                     float: left;
                 }
 
                 a {
-                    color: #1E90FF;
+                    color: #00CCAA;
                     font-size: 1.4rem;
                     margin-left: 10px;
                     text-decoration: none;
@@ -168,16 +168,8 @@ main {
                     font-size: 4.8rem;
                 }
 
-                .yellow {
-                    color:  #FFBF11
-                }
-
-                .orange {
-                    color:  #FF5A36
-                }
-
                 .green {
-                    color:  #009999
+                    color:  #00CCAA
                 }
 
                 .content-text {

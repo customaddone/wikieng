@@ -28,7 +28,7 @@
                 </div>
                 <div class="image-heading-text">
                     <p>英語版wikipediaで英語を学習するためのアプリです。<br>
-                        wikipediaの記事の検索、保存、記事へのハイライトの書き込み、単語の検索、単語の意味を例文と共に保存することができます</p>
+                        上の検索フォームで記事を検索してみましょう！</p>
                     <i class="fa fa-hand-o-right "></i>
                     <a href="/explain">アプリの使い方について</a>
                 </div>
@@ -37,7 +37,7 @@
             <!-- contents -->
             <div class="contents-box">
                 <div class="content">
-                    <i class="fa fa-copy orange"></i>
+                    <i class="fa fa-eyedropper green"></i>
                     <div class="content-text">
                         <h1>ハイライト機能</h1>
                         <p>ハイライトを書き込み、消去できます<br>
@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <div class="content">
-                    <i class="fa fa-book orange"></i>
+                    <i class="fa fa-book green"></i>
                     <div class="content-text" style="margin-left: 2px;">
                         <h1>単語検索機能</h1>
                         <p>記事内の単語について意味を検索でき<br>
@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 <div class="content">
-                    <i class="fa fa-database  orange"></i>
+                    <i class="fa fa-database green"></i>
                     <div class="content-text" style="margin-left: 6px;">
                         <h1>意味、例文保存機能</h1>
                         <p>検索した単語の意味と例文を保存でき<br>
