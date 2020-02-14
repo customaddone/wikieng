@@ -71,7 +71,7 @@ class ArticlesTest extends TestCase
         ]);
 
         // importには戻り値はないので、import($request)自体はnullになる
-        $article->import($request);
+        $article->create($request);
 
         // ちゃんとarticleが生成されるか？
         $this->assertNotEmpty(Article::where('title', '=', 'article'));

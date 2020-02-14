@@ -17,7 +17,8 @@ class ArticlesController extends Controller
     public function index() {
         // idとタイトルだけgetする
         // idの前にはテーブルの名前をつける
-        $articles = Article::where('user_id', '=', Auth::id())->select('id', 'title', 'summary')
+        // N+１問題回避
+        $articles = Article::with('words')->where('user_id', '=', Auth::id())->select('id', 'title', 'summary')
             ->get();
         return view('articles.myArticles', [ 'articles' => $articles ]);
     }
@@ -28,7 +29,7 @@ class ArticlesController extends Controller
     }
 
     // 記事の保存
-    public function import(Request $request) {
+    public function create(Request $request) {
         $article = Article::create([
             'title' => $request->title,
             'user_id' => Auth::id(),

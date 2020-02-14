@@ -25,7 +25,7 @@ Route::get("/searchArticleDetail/{word}", "SearchController@searchArticleDetail"
 Route::get("/searchArticleSummary/{word}", "SearchController@searchArticleSummary");
 
 // wiki記事編集用
-Route::post('/articles/import',  'ArticlesController@import');
+Route::post('/articles/import',  'ArticlesController@create');
 Route::post('/articles/edit',  'ArticlesController@edit');
 
 // 辞書機能使用用
