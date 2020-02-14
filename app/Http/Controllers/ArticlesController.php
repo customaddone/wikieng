@@ -29,7 +29,7 @@ class ArticlesController extends Controller
     }
 
     // 記事の保存
-    public function import(Request $request) {
+    public function create(Request $request) {
         $article = Article::create([
             'title' => $request->title,
             'user_id' => Auth::id(),

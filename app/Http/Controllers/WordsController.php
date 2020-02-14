@@ -13,7 +13,7 @@ class WordsController extends Controller
         $this->middleware('auth');
     }
 
-    public function wordIndexPathId($articleId) {
+    public function index($articleId) {
         return view('words.wordIndex', ['articleId' => $articleId]);
     }
 
