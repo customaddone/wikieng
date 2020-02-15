@@ -311,10 +311,6 @@ header .row .mobile-toggle span {
   font-size: 2.4rem;
 }
 
-.explain img {
-  float: left;
-}
-
 @media (max-width: 750px) {
   .explain h1 {
     font-size: 1.8rem;

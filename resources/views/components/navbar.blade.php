@@ -26,7 +26,7 @@
             <ul>
                 <li><i class="fa fa-user "></i></li>
                 @guest
-                    <li><p>guest</p></li>
+                    <li><p>User:guest</p></li>
                     <li class="loginbutton">
                         <a href="/login">ログイン</a>
                     </li>
@@ -43,7 +43,7 @@
                     </li>
                 @endguest
                 @auth
-                    <li><p>{{ Auth::user()->name }}</p></li>
+                    <li><p style="text-decoration: underline;">{{ Auth::user()->name }}さん</p></li>
                     <li>
                         <form action="/logout" method="POST">
                             <button type="submit" class="login-button">
