@@ -311,6 +311,10 @@ header .row .mobile-toggle span {
   font-size: 2.4rem;
 }
 
+.explain img {
+  float: left;
+}
+
 @media (max-width: 750px) {
   .explain h1 {
     font-size: 1.8rem;
@@ -614,7 +618,7 @@ main .row .content-foot {
   position: absolute;
   top: 0;
   left: 0;
-  border-width: 17px;
+  border-width: 16px;
   border-style: solid;
   border-color: rgba(0, 204, 170, 0.5);
   background-color: #fff;
@@ -902,7 +906,7 @@ footer .row li a {
   position: absolute;
   top: 0;
   left: 0;
-  border-width: 17px;
+  border-width: 16px;
   border-style: solid;
   border-color: rgba(225, 40, 133, 0.7);
   background-color: #fff;
