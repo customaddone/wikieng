@@ -71,6 +71,9 @@
   line-height: 4rem;
 }
 
+.mw-parser-output ul,
+.mw-parser-output ol,
+.mw-parser-output li,
 .mw-parser-output table,
 .mw-parser-output caption,
 .mw-parser-output tbody,
