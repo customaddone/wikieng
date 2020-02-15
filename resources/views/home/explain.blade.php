@@ -55,9 +55,23 @@
         <p>　　　「インポートしました！」と表示されます。保存した記事</p>
         <p>　　　は画面下の「MY記事」から閲覧できます。</p>
 
+        <br>
+        <img src="/images/searchByWord.jpeg" class="main-image"　width="300" height="200">
+        <img src="/images/saveArticle.jpeg" class="main-image"　width="300" height="200">
+        <p>　（緑丸の部分を押すと記事が「my記事」に保存されます。）<p>
+        <p>　（保存した記事は青丸のところを押すと閲覧できます。）<p>
+        <br>
+
         <h2>　⑸　ハイライト保存機能</h2>
         <p>　　　「MY記事」内の記事にハイライトを書き込み、画面下の<p>
         <p>　　　「記事保存」を押すとハイライトが保存されます。</p>
+
+        <br>
+        <img src="/images/highlight1.jpeg" class="main-image"　width="300" height="200">
+        <img src="/images/highlight2.jpeg" class="main-image"　width="300" height="200">
+        <p>　（ハイライト記入後、右下の記事保存」を押すとハイライトが保存されます。）<p>
+        <p>　（「my記事」から再度記事を開いてもハイライトが残ったままになる。）<p>
+        <br>
 
         <h2>　⑹　単語の意味、例文保存機能</h2>
         <p>　　　「MY記事」内の記事で単語を検索し、右上の小枠内を押<p>
@@ -65,6 +79,13 @@
         <p>　　　保存した単語の意味、例文は右下の緑色のボタンを押すと</p>
         <p>　　　閲覧できます。</p>
         <p>　　　「意味」「例文」の文字を押すと切り替えができます</p>
+        <br>
+        <img src="/images/wordsearch.jpeg" class="main-image"　width="300" height="200">
+        <img src="/images/wordindex1.jpeg" class="main-image"　width="300" height="200">
+        <img src="/images/wordindex2.jpeg" class="main-image"　width="300" height="200">
+        <p>　（検索した後、右上の小枠を押すと単語の意味が例文と一緒に保存されます。）<p>
+        <p>　（保存した単語は右下の緑色のボタンを押すと閲覧できます。）<p>
+        <br>
     </div>
 
     @component('components.footer')

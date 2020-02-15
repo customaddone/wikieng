@@ -22,7 +22,6 @@
                 <div class="image-heading-image">
                     <div class="title-box">
                         <h1>WikiEng</h1>
-                        <p>contents_contents</p>
                     </div>
                     <img src="/images/cafe02.jpg" class="main-image">
                 </div>
