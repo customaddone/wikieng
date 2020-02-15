@@ -60,8 +60,8 @@
 
         <br>
         <div>
-            <img src="/images/searchByWord.jpeg" class="main-image"　width="300" height="200">
-            <img src="/images/saveArticle.jpeg" class="main-image"　width="300" height="200">
+            <img src="/images/searchByWord.jpeg" class="main-image">
+            <img src="/images/saveArticle.jpeg" class="main-image">
         </div>
         <p>　（緑丸の部分を押すと記事が「my記事」に保存されます。）<p>
         <p>　（保存した記事は青丸のところを押すと閲覧できます。）<p>
@@ -72,8 +72,8 @@
         <p>　　　「記事保存」を押すとハイライトが保存されます。</p>
 
         <div>
-            <img src="/images/highlight1.jpeg" class="main-image"　width="300" height="200">
-            <img src="/images/highlight2.jpeg" class="main-image"　width="300" height="200">
+            <img src="/images/highlight1.jpeg" class="main-image">
+            <img src="/images/highlight2.jpeg" class="main-image">
         </div>
         <br>
         <p>　（ハイライト記入後、右下の「記事保存」を押すとハイライトが保存されます。）<p>
@@ -87,9 +87,9 @@
         <p>　　　閲覧できます。</p>
         <p>　　　「意味」「例文」の文字を押すと切り替えができます</p>
         <div>
-            <img src="/images/wordsearch.jpeg" class="main-image"　width="300" height="200">
-            <img src="/images/wordindex1.jpeg" class="main-image"　width="300" height="200">
-            <img src="/images/wordindex2.jpeg" class="main-image"　width="300" height="200">
+            <img src="/images/wordsearch.jpeg" class="main-image">
+            <img src="/images/wordindex1.jpeg" class="main-image">
+            <img src="/images/wordindex2.jpeg" class="main-image">
         </div>
         <p>　（検索した後、右上の小枠を押すと単語の意味が例文と一緒に保存されます。）<p>
         <p>　（保存した単語は右下の緑色のボタンを押すと閲覧できます。）<p>
