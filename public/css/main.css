@@ -723,7 +723,7 @@ main .row .content-foot {
 }
 
 .myArticles ul .article-fold {
-  z-index: 5;
+  z-index: 3;
   content: "";
   position: absolute;
   bottom: 0;
@@ -739,6 +739,7 @@ main .row .content-foot {
 }
 
 footer {
+  z-index: 5;
   position: fixed;
   left: 0;
   bottom: 0;
