@@ -73,32 +73,7 @@
       "command": null,
       "linuxParameters": null,
       "cpu": 128,
-      "environment": [
-        {
-          "name": "APP_KEY",
-          "value": "base64:Rha6fhgYifnvVBnwm81FCal18ULvEgiMnqpLLwlvyKI="
-        },
-        {
-          "name": "DB_CONNECTION",
-          "value": "mysql"
-        },
-        {
-          "name": "DB_DATABASE",
-          "value": "wikieng"
-        },
-        {
-          "name": "DB_HOST",
-          "value": "example.cw5hony92ugy.ap-northeast-1.rds.amazonaws.com"
-        },
-        {
-          "name": "DB_PASSWORD",
-          "value": "topsecret"
-        },
-        {
-          "name": "DB_USERNAME",
-          "value": "root"
-        }
-      ],
+      "environment": [],
       "resourceRequirements": null,
       "ulimits": null,
       "dnsServers": null,
@@ -136,7 +111,7 @@
   "compatibilities": [
     "EC2"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-1:183344260146:task-definition/example:299",
+  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-1:183344260146:task-definition/example:312",
   "family": "example",
   "requiresAttributes": [
     {
@@ -168,7 +143,7 @@
   "requiresCompatibilities": [],
   "networkMode": null,
   "cpu": null,
-  "revision": 299,
+  "revision": 312,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
