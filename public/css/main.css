@@ -311,6 +311,11 @@ header .row .mobile-toggle span {
   font-size: 2.4rem;
 }
 
+.explain img {
+  height: 600px;
+  width: 360px;
+}
+
 @media (max-width: 750px) {
   .explain h1 {
     font-size: 1.8rem;
@@ -323,6 +328,11 @@ header .row .mobile-toggle span {
   .explain p {
     font-weight: bold;
     font-size: 1.2rem;
+  }
+
+  .explain img {
+    height: 180px;
+    width: 108px;
   }
 }
 
@@ -713,7 +723,7 @@ main .row .content-foot {
 }
 
 .myArticles ul .article-fold {
-  z-index: 5;
+  z-index: 3;
   content: "";
   position: absolute;
   bottom: 0;
@@ -729,6 +739,7 @@ main .row .content-foot {
 }
 
 footer {
+  z-index: 5;
   position: fixed;
   left: 0;
   bottom: 0;
